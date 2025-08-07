@@ -1863,27 +1863,27 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  *(.bss*)
  .bss.count     0x20000098        0x4 build/main.o
                 0x20000098                count
- .bss.currentDelay
-                0x2000009c        0x4 build/main.o
-                0x2000009c                currentDelay
- .bss.displayMode
-                0x200000a0        0x4 build/main.o
-                0x200000a0                displayMode
- .bss.index     0x200000a4        0x4 build/main.o
-                0x200000a4                index
  .bss.Mode3_displaying
-                0x200000a8        0x4 build/main.o
-                0x200000a8                Mode3_displaying
+                0x2000009c        0x4 build/main.o
+                0x2000009c                Mode3_displaying
  .bss.Mode3_turnoffdelay
-                0x200000ac        0x4 build/main.o
-                0x200000ac                Mode3_turnoffdelay
+                0x200000a0        0x4 build/main.o
+                0x200000a0                Mode3_turnoffdelay
  .bss.Mode3_displaydelay
-                0x200000b0        0x4 build/main.o
-                0x200000b0                Mode3_displaydelay
+                0x200000a4        0x4 build/main.o
+                0x200000a4                Mode3_displaydelay
  .bss.ledPattern_Mode3
-                0x200000b4        0x1 build/main.o
-                0x200000b4                ledPattern_Mode3
- *fill*         0x200000b5        0x3 
+                0x200000a8        0x1 build/main.o
+                0x200000a8                ledPattern_Mode3
+ *fill*         0x200000a9        0x3 
+ .bss.displayMode
+                0x200000ac        0x4 build/main.o
+                0x200000ac                displayMode
+ .bss.index     0x200000b0        0x4 build/main.o
+                0x200000b0                index
+ .bss.currentDelay
+                0x200000b4        0x4 build/main.o
+                0x200000b4                currentDelay
  .bss.htim16    0x200000b8       0x48 build/main.o
                 0x200000b8                htim16
  .bss.uwTick    0x20000100        0x4 build/stm32f0xx_hal.o
@@ -2146,34 +2146,34 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_ranges  0x00000810       0x58 build/stm32f0xx_ll_utils.o
  .debug_ranges  0x00000868       0x20 build/startup_stm32f051x8.o
 
-.debug_line     0x00000000     0xa152
- .debug_line    0x00000000      0xac0 build/main.o
- .debug_line    0x00000ac0      0x2ee build/stm32f0xx_it.o
- .debug_line    0x00000dae      0x335 build/system_stm32f0xx.o
- .debug_line    0x000010e3      0x58e build/stm32f0xx_ll_gpio.o
- .debug_line    0x00001671      0x618 build/stm32f0xx_hal.o
- .debug_line    0x00001c89      0x64a build/stm32f0xx_hal_cortex.o
- .debug_line    0x000022d3      0x7b2 build/stm32f0xx_hal_gpio.o
- .debug_line    0x00002a85     0x4d47 build/stm32f0xx_hal_tim.o
- .debug_line    0x000077cc     0x1d8c build/stm32f0xx_hal_tim_ex.o
- .debug_line    0x00009558      0x359 build/stm32f0xx_hal_msp.o
- .debug_line    0x000098b1      0x82a build/stm32f0xx_ll_utils.o
- .debug_line    0x0000a0db       0x77 build/startup_stm32f051x8.o
+.debug_line     0x00000000     0xa174
+ .debug_line    0x00000000      0xae2 build/main.o
+ .debug_line    0x00000ae2      0x2ee build/stm32f0xx_it.o
+ .debug_line    0x00000dd0      0x335 build/system_stm32f0xx.o
+ .debug_line    0x00001105      0x58e build/stm32f0xx_ll_gpio.o
+ .debug_line    0x00001693      0x618 build/stm32f0xx_hal.o
+ .debug_line    0x00001cab      0x64a build/stm32f0xx_hal_cortex.o
+ .debug_line    0x000022f5      0x7b2 build/stm32f0xx_hal_gpio.o
+ .debug_line    0x00002aa7     0x4d47 build/stm32f0xx_hal_tim.o
+ .debug_line    0x000077ee     0x1d8c build/stm32f0xx_hal_tim_ex.o
+ .debug_line    0x0000957a      0x359 build/stm32f0xx_hal_msp.o
+ .debug_line    0x000098d3      0x82a build/stm32f0xx_ll_utils.o
+ .debug_line    0x0000a0fd       0x77 build/startup_stm32f051x8.o
 
-.debug_str      0x00000000     0x2c7b
- .debug_str     0x00000000     0x2c7b build/main.o
-                                0xd16 (size before relaxing)
- .debug_str     0x00002c7b      0x209 build/stm32f0xx_it.o
- .debug_str     0x00002c7b      0x27a build/system_stm32f0xx.o
- .debug_str     0x00002c7b      0x3aa build/stm32f0xx_ll_gpio.o
- .debug_str     0x00002c7b      0x6ee build/stm32f0xx_hal.o
- .debug_str     0x00002c7b      0x62f build/stm32f0xx_hal_cortex.o
- .debug_str     0x00002c7b      0x409 build/stm32f0xx_hal_gpio.o
- .debug_str     0x00002c7b     0x168e build/stm32f0xx_hal_tim.o
- .debug_str     0x00002c7b      0xe9a build/stm32f0xx_hal_tim_ex.o
- .debug_str     0x00002c7b      0x71d build/stm32f0xx_hal_msp.o
- .debug_str     0x00002c7b      0x610 build/stm32f0xx_ll_utils.o
- .debug_str     0x00002c7b       0x93 build/startup_stm32f051x8.o
+.debug_str      0x00000000     0x2c7a
+ .debug_str     0x00000000     0x2c7a build/main.o
+                                0xd15 (size before relaxing)
+ .debug_str     0x00002c7a      0x209 build/stm32f0xx_it.o
+ .debug_str     0x00002c7a      0x27a build/system_stm32f0xx.o
+ .debug_str     0x00002c7a      0x3aa build/stm32f0xx_ll_gpio.o
+ .debug_str     0x00002c7a      0x6ee build/stm32f0xx_hal.o
+ .debug_str     0x00002c7a      0x62f build/stm32f0xx_hal_cortex.o
+ .debug_str     0x00002c7a      0x409 build/stm32f0xx_hal_gpio.o
+ .debug_str     0x00002c7a     0x168e build/stm32f0xx_hal_tim.o
+ .debug_str     0x00002c7a      0xe9a build/stm32f0xx_hal_tim_ex.o
+ .debug_str     0x00002c7a      0x71d build/stm32f0xx_hal_msp.o
+ .debug_str     0x00002c7a      0x610 build/stm32f0xx_ll_utils.o
+ .debug_str     0x00002c7a       0x93 build/startup_stm32f051x8.o
 
 .comment        0x00000000       0x86
  .comment       0x00000000       0x86 build/main.o
