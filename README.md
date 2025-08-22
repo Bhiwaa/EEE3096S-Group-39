@@ -1,8 +1,13 @@
 # EEE3096S-Group-39
 Embedded system EEE3096S-Group 39
 
-The project involves programming an STM32 board to perform various LED displays as well as perform some numeric analysis. The project comprises two parts namely:
- 1. A physical demo (Part A)
- 2. A Report and data analysis section (Part B)
+The repository holds resources, programs and reports pertaining to Practical undertake during the EEE3096S-Embbedded System II Course. Each Practical will have corresponding README to describe tasks undertaken. This README will be updated with general course updates.
 
-This repository will hold details of the stm32 code files and any other reasources used in the process.
+Current Practicals Undertaken:
+1. Practical 1:
+               Summary - An introduction to programming the STM32F0 using STM32CUBEIDE as well as an introduction to Benchmarking.
+               Status  - Complete
+2. Practical 2:
+               Summary - An introduction to programming the STM32F0 using Assembly code. 
+               Status  - Ongoing 
+
