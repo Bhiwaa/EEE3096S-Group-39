@@ -95,7 +95,7 @@ load_delay_slow:
 	B     delay
 
 delay:
-	subs  R6,  R6,  #1  @ Implement a do nothing look to act as a delay
+	subs  R6,  R6,  #1  @ Implement a do nothing loop to act as a delay
 	BNE   delay
 	B     main_loop
 
