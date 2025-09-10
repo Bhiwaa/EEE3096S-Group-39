@@ -19,9 +19,12 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdint.h>
+#include "stm32f0xx.h"
+#include <stdbool.h> // Added for preference
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,6 +46,18 @@
 
 /* USER CODE BEGIN PV */
 //TODO: Define variables you think you might need
+  uint32_t start_time;
+  uint32_t end_time;
+  uint32_t execution_time;
+  uint64_t checksum;
+  int image_dimension[5] = {128, 160, 192, 224, 256};
+  int run_Count = 0;
+  bool state;
+  int MAX_iter[5] = {100,250,500,750,1000};
+  int Dimension_val = 0;
+  int Iter_val = 0;
+
+
 // - Performance timing variables (e.g execution time, throughput, pixels per second, clock cycles)
 
 /* USER CODE END PV */
@@ -52,7 +67,8 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
 //TODO: Define any function prototypes you might need such as the calculate Mandelbrot function among others
-
+uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations);
+uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -100,22 +116,59 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  //TODO: Visual indicator: Turn on LED0 to signal processing start
+		if (!run_Count) {
+			// Added to distinguish between which mode is running
+			state = true; //  true implies fixed point arithmetic is in use.
+			run_Count = 1;
+		}
+		for (int j = 0; j < (sizeof(MAX_iter) / sizeof(MAX_iter[0])); j++) {
+			for (int i = 0;
+					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+					i++) {
+				Iter_val = MAX_iter[j];
+				Dimension_val = image_dimension[i];
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
+				start_time = HAL_GetTick(); //Record start time
+				checksum = calculate_mandelbrot_fixed_point_arithmetic(
+						image_dimension[i], image_dimension[i], MAX_iter[j]); // Compute Mandelbrot
 
+				/*Retrieve end time and compute execution time*/
+				end_time = HAL_GetTick();
+				execution_time = end_time - start_time;
 
-	  //TODO: Benchmark and Profile Performance
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
+				HAL_Delay(1000);
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1,
+						GPIO_PIN_RESET); // reset LEDS for next cycle
+			}
+		}
+		if (run_Count) {
+			// Added to distinguish between which mode is running
+			state = false; //False implies double method is in use
+			run_Count = 0;
+		}
+		for (int j = 0; j < (sizeof(MAX_iter) / sizeof(MAX_iter[0])); j++) {
+			for (int i = 0;
+					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+					i++) {
+				Iter_val = MAX_iter[j];
+				Dimension_val = image_dimension[i];
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
+				start_time = HAL_GetTick(); //Record start time
+				checksum = calculate_mandelbrot_double(image_dimension[i],
+						image_dimension[i], MAX_iter[j]); // Compute Mandelbrot
 
+				/*Retrieve end time and compute execution time*/
+				end_time = HAL_GetTick();
+				execution_time = end_time - start_time;
 
-	  //TODO: Visual indicator: Turn on LED1 to signal processing start
-
-
-	  //TODO: Keep the LEDs ON for 2s
-
-	  // TODO: Turn OFF LEDs
-
-
-
-  }
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
+				HAL_Delay(1000);
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1,
+						GPIO_PIN_RESET); // reset LEDS for next cycle
+			}
+		}
+	}
   /* USER CODE END 3 */
 }
 
@@ -194,6 +247,55 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 //TODO: Function signatures you defined previously , implement them here
+uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height,
+		int max_iterations) {
+	uint64_t mandelbrot_sum = 0;
+	int64_t S = 65536; // Scaling factor for fixed point arithmetic-corresponds to 2^16
+	//TODO: Complete the function implementation
+	for (int y = 0; y < (height); y++) {
+		for (int x = 0; x < (width); x++) {
+			int64_t x_0 = ((int64_t) x * (int64_t) (3.5 * S)) / width
+					- (int64_t) (2.5 * S);
+			int64_t y_0 = ((int64_t) y * (int64_t) (2.0 * S)) / height
+					- (int64_t) (1.0 * S);
+			int64_t x_i = 0;
+			int64_t y_i = 0;
+			int iteration = 0;
+			while ((iteration < max_iterations)
+					&& (((x_i * x_i) / S) + ((y_i * y_i) / S) <= (4 * S))) {
+				int64_t temp = ((x_i * x_i) / S) - ((y_i * y_i) / S);
+				y_i = (2 * x_i * y_i) / (S) + y_0;
+				x_i = temp + x_0;
+				iteration++;
+			}
+			mandelbrot_sum += iteration;
+		}
+	}
+	return mandelbrot_sum;
+}
+
+uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations) {
+	uint64_t mandelbrot_sum = 0;
+	//TODO: Complete the function implementation
+	for (int y = 0; y < (height); y++) {
+		for (int x = 0; x < (width); x++) {
+			double x_0 = (((double) x) / width) * 3.5 - 2.5;
+			double y_0 = (((double) y) / height) * 2.0 - 1.0;
+			double x_i = 0;
+			double y_i = 0;
+			int iteration = 0;
+			while ((iteration < max_iterations)
+					&& (x_i * x_i + y_i * y_i) <= 4.0) {
+				double temp = x_i * x_i - y_i * y_i;
+				y_i = (2.0 * x_i * y_i) + y_0;
+				x_i = temp + x_0;
+				iteration++;
+			}
+			mandelbrot_sum += iteration;
+		}
+	}
+	return mandelbrot_sum;
+}
 
 /* USER CODE END 4 */
 
