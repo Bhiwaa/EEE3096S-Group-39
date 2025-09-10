@@ -168,6 +168,7 @@ int main(void)
 						GPIO_PIN_RESET); // reset LEDS for next cycle
 			}
 		}
+
 	}
   /* USER CODE END 3 */
 }
