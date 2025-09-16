@@ -181,16 +181,16 @@ int main(void)
 //
 //	}
   /*Code for Task 7 */
-		for (int j = 0; j < (sizeof(Scales) / sizeof(Scales[0])); j++) {
+		//for (int j = 0; j < (sizeof(Scales) / sizeof(Scales[0])); j++) {
 			for (int i = 0;
 					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
 					i++) {
-				Scale_val = Scales[j];
+				Scale_val = Scales[2];
 				Dimension_val = image_dimension[i];
 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
 				start_time = HAL_GetTick(); //Record start time
 				checksum = calculate_mandelbrot_var_fixed_point_arithmetic(
-						image_dimension[i], image_dimension[i], Test_ITER,Scales[j]); // Compute Mandelbrot
+						image_dimension[i], image_dimension[i], Test_ITER,Scales[2]); // Compute Mandelbrot
 
 				/*Retrieve end time and compute execution time*/
 				end_time = HAL_GetTick();
@@ -201,7 +201,7 @@ int main(void)
 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1,
 						GPIO_PIN_RESET); // reset LEDS for next cycle
 			}
-		}
+		//}
   }
   /* USER CODE END 3 */
 }
@@ -325,15 +325,15 @@ uint64_t calculate_mandelbrot_var_fixed_point_arithmetic(int width, int height,	
 			int iteration = 0;
 			while ((iteration < max_iterations)
 					&& (((x_i * x_i) / S) + ((y_i * y_i) / S) <= (4 * S))) {
-//				// Check potential overflow for squares- Alters execution time so comment out
-//				if (x_i != 0 && abs(x_i) > INT64_MAX / abs(x_i)) {
-//					task7_variables.overflow_square++;
-//				}
-//			    // Check potential overflow for cross-term (2 * x_i * y_i)- Alters execution time so comment out
-//				if (x_i != 0 && y_i != 0
-//						&& abs(y_i) > INT64_MAX / (1 * abs(x_i))) {
-//					task7_variables.overflow_cross++;
-//				}
+				// Check potential overflow for squares- Alters execution time so comment out
+				if (x_i != 0 && abs(x_i) > INT32_MAX / abs(x_i)) {
+					task7_variables.overflow_square++;
+				}
+			    // Check potential overflow for cross-term (2 * x_i * y_i)- Alters execution time so comment out
+				if (x_i != 0 && y_i != 0
+						&& abs(y_i) > INT32_MAX / (1 * abs(x_i))) {
+					task7_variables.overflow_cross++;
+				}
 				int64_t temp = ((x_i * x_i) / S) - ((y_i * y_i) / S);
 				y_i = (2 * x_i * y_i) / (S) + y_0;
 				x_i = temp + x_0;

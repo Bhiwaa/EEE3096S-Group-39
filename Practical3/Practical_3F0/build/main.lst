@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
   31:Core/Src/main.c **** /* Private typedef -----------------------------------------------------------*/
   32:Core/Src/main.c **** /* USER CODE BEGIN PTD */
   33:Core/Src/main.c **** typedef struct {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 2
 
 
   34:Core/Src/main.c ****     int overflow_square;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
   88:Core/Src/main.c **** /**
   89:Core/Src/main.c ****   * @brief  The application entry point.
   90:Core/Src/main.c ****   * @retval int
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 3
 
 
   91:Core/Src/main.c ****   */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  145:Core/Src/main.c **** //				/*Retrieve end time and compute execution time*/
  146:Core/Src/main.c **** //				end_time = HAL_GetTick();
  147:Core/Src/main.c **** //				execution_time = end_time - start_time;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 4
 
 
  148:Core/Src/main.c **** //
@@ -217,16 +217,16 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  181:Core/Src/main.c **** //
  182:Core/Src/main.c **** //	}
  183:Core/Src/main.c ****   /*Code for Task 7 */
- 184:Core/Src/main.c **** 		for (int j = 0; j < (sizeof(Scales) / sizeof(Scales[0])); j++) {
+ 184:Core/Src/main.c **** 		//for (int j = 0; j < (sizeof(Scales) / sizeof(Scales[0])); j++) {
  185:Core/Src/main.c **** 			for (int i = 0;
  186:Core/Src/main.c **** 					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
  187:Core/Src/main.c **** 					i++) {
- 188:Core/Src/main.c **** 				Scale_val = Scales[j];
+ 188:Core/Src/main.c **** 				Scale_val = Scales[2];
  189:Core/Src/main.c **** 				Dimension_val = image_dimension[i];
  190:Core/Src/main.c **** 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a c
  191:Core/Src/main.c **** 				start_time = HAL_GetTick(); //Record start time
  192:Core/Src/main.c **** 				checksum = calculate_mandelbrot_var_fixed_point_arithmetic(
- 193:Core/Src/main.c **** 						image_dimension[i], image_dimension[i], Test_ITER,Scales[j]); // Compute Mandelbrot
+ 193:Core/Src/main.c **** 						image_dimension[i], image_dimension[i], Test_ITER,Scales[2]); // Compute Mandelbrot
  194:Core/Src/main.c **** 
  195:Core/Src/main.c **** 				/*Retrieve end time and compute execution time*/
  196:Core/Src/main.c **** 				end_time = HAL_GetTick();
@@ -237,8 +237,8 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  201:Core/Src/main.c **** 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1,
  202:Core/Src/main.c **** 						GPIO_PIN_RESET); // reset LEDS for next cycle
  203:Core/Src/main.c **** 			}
- 204:Core/Src/main.c **** 		}
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 5
+ 204:Core/Src/main.c **** 		//}
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 5
 
 
  205:Core/Src/main.c ****   }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
   31              	.LCFI0:
   32              		.cfi_def_cfa_offset 8
   33              		.cfi_offset 4, -8
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 6
 
 
   34              		.cfi_offset 14, -4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  262:Core/Src/main.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
   80              		.loc 1 262 3 view .LVU15
   81              	.LBB6:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 7
 
 
   82              		.loc 1 262 3 view .LVU16
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  123              	.LVL2:
  276:Core/Src/main.c **** 
  277:Core/Src/main.c ****   /* USER CODE BEGIN MX_GPIO_Init_2 */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 8
 
 
  278:Core/Src/main.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  172 000c 9BB0     		sub	sp, sp, #108
  173              	.LCFI4:
  174              		.cfi_def_cfa_offset 144
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 9
 
 
  175 000e 1890     		str	r0, [sp, #96]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  212 002e FFF7FEFF 		bl	__aeabi_lmul
  213              	.LVL7:
  214 0032 0200     		movs	r2, r0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 10
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 10
 
 
  215 0034 0B00     		movs	r3, r1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  266 007c C845     		cmp	r8, r9
  267 007e 44DA     		bge	.L7
  299:Core/Src/main.c **** 				int64_t temp = ((x_i * x_i) / S) - ((y_i * y_i) / S);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 11
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 11
 
 
  268              		.loc 1 299 16 is_stmt 0 discriminator 1 view .LVU54
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  319 00de 0B04     		lsls	r3, r1, #16
  320 00e0 9C46     		mov	ip, r3
  321 00e2 0F00     		movs	r7, r1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 12
 
 
  322 00e4 000C     		lsrs	r0, r0, #16
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  369              		.loc 1 290 21 is_stmt 1 discriminator 1 view .LVU65
  370 0128 189B     		ldr	r3, [sp, #96]
  371 012a 9A45     		cmp	r10, r3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 13
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 13
 
 
  372 012c 40DA     		bge	.L13
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  419 0178 D917     		asrs	r1, r3, #31
  293:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
  420              		.loc 1 293 31 view .LVU73
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 14
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 14
 
 
  421 017a DB0B     		lsrs	r3, r3, #15
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  464              	.LBE8:
  289:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
  465              		.loc 1 289 33 is_stmt 1 discriminator 2 view .LVU85
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 15
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 15
 
 
  466 01b0 0123     		movs	r3, #1
@@ -890,101 +890,109 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  507              		.global	__aeabi_dmul
  508              		.global	__aeabi_d2lz
  509              		.global	__aeabi_dadd
- 510              		.section	.text.calculate_mandelbrot_var_fixed_point_arithmetic,"ax",%progbits
- 511              		.align	1
- 512              		.global	calculate_mandelbrot_var_fixed_point_arithmetic
- 513              		.syntax unified
- 514              		.code	16
- 515              		.thumb_func
- 517              	calculate_mandelbrot_var_fixed_point_arithmetic:
- 518              	.LVL26:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 16
+ 510              		.global	__aeabi_idiv
+ 511              		.section	.text.calculate_mandelbrot_var_fixed_point_arithmetic,"ax",%progbits
+ 512              		.align	1
+ 513              		.global	calculate_mandelbrot_var_fixed_point_arithmetic
+ 514              		.syntax unified
+ 515              		.code	16
+ 516              		.thumb_func
+ 518              	calculate_mandelbrot_var_fixed_point_arithmetic:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 16
 
 
- 519              	.LFB44:
+ 519              	.LVL26:
+ 520              	.LFB44:
  310:Core/Src/main.c **** 
  311:Core/Src/main.c **** uint64_t calculate_mandelbrot_var_fixed_point_arithmetic(int width, int height,	int max_iterations,
- 520              		.loc 1 311 111 is_stmt 1 view -0
- 521              		.cfi_startproc
- 522              		@ args = 0, pretend = 0, frame = 80
- 523              		@ frame_needed = 0, uses_anonymous_args = 0
- 524              		.loc 1 311 111 is_stmt 0 view .LVU92
- 525 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 526              	.LCFI5:
- 527              		.cfi_def_cfa_offset 20
- 528              		.cfi_offset 4, -20
- 529              		.cfi_offset 5, -16
- 530              		.cfi_offset 6, -12
- 531              		.cfi_offset 7, -8
- 532              		.cfi_offset 14, -4
- 533 0002 DE46     		mov	lr, fp
- 534 0004 5746     		mov	r7, r10
- 535 0006 4E46     		mov	r6, r9
- 536 0008 4546     		mov	r5, r8
- 537 000a E0B5     		push	{r5, r6, r7, lr}
- 538              	.LCFI6:
- 539              		.cfi_def_cfa_offset 36
- 540              		.cfi_offset 8, -36
- 541              		.cfi_offset 9, -32
- 542              		.cfi_offset 10, -28
- 543              		.cfi_offset 11, -24
- 544 000c 95B0     		sub	sp, sp, #84
- 545              	.LCFI7:
- 546              		.cfi_def_cfa_offset 120
- 547 000e 8346     		mov	fp, r0
- 548 0010 1291     		str	r1, [sp, #72]
- 549 0012 9146     		mov	r9, r2
- 550 0014 1393     		str	r3, [sp, #76]
- 312:Core/Src/main.c **** 	uint64_t mandelbrot_sum = 0;
- 551              		.loc 1 312 2 is_stmt 1 view .LVU93
+ 521              		.loc 1 311 111 is_stmt 1 view -0
+ 522              		.cfi_startproc
+ 523              		@ args = 0, pretend = 0, frame = 80
+ 524              		@ frame_needed = 0, uses_anonymous_args = 0
+ 525              		.loc 1 311 111 is_stmt 0 view .LVU92
+ 526 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 527              	.LCFI5:
+ 528              		.cfi_def_cfa_offset 20
+ 529              		.cfi_offset 4, -20
+ 530              		.cfi_offset 5, -16
+ 531              		.cfi_offset 6, -12
+ 532              		.cfi_offset 7, -8
+ 533              		.cfi_offset 14, -4
+ 534 0002 DE46     		mov	lr, fp
+ 535 0004 5746     		mov	r7, r10
+ 536 0006 4E46     		mov	r6, r9
+ 537 0008 4546     		mov	r5, r8
+ 538 000a E0B5     		push	{r5, r6, r7, lr}
+ 539              	.LCFI6:
+ 540              		.cfi_def_cfa_offset 36
+ 541              		.cfi_offset 8, -36
+ 542              		.cfi_offset 9, -32
+ 543              		.cfi_offset 10, -28
+ 544              		.cfi_offset 11, -24
+ 545 000c 95B0     		sub	sp, sp, #84
+ 546              	.LCFI7:
+ 547              		.cfi_def_cfa_offset 120
+ 548 000e 8346     		mov	fp, r0
+ 549 0010 1091     		str	r1, [sp, #64]
+ 550 0012 9246     		mov	r10, r2
+ 551 0014 1900     		movs	r1, r3
  552              	.LVL27:
+ 553              		.loc 1 311 111 view .LVU93
+ 554 0016 1193     		str	r3, [sp, #68]
+ 312:Core/Src/main.c **** 	uint64_t mandelbrot_sum = 0;
+ 555              		.loc 1 312 2 is_stmt 1 view .LVU94
+ 556              	.LVL28:
  313:Core/Src/main.c **** 	int64_t S = Scale; // Scaling factor for fixed point arithmetic set vary between 10^3,10^4,10^6
- 553              		.loc 1 313 2 view .LVU94
- 554              		.loc 1 313 10 is_stmt 0 view .LVU95
- 555 0016 1E00     		movs	r6, r3
- 556 0018 DF17     		asrs	r7, r3, #31
- 557              	.LVL28:
+ 557              		.loc 1 313 2 view .LVU95
+ 558              		.loc 1 313 10 is_stmt 0 view .LVU96
+ 559 0018 0022     		movs	r2, #0
+ 560              	.LVL29:
+ 561              		.loc 1 313 10 view .LVU97
+ 562 001a 0023     		movs	r3, #0
+ 563              	.LVL30:
+ 564              		.loc 1 313 10 view .LVU98
+ 565 001c 1292     		str	r2, [sp, #72]
+ 566 001e 1393     		str	r3, [sp, #76]
+ 567 0020 1291     		str	r1, [sp, #72]
+ 568 0022 CB17     		asrs	r3, r1, #31
+ 569 0024 1393     		str	r3, [sp, #76]
+ 570              	.LVL31:
  314:Core/Src/main.c **** 	task7_variables.overflow_square = 0;
- 558              		.loc 1 314 2 is_stmt 1 view .LVU96
- 559              		.loc 1 314 34 is_stmt 0 view .LVU97
- 560 001a 674B     		ldr	r3, .L28
- 561              	.LVL29:
- 562              		.loc 1 314 34 view .LVU98
- 563 001c 0022     		movs	r2, #0
- 564              	.LVL30:
- 565              		.loc 1 314 34 view .LVU99
- 566 001e 1A60     		str	r2, [r3]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 17
+
+
+ 571              		.loc 1 314 2 is_stmt 1 view .LVU99
+ 572              		.loc 1 314 34 is_stmt 0 view .LVU100
+ 573 0026 744B     		ldr	r3, .L33
+ 574 0028 1A60     		str	r2, [r3]
  315:Core/Src/main.c **** 	task7_variables.overflow_cross  = 0;
- 567              		.loc 1 315 2 is_stmt 1 view .LVU100
- 568              		.loc 1 315 34 is_stmt 0 view .LVU101
- 569 0020 5A60     		str	r2, [r3, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 17
-
-
+ 575              		.loc 1 315 2 is_stmt 1 view .LVU101
+ 576              		.loc 1 315 34 is_stmt 0 view .LVU102
+ 577 002a 5A60     		str	r2, [r3, #4]
  316:Core/Src/main.c **** 	//TODO: Complete the function implementation
  317:Core/Src/main.c **** 	for (int y = 0; y < (height); y++) {
- 570              		.loc 1 317 2 is_stmt 1 view .LVU102
- 571              	.LBB14:
- 572              		.loc 1 317 7 view .LVU103
- 573              	.LVL31:
- 574              		.loc 1 317 11 is_stmt 0 view .LVU104
- 575 0022 0023     		movs	r3, #0
- 576 0024 1193     		str	r3, [sp, #68]
- 577              	.LBE14:
+ 578              		.loc 1 317 2 is_stmt 1 view .LVU103
+ 579              	.LBB14:
+ 580              		.loc 1 317 7 view .LVU104
+ 581              	.LVL32:
+ 582              		.loc 1 317 11 is_stmt 0 view .LVU105
+ 583 002c 0023     		movs	r3, #0
+ 584 002e 0F93     		str	r3, [sp, #60]
+ 585              	.LBE14:
  312:Core/Src/main.c **** 	int64_t S = Scale; // Scaling factor for fixed point arithmetic set vary between 10^3,10^4,10^6
- 578              		.loc 1 312 11 view .LVU105
- 579 0026 0023     		movs	r3, #0
- 580 0028 0024     		movs	r4, #0
- 581 002a 0E93     		str	r3, [sp, #56]
- 582 002c 0F94     		str	r4, [sp, #60]
- 583              	.LBB20:
- 584              		.loc 1 317 2 view .LVU106
- 585 002e B2E0     		b	.L18
- 586              	.LVL32:
- 587              	.L21:
- 588              	.LBB15:
- 589              	.LBB16:
- 590              	.LBB17:
+ 586              		.loc 1 312 11 view .LVU106
+ 587 0030 0023     		movs	r3, #0
+ 588 0032 0024     		movs	r4, #0
+ 589 0034 0C93     		str	r3, [sp, #48]
+ 590 0036 0D94     		str	r4, [sp, #52]
+ 591              	.LBB21:
+ 592              		.loc 1 317 2 view .LVU107
+ 593 0038 CBE0     		b	.L18
+ 594              	.LVL33:
+ 595              	.L20:
+ 596              	.LBB15:
+ 597              	.LBB16:
+ 598              	.LBB17:
  318:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
  319:Core/Src/main.c **** 			int64_t x_0 = ((int64_t) x * (int64_t) (3.5 * S)) / width
  320:Core/Src/main.c **** 					- (int64_t) (2.5 * S);
@@ -995,454 +1003,522 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  325:Core/Src/main.c **** 			int iteration = 0;
  326:Core/Src/main.c **** 			while ((iteration < max_iterations)
  327:Core/Src/main.c **** 					&& (((x_i * x_i) / S) + ((y_i * y_i) / S) <= (4 * S))) {
- 328:Core/Src/main.c **** //				// Check potential overflow for squares
- 329:Core/Src/main.c **** //				if (x_i != 0 && abs(x_i) > INT64_MAX / abs(x_i)) {
- 330:Core/Src/main.c **** //					task7_variables.overflow_square++;
- 331:Core/Src/main.c **** //				}
- 332:Core/Src/main.c **** //			    // Check potential overflow for cross-term (2 * x_i * y_i)
- 333:Core/Src/main.c **** //				if (x_i != 0 && y_i != 0
- 334:Core/Src/main.c **** //						&& abs(y_i) > INT64_MAX / (1 * abs(x_i))) {
- 335:Core/Src/main.c **** //					task7_variables.overflow_cross++;
- 336:Core/Src/main.c **** //				}
+ 328:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 329:Core/Src/main.c **** 				if (x_i != 0 && abs(x_i) > INT32_MAX / abs(x_i)) {
+ 330:Core/Src/main.c **** 					task7_variables.overflow_square++;
+ 331:Core/Src/main.c **** 				}
+ 332:Core/Src/main.c **** 			    // Check potential overflow for cross-term (2 * x_i * y_i)- Alters execution time so comment
+ 333:Core/Src/main.c **** 				if (x_i != 0 && y_i != 0
+ 334:Core/Src/main.c **** 						&& abs(y_i) > INT32_MAX / (1 * abs(x_i))) {
+ 335:Core/Src/main.c **** 					task7_variables.overflow_cross++;
+ 336:Core/Src/main.c **** 				}
  337:Core/Src/main.c **** 				int64_t temp = ((x_i * x_i) / S) - ((y_i * y_i) / S);
- 591              		.loc 1 337 5 is_stmt 1 view .LVU107
- 592              		.loc 1 337 13 is_stmt 0 view .LVU108
- 593 0030 009A     		ldr	r2, [sp]
- 594 0032 019B     		ldr	r3, [sp, #4]
- 595 0034 A41A     		subs	r4, r4, r2
- 596 0036 9D41     		sbcs	r5, r5, r3
- 597              	.LVL33:
+ 599              		.loc 1 337 5 is_stmt 1 view .LVU108
+ 600              		.loc 1 337 13 is_stmt 0 view .LVU109
+ 601 003a 009A     		ldr	r2, [sp]
+ 602 003c 019B     		ldr	r3, [sp, #4]
+ 603 003e 0298     		ldr	r0, [sp, #8]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 18
+
+
+ 604 0040 0399     		ldr	r1, [sp, #12]
+ 605 0042 121A     		subs	r2, r2, r0
+ 606 0044 8B41     		sbcs	r3, r3, r1
+ 607 0046 0092     		str	r2, [sp]
+ 608 0048 0193     		str	r3, [sp, #4]
+ 609              	.LVL34:
  338:Core/Src/main.c **** 				y_i = (2 * x_i * y_i) / (S) + y_0;
- 598              		.loc 1 338 5 is_stmt 1 view .LVU109
- 599              		.loc 1 338 20 is_stmt 0 view .LVU110
- 600 0038 049A     		ldr	r2, [sp, #16]
- 601 003a 059B     		ldr	r3, [sp, #20]
- 602 003c 0298     		ldr	r0, [sp, #8]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 18
-
-
- 603 003e 0399     		ldr	r1, [sp, #12]
- 604 0040 FFF7FEFF 		bl	__aeabi_lmul
- 605              	.LVL34:
- 606 0044 0200     		movs	r2, r0
- 607 0046 0B00     		movs	r3, r1
- 608 0048 9218     		adds	r2, r2, r2
- 609 004a 5B41     		adcs	r3, r3, r3
- 610 004c 1000     		movs	r0, r2
- 611 004e 1900     		movs	r1, r3
- 612              		.loc 1 338 27 view .LVU111
- 613 0050 3200     		movs	r2, r6
- 614 0052 3B00     		movs	r3, r7
- 615 0054 FFF7FEFF 		bl	__aeabi_ldivmod
- 616              	.LVL35:
- 617              		.loc 1 338 9 view .LVU112
- 618 0058 089A     		ldr	r2, [sp, #32]
- 619 005a 099B     		ldr	r3, [sp, #36]
- 620 005c 1218     		adds	r2, r2, r0
- 621 005e 4B41     		adcs	r3, r3, r1
- 622 0060 0492     		str	r2, [sp, #16]
- 623 0062 0593     		str	r3, [sp, #20]
- 624              	.LVL36:
+ 610              		.loc 1 338 5 is_stmt 1 view .LVU110
+ 611              		.loc 1 338 20 is_stmt 0 view .LVU111
+ 612 004a 049A     		ldr	r2, [sp, #16]
+ 613 004c 059B     		ldr	r3, [sp, #20]
+ 614              	.LVL35:
+ 615              		.loc 1 338 20 view .LVU112
+ 616 004e 3000     		movs	r0, r6
+ 617 0050 3900     		movs	r1, r7
+ 618 0052 FFF7FEFF 		bl	__aeabi_lmul
+ 619              	.LVL36:
+ 620 0056 0200     		movs	r2, r0
+ 621 0058 0B00     		movs	r3, r1
+ 622 005a 8018     		adds	r0, r0, r2
+ 623 005c 5941     		adcs	r1, r1, r3
+ 624              		.loc 1 338 27 view .LVU113
+ 625 005e 2200     		movs	r2, r4
+ 626 0060 2B00     		movs	r3, r5
+ 627 0062 FFF7FEFF 		bl	__aeabi_ldivmod
+ 628              	.LVL37:
+ 629              		.loc 1 338 9 view .LVU114
+ 630 0066 089A     		ldr	r2, [sp, #32]
+ 631 0068 099B     		ldr	r3, [sp, #36]
+ 632 006a 1218     		adds	r2, r2, r0
+ 633 006c 4B41     		adcs	r3, r3, r1
+ 634 006e 0492     		str	r2, [sp, #16]
+ 635 0070 0593     		str	r3, [sp, #20]
+ 636              	.LVL38:
  339:Core/Src/main.c **** 				x_i = temp + x_0;
- 625              		.loc 1 339 5 is_stmt 1 view .LVU113
- 626              		.loc 1 339 9 is_stmt 0 view .LVU114
- 627 0064 069A     		ldr	r2, [sp, #24]
- 628 0066 079B     		ldr	r3, [sp, #28]
- 629              	.LVL37:
- 630              		.loc 1 339 9 view .LVU115
- 631 0068 1219     		adds	r2, r2, r4
- 632 006a 6B41     		adcs	r3, r3, r5
- 633 006c 0292     		str	r2, [sp, #8]
- 634 006e 0393     		str	r3, [sp, #12]
- 635              	.LVL38:
- 340:Core/Src/main.c **** 				iteration++;
- 636              		.loc 1 340 5 is_stmt 1 view .LVU116
- 637              		.loc 1 340 14 is_stmt 0 view .LVU117
- 638 0070 0123     		movs	r3, #1
- 639 0072 9C46     		mov	ip, r3
- 640 0074 E244     		add	r10, r10, ip
+ 637              		.loc 1 339 5 is_stmt 1 view .LVU115
+ 638              		.loc 1 339 9 is_stmt 0 view .LVU116
+ 639 0072 009E     		ldr	r6, [sp]
+ 640 0074 019F     		ldr	r7, [sp, #4]
  641              	.LVL39:
- 642              	.L19:
- 643              		.loc 1 340 14 view .LVU118
- 644              	.LBE17:
- 327:Core/Src/main.c **** //				// Check potential overflow for squares
- 645              		.loc 1 327 6 is_stmt 1 view .LVU119
- 646 0076 CA45     		cmp	r10, r9
- 647 0078 31DA     		bge	.L20
- 327:Core/Src/main.c **** //				// Check potential overflow for squares
- 648              		.loc 1 327 16 is_stmt 0 discriminator 1 view .LVU120
- 649 007a 0298     		ldr	r0, [sp, #8]
- 650 007c 0399     		ldr	r1, [sp, #12]
- 651 007e 0200     		movs	r2, r0
- 652 0080 0B00     		movs	r3, r1
- 653 0082 FFF7FEFF 		bl	__aeabi_lmul
- 654              	.LVL40:
- 327:Core/Src/main.c **** //				// Check potential overflow for squares
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 19
+ 642              		.loc 1 339 9 view .LVU117
+ 643 0076 069A     		ldr	r2, [sp, #24]
+ 644 0078 079B     		ldr	r3, [sp, #28]
+ 645              	.LVL40:
+ 646              		.loc 1 339 9 view .LVU118
+ 647 007a B618     		adds	r6, r6, r2
+ 648 007c 5F41     		adcs	r7, r7, r3
+ 649              	.LVL41:
+ 340:Core/Src/main.c **** 				iteration++;
+ 650              		.loc 1 340 5 is_stmt 1 view .LVU119
+ 651              		.loc 1 340 14 is_stmt 0 view .LVU120
+ 652 007e 0123     		movs	r3, #1
+ 653 0080 9C46     		mov	ip, r3
+ 654 0082 E044     		add	r8, r8, ip
+ 655              	.LVL42:
+ 656              	.L19:
+ 657              		.loc 1 340 14 view .LVU121
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 19
 
 
- 655              		.loc 1 327 23 discriminator 1 view .LVU121
- 656 0086 3200     		movs	r2, r6
- 657 0088 3B00     		movs	r3, r7
- 658 008a FFF7FEFF 		bl	__aeabi_ldivmod
- 659              	.LVL41:
- 660 008e 0400     		movs	r4, r0
- 661 0090 0D00     		movs	r5, r1
- 327:Core/Src/main.c **** //				// Check potential overflow for squares
- 662              		.loc 1 327 36 discriminator 1 view .LVU122
- 663 0092 0498     		ldr	r0, [sp, #16]
- 664 0094 0599     		ldr	r1, [sp, #20]
- 665 0096 0200     		movs	r2, r0
- 666 0098 0B00     		movs	r3, r1
- 667 009a FFF7FEFF 		bl	__aeabi_lmul
- 668              	.LVL42:
- 327:Core/Src/main.c **** //				// Check potential overflow for squares
- 669              		.loc 1 327 43 discriminator 1 view .LVU123
- 670 009e 3200     		movs	r2, r6
- 671 00a0 3B00     		movs	r3, r7
- 672 00a2 FFF7FEFF 		bl	__aeabi_ldivmod
- 673              	.LVL43:
- 674 00a6 0090     		str	r0, [sp]
- 675 00a8 0191     		str	r1, [sp, #4]
- 327:Core/Src/main.c **** //				// Check potential overflow for squares
- 676              		.loc 1 327 28 discriminator 1 view .LVU124
- 677 00aa 2000     		movs	r0, r4
- 678 00ac 2900     		movs	r1, r5
- 679 00ae 009A     		ldr	r2, [sp]
- 680 00b0 019B     		ldr	r3, [sp, #4]
- 681 00b2 8018     		adds	r0, r0, r2
- 682 00b4 5941     		adcs	r1, r1, r3
- 683 00b6 0200     		movs	r2, r0
- 684 00b8 0B00     		movs	r3, r1
- 685 00ba 0A92     		str	r2, [sp, #40]
- 686 00bc 0B93     		str	r3, [sp, #44]
- 327:Core/Src/main.c **** //				// Check potential overflow for squares
- 687              		.loc 1 327 54 discriminator 1 view .LVU125
- 688 00be B900     		lsls	r1, r7, #2
- 689 00c0 8C46     		mov	ip, r1
- 690 00c2 B10F     		lsrs	r1, r6, #30
- 691 00c4 8846     		mov	r8, r1
- 692 00c6 6146     		mov	r1, ip
- 693 00c8 4046     		mov	r0, r8
- 694 00ca 0143     		orrs	r1, r0
- 695 00cc 8C46     		mov	ip, r1
- 696 00ce B100     		lsls	r1, r6, #2
- 697 00d0 8846     		mov	r8, r1
- 327:Core/Src/main.c **** //				// Check potential overflow for squares
- 698              		.loc 1 327 6 discriminator 1 view .LVU126
- 699 00d2 6345     		cmp	r3, ip
- 700 00d4 03DC     		bgt	.L20
- 701 00d6 ABD1     		bne	.L21
- 702 00d8 0A9B     		ldr	r3, [sp, #40]
- 703 00da 4345     		cmp	r3, r8
- 704 00dc A8D9     		bls	.L21
- 705              	.L20:
+ 658              	.LBE17:
+ 327:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 659              		.loc 1 327 6 is_stmt 1 view .LVU122
+ 660 0084 D045     		cmp	r8, r10
+ 661 0086 48DA     		bge	.L24
+ 327:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 662              		.loc 1 327 16 is_stmt 0 discriminator 1 view .LVU123
+ 663 0088 3200     		movs	r2, r6
+ 664 008a 3B00     		movs	r3, r7
+ 665 008c 3000     		movs	r0, r6
+ 666 008e 3900     		movs	r1, r7
+ 667 0090 FFF7FEFF 		bl	__aeabi_lmul
+ 668              	.LVL43:
+ 327:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 669              		.loc 1 327 23 discriminator 1 view .LVU124
+ 670 0094 2200     		movs	r2, r4
+ 671 0096 2B00     		movs	r3, r5
+ 672 0098 FFF7FEFF 		bl	__aeabi_ldivmod
+ 673              	.LVL44:
+ 674 009c 0090     		str	r0, [sp]
+ 675 009e 0191     		str	r1, [sp, #4]
+ 327:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 676              		.loc 1 327 36 discriminator 1 view .LVU125
+ 677 00a0 0498     		ldr	r0, [sp, #16]
+ 678 00a2 0599     		ldr	r1, [sp, #20]
+ 679 00a4 0200     		movs	r2, r0
+ 680 00a6 0B00     		movs	r3, r1
+ 681 00a8 FFF7FEFF 		bl	__aeabi_lmul
+ 682              	.LVL45:
+ 327:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 683              		.loc 1 327 43 discriminator 1 view .LVU126
+ 684 00ac 2200     		movs	r2, r4
+ 685 00ae 2B00     		movs	r3, r5
+ 686 00b0 FFF7FEFF 		bl	__aeabi_ldivmod
+ 687              	.LVL46:
+ 688 00b4 0290     		str	r0, [sp, #8]
+ 689 00b6 0391     		str	r1, [sp, #12]
+ 327:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 690              		.loc 1 327 28 discriminator 1 view .LVU127
+ 691 00b8 0098     		ldr	r0, [sp]
+ 692 00ba 0199     		ldr	r1, [sp, #4]
+ 693 00bc 029A     		ldr	r2, [sp, #8]
+ 694 00be 039B     		ldr	r3, [sp, #12]
+ 695 00c0 8018     		adds	r0, r0, r2
+ 696 00c2 5941     		adcs	r1, r1, r3
+ 327:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 697              		.loc 1 327 54 discriminator 1 view .LVU128
+ 698 00c4 A30F     		lsrs	r3, r4, #30
+ 699 00c6 AA00     		lsls	r2, r5, #2
+ 700 00c8 1A43     		orrs	r2, r3
+ 701 00ca A300     		lsls	r3, r4, #2
+ 327:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 702              		.loc 1 327 6 discriminator 1 view .LVU129
+ 703 00cc 9142     		cmp	r1, r2
+ 704 00ce 24DC     		bgt	.L24
+ 705 00d0 21D0     		beq	.L30
+ 706              	.L25:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 20
+
+
+ 707              	.LBB18:
+ 329:Core/Src/main.c **** 					task7_variables.overflow_square++;
+ 708              		.loc 1 329 5 is_stmt 1 view .LVU130
+ 329:Core/Src/main.c **** 					task7_variables.overflow_square++;
+ 709              		.loc 1 329 8 is_stmt 0 view .LVU131
+ 710 00d2 3300     		movs	r3, r6
+ 711 00d4 3B43     		orrs	r3, r7
+ 712 00d6 B0D0     		beq	.L20
+ 329:Core/Src/main.c **** 					task7_variables.overflow_square++;
+ 713              		.loc 1 329 21 discriminator 1 view .LVU132
+ 714 00d8 F317     		asrs	r3, r6, #31
+ 715 00da F218     		adds	r2, r6, r3
+ 716 00dc 5A40     		eors	r2, r3
+ 717 00de 9146     		mov	r9, r2
+ 329:Core/Src/main.c **** 					task7_variables.overflow_square++;
+ 718              		.loc 1 329 42 discriminator 1 view .LVU133
+ 719 00e0 1100     		movs	r1, r2
+ 720 00e2 4648     		ldr	r0, .L33+4
+ 721 00e4 FFF7FEFF 		bl	__aeabi_idiv
+ 722              	.LVL47:
+ 723 00e8 8446     		mov	ip, r0
+ 329:Core/Src/main.c **** 					task7_variables.overflow_square++;
+ 724              		.loc 1 329 18 discriminator 1 view .LVU134
+ 725 00ea 8145     		cmp	r9, r0
+ 726 00ec 03DD     		ble	.L22
+ 330:Core/Src/main.c **** 				}
+ 727              		.loc 1 330 6 is_stmt 1 view .LVU135
+ 330:Core/Src/main.c **** 				}
+ 728              		.loc 1 330 21 is_stmt 0 view .LVU136
+ 729 00ee 424A     		ldr	r2, .L33
+ 730 00f0 1368     		ldr	r3, [r2]
+ 330:Core/Src/main.c **** 				}
+ 731              		.loc 1 330 37 view .LVU137
+ 732 00f2 0133     		adds	r3, r3, #1
+ 733 00f4 1360     		str	r3, [r2]
+ 734              	.L22:
+ 333:Core/Src/main.c **** 						&& abs(y_i) > INT32_MAX / (1 * abs(x_i))) {
+ 735              		.loc 1 333 5 is_stmt 1 view .LVU138
+ 333:Core/Src/main.c **** 						&& abs(y_i) > INT32_MAX / (1 * abs(x_i))) {
+ 736              		.loc 1 333 18 is_stmt 0 discriminator 1 view .LVU139
+ 737 00f6 0499     		ldr	r1, [sp, #16]
+ 738 00f8 059A     		ldr	r2, [sp, #20]
+ 739 00fa 0B00     		movs	r3, r1
+ 740 00fc 1343     		orrs	r3, r2
+ 741 00fe 9CD0     		beq	.L20
+ 334:Core/Src/main.c **** 					task7_variables.overflow_cross++;
+ 742              		.loc 1 334 10 view .LVU140
+ 743 0100 0B00     		movs	r3, r1
+ 744 0102 CA17     		asrs	r2, r1, #31
+ 745 0104 9B18     		adds	r3, r3, r2
+ 746 0106 5340     		eors	r3, r2
+ 334:Core/Src/main.c **** 					task7_variables.overflow_cross++;
+ 747              		.loc 1 334 7 view .LVU141
+ 748 0108 9C45     		cmp	ip, r3
+ 749 010a 96DA     		bge	.L20
+ 335:Core/Src/main.c **** 				}
+ 750              		.loc 1 335 6 is_stmt 1 view .LVU142
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 21
+
+
+ 335:Core/Src/main.c **** 				}
+ 751              		.loc 1 335 21 is_stmt 0 view .LVU143
+ 752 010c 3A4A     		ldr	r2, .L33
+ 753 010e 5368     		ldr	r3, [r2, #4]
+ 335:Core/Src/main.c **** 				}
+ 754              		.loc 1 335 36 view .LVU144
+ 755 0110 0133     		adds	r3, r3, #1
+ 756 0112 5360     		str	r3, [r2, #4]
+ 757 0114 91E7     		b	.L20
+ 758              	.L30:
+ 759              	.LBE18:
+ 327:Core/Src/main.c **** 				// Check potential overflow for squares- Alters execution time so comment out
+ 760              		.loc 1 327 6 discriminator 1 view .LVU145
+ 761 0116 9842     		cmp	r0, r3
+ 762 0118 DBD9     		bls	.L25
+ 763              	.L24:
  341:Core/Src/main.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 20
-
-
  342:Core/Src/main.c **** 			}
  343:Core/Src/main.c **** 			mandelbrot_sum += iteration;
- 706              		.loc 1 343 4 is_stmt 1 view .LVU127
- 707              		.loc 1 343 19 is_stmt 0 view .LVU128
- 708 00de 5346     		mov	r3, r10
- 709 00e0 0C93     		str	r3, [sp, #48]
- 710 00e2 DB17     		asrs	r3, r3, #31
- 711 00e4 0D93     		str	r3, [sp, #52]
- 712 00e6 0E9B     		ldr	r3, [sp, #56]
- 713 00e8 0F9C     		ldr	r4, [sp, #60]
- 714 00ea 0C99     		ldr	r1, [sp, #48]
- 715 00ec 0D9A     		ldr	r2, [sp, #52]
- 716 00ee 5B18     		adds	r3, r3, r1
- 717 00f0 5441     		adcs	r4, r4, r2
- 718 00f2 0E93     		str	r3, [sp, #56]
- 719 00f4 0F94     		str	r4, [sp, #60]
- 720              	.LVL44:
- 721              		.loc 1 343 19 view .LVU129
- 722              	.LBE16:
+ 764              		.loc 1 343 4 is_stmt 1 view .LVU146
+ 765              		.loc 1 343 19 is_stmt 0 view .LVU147
+ 766 011a 4346     		mov	r3, r8
+ 767 011c 0A93     		str	r3, [sp, #40]
+ 768 011e DB17     		asrs	r3, r3, #31
+ 769 0120 0B93     		str	r3, [sp, #44]
+ 770 0122 0C9A     		ldr	r2, [sp, #48]
+ 771 0124 0D9B     		ldr	r3, [sp, #52]
+ 772 0126 0A98     		ldr	r0, [sp, #40]
+ 773 0128 0B99     		ldr	r1, [sp, #44]
+ 774 012a 1218     		adds	r2, r2, r0
+ 775 012c 4B41     		adcs	r3, r3, r1
+ 776 012e 0C92     		str	r2, [sp, #48]
+ 777 0130 0D93     		str	r3, [sp, #52]
+ 778              	.LVL48:
+ 779              		.loc 1 343 19 view .LVU148
+ 780              	.LBE16:
  318:Core/Src/main.c **** 			int64_t x_0 = ((int64_t) x * (int64_t) (3.5 * S)) / width
- 723              		.loc 1 318 33 is_stmt 1 discriminator 2 view .LVU130
- 724 00f6 109B     		ldr	r3, [sp, #64]
- 725              	.LVL45:
+ 781              		.loc 1 318 33 is_stmt 1 discriminator 2 view .LVU149
+ 782 0132 0E9B     		ldr	r3, [sp, #56]
+ 783 0134 0133     		adds	r3, r3, #1
+ 784 0136 0E93     		str	r3, [sp, #56]
+ 785              	.LVL49:
+ 786              	.L28:
  318:Core/Src/main.c **** 			int64_t x_0 = ((int64_t) x * (int64_t) (3.5 * S)) / width
- 726              		.loc 1 318 33 is_stmt 0 discriminator 2 view .LVU131
- 727 00f8 0133     		adds	r3, r3, #1
- 728 00fa 1093     		str	r3, [sp, #64]
- 729              	.LVL46:
- 730              	.L24:
- 318:Core/Src/main.c **** 			int64_t x_0 = ((int64_t) x * (int64_t) (3.5 * S)) / width
- 731              		.loc 1 318 21 is_stmt 1 discriminator 1 view .LVU132
- 732 00fc 109B     		ldr	r3, [sp, #64]
- 733 00fe 5B45     		cmp	r3, fp
- 734 0100 46DA     		bge	.L26
- 735              	.LBB18:
+ 787              		.loc 1 318 21 discriminator 1 view .LVU150
+ 788 0138 0E9B     		ldr	r3, [sp, #56]
+ 789 013a 5B45     		cmp	r3, fp
+ 790 013c 46DA     		bge	.L31
+ 791              	.LBB19:
  319:Core/Src/main.c **** 					- (int64_t) (2.5 * S);
- 736              		.loc 1 319 4 view .LVU133
+ 792              		.loc 1 319 4 view .LVU151
  319:Core/Src/main.c **** 					- (int64_t) (2.5 * S);
- 737              		.loc 1 319 48 is_stmt 0 view .LVU134
- 738 0102 1398     		ldr	r0, [sp, #76]
- 739 0104 FFF7FEFF 		bl	__aeabi_i2d
- 740              	.LVL47:
- 741 0108 0400     		movs	r4, r0
- 742 010a 0D00     		movs	r5, r1
- 743 010c 0022     		movs	r2, #0
- 744 010e 2B4B     		ldr	r3, .L28+4
- 745 0110 FFF7FEFF 		bl	__aeabi_dmul
- 746              	.LVL48:
- 319:Core/Src/main.c **** 					- (int64_t) (2.5 * S);
- 747              		.loc 1 319 33 view .LVU135
- 748 0114 FFF7FEFF 		bl	__aeabi_d2lz
- 749              	.LVL49:
- 750 0118 0200     		movs	r2, r0
- 751 011a 0B00     		movs	r3, r1
- 319:Core/Src/main.c **** 					- (int64_t) (2.5 * S);
- 752              		.loc 1 319 31 view .LVU136
- 753 011c 1099     		ldr	r1, [sp, #64]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 21
+ 793              		.loc 1 319 48 is_stmt 0 view .LVU152
+ 794 013e 1198     		ldr	r0, [sp, #68]
+ 795 0140 FFF7FEFF 		bl	__aeabi_i2d
+ 796              	.LVL50:
+ 797 0144 0600     		movs	r6, r0
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 22
 
 
- 754 011e 0800     		movs	r0, r1
- 755 0120 C917     		asrs	r1, r1, #31
- 756 0122 FFF7FEFF 		bl	__aeabi_lmul
- 757              	.LVL50:
+ 798 0146 0F00     		movs	r7, r1
+ 799 0148 0022     		movs	r2, #0
+ 800 014a 2D4B     		ldr	r3, .L33+8
+ 801 014c FFF7FEFF 		bl	__aeabi_dmul
+ 802              	.LVL51:
  319:Core/Src/main.c **** 					- (int64_t) (2.5 * S);
- 758              		.loc 1 319 54 view .LVU137
- 759 0126 5B46     		mov	r3, fp
- 760 0128 DB17     		asrs	r3, r3, #31
- 761 012a 5A46     		mov	r2, fp
- 762 012c FFF7FEFF 		bl	__aeabi_ldivmod
- 763              	.LVL51:
- 764 0130 0090     		str	r0, [sp]
- 765 0132 0191     		str	r1, [sp, #4]
+ 803              		.loc 1 319 33 view .LVU153
+ 804 0150 FFF7FEFF 		bl	__aeabi_d2lz
+ 805              	.LVL52:
+ 806 0154 0200     		movs	r2, r0
+ 807 0156 0B00     		movs	r3, r1
+ 319:Core/Src/main.c **** 					- (int64_t) (2.5 * S);
+ 808              		.loc 1 319 31 view .LVU154
+ 809 0158 0E99     		ldr	r1, [sp, #56]
+ 810 015a 0800     		movs	r0, r1
+ 811 015c C917     		asrs	r1, r1, #31
+ 812 015e FFF7FEFF 		bl	__aeabi_lmul
+ 813              	.LVL53:
+ 319:Core/Src/main.c **** 					- (int64_t) (2.5 * S);
+ 814              		.loc 1 319 54 view .LVU155
+ 815 0162 5B46     		mov	r3, fp
+ 816 0164 DB17     		asrs	r3, r3, #31
+ 817 0166 5A46     		mov	r2, fp
+ 818 0168 FFF7FEFF 		bl	__aeabi_ldivmod
+ 819              	.LVL54:
+ 820 016c 0090     		str	r0, [sp]
+ 821 016e 0191     		str	r1, [sp, #4]
  320:Core/Src/main.c **** 			int64_t y_0 = ((int64_t) y * (int64_t) (2.0 * S)) / height
- 766              		.loc 1 320 23 view .LVU138
- 767 0134 0022     		movs	r2, #0
- 768 0136 224B     		ldr	r3, .L28+8
- 769 0138 2000     		movs	r0, r4
- 770 013a 2900     		movs	r1, r5
- 771 013c FFF7FEFF 		bl	__aeabi_dmul
- 772              	.LVL52:
+ 822              		.loc 1 320 23 view .LVU156
+ 823 0170 0022     		movs	r2, #0
+ 824 0172 244B     		ldr	r3, .L33+12
+ 825 0174 3000     		movs	r0, r6
+ 826 0176 3900     		movs	r1, r7
+ 827 0178 FFF7FEFF 		bl	__aeabi_dmul
+ 828              	.LVL55:
  320:Core/Src/main.c **** 			int64_t y_0 = ((int64_t) y * (int64_t) (2.0 * S)) / height
- 773              		.loc 1 320 8 view .LVU139
- 774 0140 FFF7FEFF 		bl	__aeabi_d2lz
- 775              	.LVL53:
+ 829              		.loc 1 320 8 view .LVU157
+ 830 017c FFF7FEFF 		bl	__aeabi_d2lz
+ 831              	.LVL56:
  319:Core/Src/main.c **** 					- (int64_t) (2.5 * S);
- 776              		.loc 1 319 12 view .LVU140
- 777 0144 009A     		ldr	r2, [sp]
- 778 0146 019B     		ldr	r3, [sp, #4]
- 779 0148 121A     		subs	r2, r2, r0
- 780 014a 8B41     		sbcs	r3, r3, r1
- 781 014c 0692     		str	r2, [sp, #24]
- 782 014e 0793     		str	r3, [sp, #28]
- 783              	.LVL54:
+ 832              		.loc 1 319 12 view .LVU158
+ 833 0180 009A     		ldr	r2, [sp]
+ 834 0182 019B     		ldr	r3, [sp, #4]
+ 835 0184 121A     		subs	r2, r2, r0
+ 836 0186 8B41     		sbcs	r3, r3, r1
+ 837 0188 0692     		str	r2, [sp, #24]
+ 838 018a 0793     		str	r3, [sp, #28]
+ 839              	.LVL57:
  321:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
- 784              		.loc 1 321 4 is_stmt 1 view .LVU141
+ 840              		.loc 1 321 4 is_stmt 1 view .LVU159
  321:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
- 785              		.loc 1 321 48 is_stmt 0 view .LVU142
- 786 0150 2200     		movs	r2, r4
- 787              	.LVL55:
+ 841              		.loc 1 321 48 is_stmt 0 view .LVU160
+ 842 018c 3200     		movs	r2, r6
+ 843              	.LVL58:
  321:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
- 788              		.loc 1 321 48 view .LVU143
- 789 0152 2B00     		movs	r3, r5
- 790 0154 2000     		movs	r0, r4
- 791 0156 2900     		movs	r1, r5
- 792 0158 FFF7FEFF 		bl	__aeabi_dadd
- 793              	.LVL56:
- 321:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
- 794              		.loc 1 321 33 view .LVU144
- 795 015c FFF7FEFF 		bl	__aeabi_d2lz
- 796              	.LVL57:
- 797 0160 0200     		movs	r2, r0
- 798 0162 0B00     		movs	r3, r1
- 321:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
- 799              		.loc 1 321 31 view .LVU145
- 800 0164 1199     		ldr	r1, [sp, #68]
- 801 0166 0800     		movs	r0, r1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 22
+ 844              		.loc 1 321 48 view .LVU161
+ 845 018e 3B00     		movs	r3, r7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 23
 
 
- 802 0168 C917     		asrs	r1, r1, #31
- 803 016a FFF7FEFF 		bl	__aeabi_lmul
- 804              	.LVL58:
+ 846 0190 3000     		movs	r0, r6
+ 847 0192 3900     		movs	r1, r7
+ 848 0194 FFF7FEFF 		bl	__aeabi_dadd
+ 849              	.LVL59:
  321:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
- 805              		.loc 1 321 54 view .LVU146
- 806 016e 129A     		ldr	r2, [sp, #72]
- 807 0170 D317     		asrs	r3, r2, #31
- 808 0172 FFF7FEFF 		bl	__aeabi_ldivmod
- 809              	.LVL59:
+ 850              		.loc 1 321 33 view .LVU162
+ 851 0198 FFF7FEFF 		bl	__aeabi_d2lz
+ 852              	.LVL60:
+ 853 019c 0200     		movs	r2, r0
+ 854 019e 0B00     		movs	r3, r1
  321:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
- 810              		.loc 1 321 12 view .LVU147
- 811 0176 801B     		subs	r0, r0, r6
- 812 0178 B941     		sbcs	r1, r1, r7
- 813 017a 0890     		str	r0, [sp, #32]
- 814 017c 0991     		str	r1, [sp, #36]
- 815              	.LVL60:
+ 855              		.loc 1 321 31 view .LVU163
+ 856 01a0 0F99     		ldr	r1, [sp, #60]
+ 857 01a2 0800     		movs	r0, r1
+ 858 01a4 C917     		asrs	r1, r1, #31
+ 859 01a6 FFF7FEFF 		bl	__aeabi_lmul
+ 860              	.LVL61:
+ 321:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
+ 861              		.loc 1 321 54 view .LVU164
+ 862 01aa 109A     		ldr	r2, [sp, #64]
+ 863 01ac D317     		asrs	r3, r2, #31
+ 864 01ae FFF7FEFF 		bl	__aeabi_ldivmod
+ 865              	.LVL62:
+ 321:Core/Src/main.c **** 					- (int64_t) (1.0 * S);
+ 866              		.loc 1 321 12 view .LVU165
+ 867 01b2 001B     		subs	r0, r0, r4
+ 868 01b4 A941     		sbcs	r1, r1, r5
+ 869 01b6 0890     		str	r0, [sp, #32]
+ 870 01b8 0991     		str	r1, [sp, #36]
+ 871              	.LVL63:
  323:Core/Src/main.c **** 			int64_t y_i = 0;
- 816              		.loc 1 323 4 is_stmt 1 view .LVU148
+ 872              		.loc 1 323 4 is_stmt 1 view .LVU166
  324:Core/Src/main.c **** 			int iteration = 0;
- 817              		.loc 1 324 4 view .LVU149
+ 873              		.loc 1 324 4 view .LVU167
  325:Core/Src/main.c **** 			while ((iteration < max_iterations)
- 818              		.loc 1 325 4 view .LVU150
+ 874              		.loc 1 325 4 view .LVU168
  326:Core/Src/main.c **** 					&& (((x_i * x_i) / S) + ((y_i * y_i) / S) <= (4 * S))) {
- 819              		.loc 1 326 4 view .LVU151
+ 875              		.loc 1 326 4 view .LVU169
  325:Core/Src/main.c **** 			while ((iteration < max_iterations)
- 820              		.loc 1 325 8 is_stmt 0 view .LVU152
- 821 017e 0023     		movs	r3, #0
- 822 0180 9A46     		mov	r10, r3
+ 876              		.loc 1 325 8 is_stmt 0 view .LVU170
+ 877 01ba 0023     		movs	r3, #0
+ 878 01bc 9846     		mov	r8, r3
  324:Core/Src/main.c **** 			int iteration = 0;
- 823              		.loc 1 324 12 view .LVU153
- 824 0182 0023     		movs	r3, #0
- 825 0184 0024     		movs	r4, #0
- 826 0186 0493     		str	r3, [sp, #16]
- 827 0188 0594     		str	r4, [sp, #20]
+ 879              		.loc 1 324 12 view .LVU171
+ 880 01be 0022     		movs	r2, #0
+ 881 01c0 0023     		movs	r3, #0
+ 882 01c2 0492     		str	r2, [sp, #16]
+ 883 01c4 0593     		str	r3, [sp, #20]
  323:Core/Src/main.c **** 			int64_t y_i = 0;
- 828              		.loc 1 323 12 view .LVU154
- 829 018a 0293     		str	r3, [sp, #8]
- 830 018c 0394     		str	r4, [sp, #12]
+ 884              		.loc 1 323 12 view .LVU172
+ 885 01c6 0026     		movs	r6, #0
+ 886 01c8 0027     		movs	r7, #0
  326:Core/Src/main.c **** 					&& (((x_i * x_i) / S) + ((y_i * y_i) / S) <= (4 * S))) {
- 831              		.loc 1 326 10 view .LVU155
- 832 018e 72E7     		b	.L19
- 833              	.LVL61:
- 834              	.L26:
- 326:Core/Src/main.c **** 					&& (((x_i * x_i) / S) + ((y_i * y_i) / S) <= (4 * S))) {
- 835              		.loc 1 326 10 view .LVU156
- 836              	.LBE18:
- 837              	.LBE15:
- 317:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
- 838              		.loc 1 317 33 is_stmt 1 discriminator 2 view .LVU157
- 839 0190 119B     		ldr	r3, [sp, #68]
- 840              	.LVL62:
- 317:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
- 841              		.loc 1 317 33 is_stmt 0 discriminator 2 view .LVU158
- 842 0192 0133     		adds	r3, r3, #1
- 843 0194 1193     		str	r3, [sp, #68]
- 844              	.LVL63:
- 845              	.L18:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 23
+ 887              		.loc 1 326 10 view .LVU173
+ 888 01ca 5BE7     		b	.L19
+ 889              	.LVL64:
+ 890              	.L31:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 24
 
 
+ 326:Core/Src/main.c **** 					&& (((x_i * x_i) / S) + ((y_i * y_i) / S) <= (4 * S))) {
+ 891              		.loc 1 326 10 view .LVU174
+ 892              	.LBE19:
+ 893              	.LBE15:
  317:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
- 846              		.loc 1 317 20 is_stmt 1 discriminator 1 view .LVU159
- 847 0196 119B     		ldr	r3, [sp, #68]
- 848 0198 129A     		ldr	r2, [sp, #72]
- 849 019a 9342     		cmp	r3, r2
- 850 019c 02DA     		bge	.L27
- 851              	.LBB19:
+ 894              		.loc 1 317 33 is_stmt 1 discriminator 2 view .LVU175
+ 895 01cc 0F9B     		ldr	r3, [sp, #60]
+ 896              	.LVL65:
+ 317:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
+ 897              		.loc 1 317 33 is_stmt 0 discriminator 2 view .LVU176
+ 898 01ce 0133     		adds	r3, r3, #1
+ 899 01d0 0F93     		str	r3, [sp, #60]
+ 900              	.LVL66:
+ 901              	.L18:
+ 317:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
+ 902              		.loc 1 317 20 is_stmt 1 discriminator 1 view .LVU177
+ 903 01d2 0F9B     		ldr	r3, [sp, #60]
+ 904 01d4 109A     		ldr	r2, [sp, #64]
+ 905 01d6 9342     		cmp	r3, r2
+ 906 01d8 04DA     		bge	.L32
+ 907              	.LBB20:
  318:Core/Src/main.c **** 			int64_t x_0 = ((int64_t) x * (int64_t) (3.5 * S)) / width
- 852              		.loc 1 318 12 is_stmt 0 view .LVU160
- 853 019e 0023     		movs	r3, #0
- 854 01a0 1093     		str	r3, [sp, #64]
- 855 01a2 ABE7     		b	.L24
- 856              	.LVL64:
- 857              	.L27:
+ 908              		.loc 1 318 12 is_stmt 0 view .LVU178
+ 909 01da 0023     		movs	r3, #0
+ 910 01dc 0E93     		str	r3, [sp, #56]
+ 911 01de 129C     		ldr	r4, [sp, #72]
+ 912 01e0 139D     		ldr	r5, [sp, #76]
+ 913 01e2 A9E7     		b	.L28
+ 914              	.LVL67:
+ 915              	.L32:
  318:Core/Src/main.c **** 			int64_t x_0 = ((int64_t) x * (int64_t) (3.5 * S)) / width
- 858              		.loc 1 318 12 view .LVU161
- 859              	.LBE19:
- 860              	.LBE20:
+ 916              		.loc 1 318 12 view .LVU179
+ 917              	.LBE20:
+ 918              	.LBE21:
  344:Core/Src/main.c **** 		}
  345:Core/Src/main.c **** 	}
  346:Core/Src/main.c **** 	return mandelbrot_sum;
- 861              		.loc 1 346 2 is_stmt 1 view .LVU162
+ 919              		.loc 1 346 2 is_stmt 1 view .LVU180
  347:Core/Src/main.c **** }
- 862              		.loc 1 347 1 is_stmt 0 view .LVU163
- 863 01a4 0E98     		ldr	r0, [sp, #56]
- 864 01a6 0F99     		ldr	r1, [sp, #60]
- 865 01a8 15B0     		add	sp, sp, #84
- 866              		@ sp needed
- 867              	.LVL65:
- 868              	.LVL66:
- 869              	.LVL67:
- 870              		.loc 1 347 1 view .LVU164
- 871 01aa F0BC     		pop	{r4, r5, r6, r7}
- 872 01ac BB46     		mov	fp, r7
- 873 01ae B246     		mov	r10, r6
- 874 01b0 A946     		mov	r9, r5
- 875 01b2 A046     		mov	r8, r4
- 876 01b4 F0BD     		pop	{r4, r5, r6, r7, pc}
- 877              	.L29:
- 878 01b6 C046     		.align	2
- 879              	.L28:
- 880 01b8 00000000 		.word	task7_variables
- 881 01bc 00000C40 		.word	1074528256
- 882 01c0 00000440 		.word	1074003968
- 883              		.cfi_endproc
- 884              	.LFE44:
- 886              		.global	__aeabi_ddiv
- 887              		.global	__aeabi_dsub
- 888              		.global	__aeabi_dcmple
- 889              		.section	.text.calculate_mandelbrot_double,"ax",%progbits
- 890              		.align	1
- 891              		.global	calculate_mandelbrot_double
- 892              		.syntax unified
- 893              		.code	16
- 894              		.thumb_func
- 896              	calculate_mandelbrot_double:
- 897              	.LVL68:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 24
+ 920              		.loc 1 347 1 is_stmt 0 view .LVU181
+ 921 01e4 0C98     		ldr	r0, [sp, #48]
+ 922 01e6 0D99     		ldr	r1, [sp, #52]
+ 923 01e8 15B0     		add	sp, sp, #84
+ 924              		@ sp needed
+ 925              	.LVL68:
+ 926              	.LVL69:
+ 927              		.loc 1 347 1 view .LVU182
+ 928 01ea F0BC     		pop	{r4, r5, r6, r7}
+ 929 01ec BB46     		mov	fp, r7
+ 930 01ee B246     		mov	r10, r6
+ 931 01f0 A946     		mov	r9, r5
+ 932 01f2 A046     		mov	r8, r4
+ 933 01f4 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 934              	.L34:
+ 935 01f6 C046     		.align	2
+ 936              	.L33:
+ 937 01f8 00000000 		.word	task7_variables
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 25
 
 
- 898              	.LFB45:
+ 938 01fc FFFFFF7F 		.word	2147483647
+ 939 0200 00000C40 		.word	1074528256
+ 940 0204 00000440 		.word	1074003968
+ 941              		.cfi_endproc
+ 942              	.LFE44:
+ 944              		.global	__aeabi_ddiv
+ 945              		.global	__aeabi_dsub
+ 946              		.global	__aeabi_dcmple
+ 947              		.section	.text.calculate_mandelbrot_double,"ax",%progbits
+ 948              		.align	1
+ 949              		.global	calculate_mandelbrot_double
+ 950              		.syntax unified
+ 951              		.code	16
+ 952              		.thumb_func
+ 954              	calculate_mandelbrot_double:
+ 955              	.LVL70:
+ 956              	.LFB45:
  348:Core/Src/main.c **** 
  349:Core/Src/main.c **** uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations) {
- 899              		.loc 1 349 81 is_stmt 1 view -0
- 900              		.cfi_startproc
- 901              		@ args = 0, pretend = 0, frame = 64
- 902              		@ frame_needed = 0, uses_anonymous_args = 0
- 903              		.loc 1 349 81 is_stmt 0 view .LVU166
- 904 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 905              	.LCFI8:
- 906              		.cfi_def_cfa_offset 20
- 907              		.cfi_offset 4, -20
- 908              		.cfi_offset 5, -16
- 909              		.cfi_offset 6, -12
- 910              		.cfi_offset 7, -8
- 911              		.cfi_offset 14, -4
- 912 0002 DE46     		mov	lr, fp
- 913 0004 5746     		mov	r7, r10
- 914 0006 4E46     		mov	r6, r9
- 915 0008 4546     		mov	r5, r8
- 916 000a E0B5     		push	{r5, r6, r7, lr}
- 917              	.LCFI9:
- 918              		.cfi_def_cfa_offset 36
- 919              		.cfi_offset 8, -36
- 920              		.cfi_offset 9, -32
- 921              		.cfi_offset 10, -28
- 922              		.cfi_offset 11, -24
- 923 000c 91B0     		sub	sp, sp, #68
- 924              	.LCFI10:
- 925              		.cfi_def_cfa_offset 104
- 926 000e 0F91     		str	r1, [sp, #60]
- 927 0010 9146     		mov	r9, r2
+ 957              		.loc 1 349 81 is_stmt 1 view -0
+ 958              		.cfi_startproc
+ 959              		@ args = 0, pretend = 0, frame = 64
+ 960              		@ frame_needed = 0, uses_anonymous_args = 0
+ 961              		.loc 1 349 81 is_stmt 0 view .LVU184
+ 962 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 963              	.LCFI8:
+ 964              		.cfi_def_cfa_offset 20
+ 965              		.cfi_offset 4, -20
+ 966              		.cfi_offset 5, -16
+ 967              		.cfi_offset 6, -12
+ 968              		.cfi_offset 7, -8
+ 969              		.cfi_offset 14, -4
+ 970 0002 DE46     		mov	lr, fp
+ 971 0004 5746     		mov	r7, r10
+ 972 0006 4E46     		mov	r6, r9
+ 973 0008 4546     		mov	r5, r8
+ 974 000a E0B5     		push	{r5, r6, r7, lr}
+ 975              	.LCFI9:
+ 976              		.cfi_def_cfa_offset 36
+ 977              		.cfi_offset 8, -36
+ 978              		.cfi_offset 9, -32
+ 979              		.cfi_offset 10, -28
+ 980              		.cfi_offset 11, -24
+ 981 000c 91B0     		sub	sp, sp, #68
+ 982              	.LCFI10:
+ 983              		.cfi_def_cfa_offset 104
+ 984 000e 0F91     		str	r1, [sp, #60]
+ 985 0010 9146     		mov	r9, r2
  350:Core/Src/main.c **** 	uint64_t mandelbrot_sum = 0;
- 928              		.loc 1 350 2 is_stmt 1 view .LVU167
- 929              	.LVL69:
+ 986              		.loc 1 350 2 is_stmt 1 view .LVU185
+ 987              	.LVL71:
  351:Core/Src/main.c **** 	//TODO: Complete the function implementation
  352:Core/Src/main.c **** 	for (int y = 0; y < (height); y++) {
- 930              		.loc 1 352 2 view .LVU168
- 931              	.LBB21:
- 932              		.loc 1 352 7 view .LVU169
- 933              		.loc 1 352 11 is_stmt 0 view .LVU170
- 934 0012 0023     		movs	r3, #0
- 935 0014 0E93     		str	r3, [sp, #56]
- 936              	.LBE21:
+ 988              		.loc 1 352 2 view .LVU186
+ 989              	.LBB22:
+ 990              		.loc 1 352 7 view .LVU187
+ 991              		.loc 1 352 11 is_stmt 0 view .LVU188
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 26
+
+
+ 992 0012 0023     		movs	r3, #0
+ 993 0014 0E93     		str	r3, [sp, #56]
+ 994              	.LBE22:
  350:Core/Src/main.c **** 	uint64_t mandelbrot_sum = 0;
- 937              		.loc 1 350 11 view .LVU171
- 938 0016 0023     		movs	r3, #0
- 939 0018 0024     		movs	r4, #0
- 940 001a 0C93     		str	r3, [sp, #48]
- 941 001c 0D94     		str	r4, [sp, #52]
- 942 001e 0B90     		str	r0, [sp, #44]
- 943              	.LBB27:
- 944              		.loc 1 352 2 view .LVU172
- 945 0020 8DE0     		b	.L31
- 946              	.LVL70:
- 947              	.L34:
- 948              	.LBB22:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 25
-
-
- 949              	.LBB23:
- 950              	.LBB24:
+ 995              		.loc 1 350 11 view .LVU189
+ 996 0016 0023     		movs	r3, #0
+ 997 0018 0024     		movs	r4, #0
+ 998 001a 0C93     		str	r3, [sp, #48]
+ 999 001c 0D94     		str	r4, [sp, #52]
+ 1000 001e 0B90     		str	r0, [sp, #44]
+ 1001              	.LBB28:
+ 1002              		.loc 1 352 2 view .LVU190
+ 1003 0020 8DE0     		b	.L36
+ 1004              	.LVL72:
+ 1005              	.L39:
+ 1006              	.LBB23:
+ 1007              	.LBB24:
+ 1008              	.LBB25:
  353:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
  354:Core/Src/main.c **** 			double x_0 = (((double) x) / width) * 3.5 - 2.5;
  355:Core/Src/main.c **** 			double y_0 = (((double) y) / height) * 2.0 - 1.0;
@@ -1452,355 +1528,355 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  359:Core/Src/main.c **** 			while ((iteration < max_iterations)
  360:Core/Src/main.c **** 					&& (x_i * x_i + y_i * y_i) <= 4.0) {
  361:Core/Src/main.c **** 				double temp = x_i * x_i - y_i * y_i;
- 951              		.loc 1 361 5 is_stmt 1 view .LVU173
- 952              		.loc 1 361 12 is_stmt 0 view .LVU174
- 953 0022 029A     		ldr	r2, [sp, #8]
- 954 0024 039B     		ldr	r3, [sp, #12]
- 955 0026 0098     		ldr	r0, [sp]
- 956 0028 0199     		ldr	r1, [sp, #4]
- 957 002a FFF7FEFF 		bl	__aeabi_dsub
- 958              	.LVL71:
- 959 002e 0090     		str	r0, [sp]
- 960 0030 0191     		str	r1, [sp, #4]
- 961              	.LVL72:
+ 1009              		.loc 1 361 5 is_stmt 1 view .LVU191
+ 1010              		.loc 1 361 12 is_stmt 0 view .LVU192
+ 1011 0022 029A     		ldr	r2, [sp, #8]
+ 1012 0024 039B     		ldr	r3, [sp, #12]
+ 1013 0026 0098     		ldr	r0, [sp]
+ 1014 0028 0199     		ldr	r1, [sp, #4]
+ 1015 002a FFF7FEFF 		bl	__aeabi_dsub
+ 1016              	.LVL73:
+ 1017 002e 0090     		str	r0, [sp]
+ 1018 0030 0191     		str	r1, [sp, #4]
+ 1019              	.LVL74:
  362:Core/Src/main.c **** 				y_i = (2.0 * x_i * y_i) + y_0;
- 962              		.loc 1 362 5 is_stmt 1 view .LVU175
- 963              		.loc 1 362 16 is_stmt 0 view .LVU176
- 964 0032 3200     		movs	r2, r6
- 965 0034 3B00     		movs	r3, r7
- 966 0036 3000     		movs	r0, r6
- 967              	.LVL73:
- 968              		.loc 1 362 16 view .LVU177
- 969 0038 3900     		movs	r1, r7
- 970 003a FFF7FEFF 		bl	__aeabi_dadd
- 971              	.LVL74:
- 972              		.loc 1 362 22 view .LVU178
- 973 003e 2200     		movs	r2, r4
- 974 0040 2B00     		movs	r3, r5
- 975 0042 FFF7FEFF 		bl	__aeabi_dmul
- 976              	.LVL75:
- 977              		.loc 1 362 9 view .LVU179
- 978 0046 069A     		ldr	r2, [sp, #24]
- 979 0048 079B     		ldr	r3, [sp, #28]
- 980 004a FFF7FEFF 		bl	__aeabi_dadd
- 981              	.LVL76:
- 982 004e 0400     		movs	r4, r0
- 983              	.LVL77:
- 984              		.loc 1 362 9 view .LVU180
- 985 0050 0D00     		movs	r5, r1
- 986              	.LVL78:
+ 1020              		.loc 1 362 5 is_stmt 1 view .LVU193
+ 1021              		.loc 1 362 16 is_stmt 0 view .LVU194
+ 1022 0032 3200     		movs	r2, r6
+ 1023 0034 3B00     		movs	r3, r7
+ 1024 0036 3000     		movs	r0, r6
+ 1025              	.LVL75:
+ 1026              		.loc 1 362 16 view .LVU195
+ 1027 0038 3900     		movs	r1, r7
+ 1028 003a FFF7FEFF 		bl	__aeabi_dadd
+ 1029              	.LVL76:
+ 1030              		.loc 1 362 22 view .LVU196
+ 1031 003e 2200     		movs	r2, r4
+ 1032 0040 2B00     		movs	r3, r5
+ 1033 0042 FFF7FEFF 		bl	__aeabi_dmul
+ 1034              	.LVL77:
+ 1035              		.loc 1 362 9 view .LVU197
+ 1036 0046 069A     		ldr	r2, [sp, #24]
+ 1037 0048 079B     		ldr	r3, [sp, #28]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 27
+
+
+ 1038 004a FFF7FEFF 		bl	__aeabi_dadd
+ 1039              	.LVL78:
+ 1040 004e 0400     		movs	r4, r0
+ 1041              	.LVL79:
+ 1042              		.loc 1 362 9 view .LVU198
+ 1043 0050 0D00     		movs	r5, r1
+ 1044              	.LVL80:
  363:Core/Src/main.c **** 				x_i = temp + x_0;
- 987              		.loc 1 363 5 is_stmt 1 view .LVU181
- 988              		.loc 1 363 9 is_stmt 0 view .LVU182
- 989 0052 009A     		ldr	r2, [sp]
- 990 0054 019B     		ldr	r3, [sp, #4]
- 991 0056 0498     		ldr	r0, [sp, #16]
- 992 0058 0599     		ldr	r1, [sp, #20]
- 993 005a FFF7FEFF 		bl	__aeabi_dadd
- 994              	.LVL79:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 26
-
-
- 995 005e 0600     		movs	r6, r0
- 996              	.LVL80:
- 997              		.loc 1 363 9 view .LVU183
- 998 0060 0F00     		movs	r7, r1
- 999              	.LVL81:
+ 1045              		.loc 1 363 5 is_stmt 1 view .LVU199
+ 1046              		.loc 1 363 9 is_stmt 0 view .LVU200
+ 1047 0052 009A     		ldr	r2, [sp]
+ 1048 0054 019B     		ldr	r3, [sp, #4]
+ 1049 0056 0498     		ldr	r0, [sp, #16]
+ 1050 0058 0599     		ldr	r1, [sp, #20]
+ 1051 005a FFF7FEFF 		bl	__aeabi_dadd
+ 1052              	.LVL81:
+ 1053 005e 0600     		movs	r6, r0
+ 1054              	.LVL82:
+ 1055              		.loc 1 363 9 view .LVU201
+ 1056 0060 0F00     		movs	r7, r1
+ 1057              	.LVL83:
  364:Core/Src/main.c **** 				iteration++;
- 1000              		.loc 1 364 5 is_stmt 1 view .LVU184
- 1001              		.loc 1 364 14 is_stmt 0 view .LVU185
- 1002 0062 0123     		movs	r3, #1
- 1003 0064 9C46     		mov	ip, r3
- 1004 0066 E044     		add	r8, r8, ip
- 1005              	.LVL82:
- 1006              	.L32:
- 1007              		.loc 1 364 14 view .LVU186
- 1008              	.LBE24:
+ 1058              		.loc 1 364 5 is_stmt 1 view .LVU202
+ 1059              		.loc 1 364 14 is_stmt 0 view .LVU203
+ 1060 0062 0123     		movs	r3, #1
+ 1061 0064 9C46     		mov	ip, r3
+ 1062 0066 E044     		add	r8, r8, ip
+ 1063              	.LVL84:
+ 1064              	.L37:
+ 1065              		.loc 1 364 14 view .LVU204
+ 1066              	.LBE25:
  360:Core/Src/main.c **** 				double temp = x_i * x_i - y_i * y_i;
- 1009              		.loc 1 360 6 is_stmt 1 view .LVU187
- 1010 0068 C845     		cmp	r8, r9
- 1011 006a 1BDA     		bge	.L33
+ 1067              		.loc 1 360 6 is_stmt 1 view .LVU205
+ 1068 0068 C845     		cmp	r8, r9
+ 1069 006a 1BDA     		bge	.L38
  360:Core/Src/main.c **** 				double temp = x_i * x_i - y_i * y_i;
- 1012              		.loc 1 360 14 is_stmt 0 discriminator 1 view .LVU188
- 1013 006c 3200     		movs	r2, r6
- 1014 006e 3B00     		movs	r3, r7
- 1015 0070 3000     		movs	r0, r6
- 1016 0072 3900     		movs	r1, r7
- 1017 0074 FFF7FEFF 		bl	__aeabi_dmul
- 1018              	.LVL83:
- 1019 0078 0090     		str	r0, [sp]
- 1020 007a 0191     		str	r1, [sp, #4]
+ 1070              		.loc 1 360 14 is_stmt 0 discriminator 1 view .LVU206
+ 1071 006c 3200     		movs	r2, r6
+ 1072 006e 3B00     		movs	r3, r7
+ 1073 0070 3000     		movs	r0, r6
+ 1074 0072 3900     		movs	r1, r7
+ 1075 0074 FFF7FEFF 		bl	__aeabi_dmul
+ 1076              	.LVL85:
+ 1077 0078 0090     		str	r0, [sp]
+ 1078 007a 0191     		str	r1, [sp, #4]
  360:Core/Src/main.c **** 				double temp = x_i * x_i - y_i * y_i;
- 1021              		.loc 1 360 26 discriminator 1 view .LVU189
- 1022 007c 2200     		movs	r2, r4
- 1023 007e 2B00     		movs	r3, r5
- 1024 0080 2000     		movs	r0, r4
- 1025 0082 2900     		movs	r1, r5
- 1026 0084 FFF7FEFF 		bl	__aeabi_dmul
- 1027              	.LVL84:
- 1028 0088 0200     		movs	r2, r0
- 1029 008a 0B00     		movs	r3, r1
- 1030 008c 0292     		str	r2, [sp, #8]
- 1031 008e 0393     		str	r3, [sp, #12]
+ 1079              		.loc 1 360 26 discriminator 1 view .LVU207
+ 1080 007c 2200     		movs	r2, r4
+ 1081 007e 2B00     		movs	r3, r5
+ 1082 0080 2000     		movs	r0, r4
+ 1083 0082 2900     		movs	r1, r5
+ 1084 0084 FFF7FEFF 		bl	__aeabi_dmul
+ 1085              	.LVL86:
+ 1086 0088 0200     		movs	r2, r0
+ 1087 008a 0B00     		movs	r3, r1
+ 1088 008c 0292     		str	r2, [sp, #8]
+ 1089 008e 0393     		str	r3, [sp, #12]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 28
+
+
  360:Core/Src/main.c **** 				double temp = x_i * x_i - y_i * y_i;
- 1032              		.loc 1 360 20 discriminator 1 view .LVU190
- 1033 0090 0098     		ldr	r0, [sp]
- 1034 0092 0199     		ldr	r1, [sp, #4]
- 1035 0094 FFF7FEFF 		bl	__aeabi_dadd
- 1036              	.LVL85:
+ 1090              		.loc 1 360 20 discriminator 1 view .LVU208
+ 1091 0090 0098     		ldr	r0, [sp]
+ 1092 0092 0199     		ldr	r1, [sp, #4]
+ 1093 0094 FFF7FEFF 		bl	__aeabi_dadd
+ 1094              	.LVL87:
  360:Core/Src/main.c **** 				double temp = x_i * x_i - y_i * y_i;
- 1037              		.loc 1 360 6 discriminator 1 view .LVU191
- 1038 0098 0022     		movs	r2, #0
- 1039 009a 344B     		ldr	r3, .L40
- 1040 009c FFF7FEFF 		bl	__aeabi_dcmple
- 1041              	.LVL86:
- 1042 00a0 0028     		cmp	r0, #0
- 1043 00a2 BED1     		bne	.L34
- 1044              	.L33:
+ 1095              		.loc 1 360 6 discriminator 1 view .LVU209
+ 1096 0098 0022     		movs	r2, #0
+ 1097 009a 344B     		ldr	r3, .L45
+ 1098 009c FFF7FEFF 		bl	__aeabi_dcmple
+ 1099              	.LVL88:
+ 1100 00a0 0028     		cmp	r0, #0
+ 1101 00a2 BED1     		bne	.L39
+ 1102              	.L38:
  365:Core/Src/main.c **** 			}
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 27
-
-
  366:Core/Src/main.c **** 			mandelbrot_sum += iteration;
- 1045              		.loc 1 366 4 is_stmt 1 view .LVU192
- 1046              		.loc 1 366 19 is_stmt 0 view .LVU193
- 1047 00a4 4346     		mov	r3, r8
- 1048 00a6 0893     		str	r3, [sp, #32]
- 1049 00a8 DB17     		asrs	r3, r3, #31
- 1050 00aa 0993     		str	r3, [sp, #36]
- 1051 00ac 0C9B     		ldr	r3, [sp, #48]
- 1052 00ae 0D9C     		ldr	r4, [sp, #52]
- 1053 00b0 0899     		ldr	r1, [sp, #32]
- 1054 00b2 099A     		ldr	r2, [sp, #36]
- 1055 00b4 5B18     		adds	r3, r3, r1
- 1056 00b6 5441     		adcs	r4, r4, r2
- 1057 00b8 0C93     		str	r3, [sp, #48]
- 1058 00ba 0D94     		str	r4, [sp, #52]
- 1059              	.LVL87:
- 1060              		.loc 1 366 19 view .LVU194
- 1061              	.LBE23:
+ 1103              		.loc 1 366 4 is_stmt 1 view .LVU210
+ 1104              		.loc 1 366 19 is_stmt 0 view .LVU211
+ 1105 00a4 4346     		mov	r3, r8
+ 1106 00a6 0893     		str	r3, [sp, #32]
+ 1107 00a8 DB17     		asrs	r3, r3, #31
+ 1108 00aa 0993     		str	r3, [sp, #36]
+ 1109 00ac 0C9B     		ldr	r3, [sp, #48]
+ 1110 00ae 0D9C     		ldr	r4, [sp, #52]
+ 1111 00b0 0899     		ldr	r1, [sp, #32]
+ 1112 00b2 099A     		ldr	r2, [sp, #36]
+ 1113 00b4 5B18     		adds	r3, r3, r1
+ 1114 00b6 5441     		adcs	r4, r4, r2
+ 1115 00b8 0C93     		str	r3, [sp, #48]
+ 1116 00ba 0D94     		str	r4, [sp, #52]
+ 1117              	.LVL89:
+ 1118              		.loc 1 366 19 view .LVU212
+ 1119              	.LBE24:
  353:Core/Src/main.c **** 			double x_0 = (((double) x) / width) * 3.5 - 2.5;
- 1062              		.loc 1 353 33 is_stmt 1 discriminator 2 view .LVU195
- 1063 00bc 0A9B     		ldr	r3, [sp, #40]
- 1064              	.LVL88:
+ 1120              		.loc 1 353 33 is_stmt 1 discriminator 2 view .LVU213
+ 1121 00bc 0A9B     		ldr	r3, [sp, #40]
+ 1122              	.LVL90:
  353:Core/Src/main.c **** 			double x_0 = (((double) x) / width) * 3.5 - 2.5;
- 1065              		.loc 1 353 33 is_stmt 0 discriminator 2 view .LVU196
- 1066 00be 0133     		adds	r3, r3, #1
- 1067 00c0 0A93     		str	r3, [sp, #40]
- 1068              	.LVL89:
- 1069              	.L36:
+ 1123              		.loc 1 353 33 is_stmt 0 discriminator 2 view .LVU214
+ 1124 00be 0133     		adds	r3, r3, #1
+ 1125 00c0 0A93     		str	r3, [sp, #40]
+ 1126              	.LVL91:
+ 1127              	.L41:
  353:Core/Src/main.c **** 			double x_0 = (((double) x) / width) * 3.5 - 2.5;
- 1070              		.loc 1 353 21 is_stmt 1 discriminator 1 view .LVU197
- 1071 00c2 0A9B     		ldr	r3, [sp, #40]
- 1072 00c4 0B9A     		ldr	r2, [sp, #44]
- 1073 00c6 9342     		cmp	r3, r2
- 1074 00c8 36DA     		bge	.L38
- 1075              	.LBB25:
+ 1128              		.loc 1 353 21 is_stmt 1 discriminator 1 view .LVU215
+ 1129 00c2 0A9B     		ldr	r3, [sp, #40]
+ 1130 00c4 0B9A     		ldr	r2, [sp, #44]
+ 1131 00c6 9342     		cmp	r3, r2
+ 1132 00c8 36DA     		bge	.L43
+ 1133              	.LBB26:
  354:Core/Src/main.c **** 			double y_0 = (((double) y) / height) * 2.0 - 1.0;
- 1076              		.loc 1 354 4 view .LVU198
+ 1134              		.loc 1 354 4 view .LVU216
  354:Core/Src/main.c **** 			double y_0 = (((double) y) / height) * 2.0 - 1.0;
- 1077              		.loc 1 354 19 is_stmt 0 view .LVU199
- 1078 00ca 0A98     		ldr	r0, [sp, #40]
- 1079 00cc FFF7FEFF 		bl	__aeabi_i2d
- 1080              	.LVL90:
- 1081 00d0 0400     		movs	r4, r0
- 1082 00d2 0D00     		movs	r5, r1
- 354:Core/Src/main.c **** 			double y_0 = (((double) y) / height) * 2.0 - 1.0;
- 1083              		.loc 1 354 31 view .LVU200
- 1084 00d4 0B98     		ldr	r0, [sp, #44]
- 1085 00d6 FFF7FEFF 		bl	__aeabi_i2d
- 1086              	.LVL91:
- 1087 00da 0200     		movs	r2, r0
- 1088 00dc 0B00     		movs	r3, r1
- 1089 00de 2000     		movs	r0, r4
- 1090 00e0 2900     		movs	r1, r5
- 1091 00e2 FFF7FEFF 		bl	__aeabi_ddiv
- 1092              	.LVL92:
- 354:Core/Src/main.c **** 			double y_0 = (((double) y) / height) * 2.0 - 1.0;
- 1093              		.loc 1 354 40 view .LVU201
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 28
+ 1135              		.loc 1 354 19 is_stmt 0 view .LVU217
+ 1136 00ca 0A98     		ldr	r0, [sp, #40]
+ 1137 00cc FFF7FEFF 		bl	__aeabi_i2d
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 29
 
 
- 1094 00e6 0022     		movs	r2, #0
- 1095 00e8 214B     		ldr	r3, .L40+4
- 1096 00ea FFF7FEFF 		bl	__aeabi_dmul
- 1097              	.LVL93:
+ 1138              	.LVL92:
+ 1139 00d0 0400     		movs	r4, r0
+ 1140 00d2 0D00     		movs	r5, r1
  354:Core/Src/main.c **** 			double y_0 = (((double) y) / height) * 2.0 - 1.0;
- 1098              		.loc 1 354 11 view .LVU202
- 1099 00ee 0022     		movs	r2, #0
- 1100 00f0 204B     		ldr	r3, .L40+8
- 1101 00f2 FFF7FEFF 		bl	__aeabi_dsub
- 1102              	.LVL94:
- 1103 00f6 0490     		str	r0, [sp, #16]
- 1104 00f8 0591     		str	r1, [sp, #20]
- 1105              	.LVL95:
+ 1141              		.loc 1 354 31 view .LVU218
+ 1142 00d4 0B98     		ldr	r0, [sp, #44]
+ 1143 00d6 FFF7FEFF 		bl	__aeabi_i2d
+ 1144              	.LVL93:
+ 1145 00da 0200     		movs	r2, r0
+ 1146 00dc 0B00     		movs	r3, r1
+ 1147 00de 2000     		movs	r0, r4
+ 1148 00e0 2900     		movs	r1, r5
+ 1149 00e2 FFF7FEFF 		bl	__aeabi_ddiv
+ 1150              	.LVL94:
+ 354:Core/Src/main.c **** 			double y_0 = (((double) y) / height) * 2.0 - 1.0;
+ 1151              		.loc 1 354 40 view .LVU219
+ 1152 00e6 0022     		movs	r2, #0
+ 1153 00e8 214B     		ldr	r3, .L45+4
+ 1154 00ea FFF7FEFF 		bl	__aeabi_dmul
+ 1155              	.LVL95:
+ 354:Core/Src/main.c **** 			double y_0 = (((double) y) / height) * 2.0 - 1.0;
+ 1156              		.loc 1 354 11 view .LVU220
+ 1157 00ee 0022     		movs	r2, #0
+ 1158 00f0 204B     		ldr	r3, .L45+8
+ 1159 00f2 FFF7FEFF 		bl	__aeabi_dsub
+ 1160              	.LVL96:
+ 1161 00f6 0490     		str	r0, [sp, #16]
+ 1162 00f8 0591     		str	r1, [sp, #20]
+ 1163              	.LVL97:
  355:Core/Src/main.c **** 			double x_i = 0;
- 1106              		.loc 1 355 4 is_stmt 1 view .LVU203
+ 1164              		.loc 1 355 4 is_stmt 1 view .LVU221
  355:Core/Src/main.c **** 			double x_i = 0;
- 1107              		.loc 1 355 19 is_stmt 0 view .LVU204
- 1108 00fa 5846     		mov	r0, fp
- 1109              	.LVL96:
+ 1165              		.loc 1 355 19 is_stmt 0 view .LVU222
+ 1166 00fa 5846     		mov	r0, fp
+ 1167              	.LVL98:
  355:Core/Src/main.c **** 			double x_i = 0;
- 1110              		.loc 1 355 19 view .LVU205
- 1111 00fc FFF7FEFF 		bl	__aeabi_i2d
- 1112              	.LVL97:
- 1113 0100 0400     		movs	r4, r0
- 1114 0102 0D00     		movs	r5, r1
+ 1168              		.loc 1 355 19 view .LVU223
+ 1169 00fc FFF7FEFF 		bl	__aeabi_i2d
+ 1170              	.LVL99:
+ 1171 0100 0400     		movs	r4, r0
+ 1172 0102 0D00     		movs	r5, r1
  355:Core/Src/main.c **** 			double x_i = 0;
- 1115              		.loc 1 355 31 view .LVU206
- 1116 0104 5046     		mov	r0, r10
- 1117 0106 FFF7FEFF 		bl	__aeabi_i2d
- 1118              	.LVL98:
- 1119 010a 0200     		movs	r2, r0
- 1120 010c 0B00     		movs	r3, r1
- 1121 010e 2000     		movs	r0, r4
- 1122 0110 2900     		movs	r1, r5
- 1123 0112 FFF7FEFF 		bl	__aeabi_ddiv
- 1124              	.LVL99:
+ 1173              		.loc 1 355 31 view .LVU224
+ 1174 0104 5046     		mov	r0, r10
+ 1175 0106 FFF7FEFF 		bl	__aeabi_i2d
+ 1176              	.LVL100:
+ 1177 010a 0200     		movs	r2, r0
+ 1178 010c 0B00     		movs	r3, r1
+ 1179 010e 2000     		movs	r0, r4
+ 1180 0110 2900     		movs	r1, r5
+ 1181 0112 FFF7FEFF 		bl	__aeabi_ddiv
+ 1182              	.LVL101:
  355:Core/Src/main.c **** 			double x_i = 0;
- 1125              		.loc 1 355 41 view .LVU207
- 1126 0116 0200     		movs	r2, r0
- 1127 0118 0B00     		movs	r3, r1
- 1128 011a FFF7FEFF 		bl	__aeabi_dadd
- 1129              	.LVL100:
+ 1183              		.loc 1 355 41 view .LVU225
+ 1184 0116 0200     		movs	r2, r0
+ 1185 0118 0B00     		movs	r3, r1
+ 1186 011a FFF7FEFF 		bl	__aeabi_dadd
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 30
+
+
+ 1187              	.LVL102:
  355:Core/Src/main.c **** 			double x_i = 0;
- 1130              		.loc 1 355 11 view .LVU208
- 1131 011e 0022     		movs	r2, #0
- 1132 0120 154B     		ldr	r3, .L40+12
- 1133 0122 FFF7FEFF 		bl	__aeabi_dsub
- 1134              	.LVL101:
- 1135 0126 0690     		str	r0, [sp, #24]
- 1136 0128 0791     		str	r1, [sp, #28]
- 1137              	.LVL102:
+ 1188              		.loc 1 355 11 view .LVU226
+ 1189 011e 0022     		movs	r2, #0
+ 1190 0120 154B     		ldr	r3, .L45+12
+ 1191 0122 FFF7FEFF 		bl	__aeabi_dsub
+ 1192              	.LVL103:
+ 1193 0126 0690     		str	r0, [sp, #24]
+ 1194 0128 0791     		str	r1, [sp, #28]
+ 1195              	.LVL104:
  356:Core/Src/main.c **** 			double y_i = 0;
- 1138              		.loc 1 356 4 is_stmt 1 view .LVU209
+ 1196              		.loc 1 356 4 is_stmt 1 view .LVU227
  357:Core/Src/main.c **** 			int iteration = 0;
- 1139              		.loc 1 357 4 view .LVU210
+ 1197              		.loc 1 357 4 view .LVU228
  358:Core/Src/main.c **** 			while ((iteration < max_iterations)
- 1140              		.loc 1 358 4 view .LVU211
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 29
-
-
+ 1198              		.loc 1 358 4 view .LVU229
  359:Core/Src/main.c **** 					&& (x_i * x_i + y_i * y_i) <= 4.0) {
- 1141              		.loc 1 359 4 view .LVU212
+ 1199              		.loc 1 359 4 view .LVU230
  358:Core/Src/main.c **** 			while ((iteration < max_iterations)
- 1142              		.loc 1 358 8 is_stmt 0 view .LVU213
- 1143 012a 0023     		movs	r3, #0
- 1144 012c 9846     		mov	r8, r3
+ 1200              		.loc 1 358 8 is_stmt 0 view .LVU231
+ 1201 012a 0023     		movs	r3, #0
+ 1202 012c 9846     		mov	r8, r3
  357:Core/Src/main.c **** 			int iteration = 0;
- 1145              		.loc 1 357 11 view .LVU214
- 1146 012e 0024     		movs	r4, #0
- 1147 0130 0025     		movs	r5, #0
+ 1203              		.loc 1 357 11 view .LVU232
+ 1204 012e 0024     		movs	r4, #0
+ 1205 0130 0025     		movs	r5, #0
  356:Core/Src/main.c **** 			double y_i = 0;
- 1148              		.loc 1 356 11 view .LVU215
- 1149 0132 2600     		movs	r6, r4
- 1150 0134 2F00     		movs	r7, r5
+ 1206              		.loc 1 356 11 view .LVU233
+ 1207 0132 2600     		movs	r6, r4
+ 1208 0134 2F00     		movs	r7, r5
  359:Core/Src/main.c **** 					&& (x_i * x_i + y_i * y_i) <= 4.0) {
- 1151              		.loc 1 359 10 view .LVU216
- 1152 0136 97E7     		b	.L32
- 1153              	.LVL103:
- 1154              	.L38:
+ 1209              		.loc 1 359 10 view .LVU234
+ 1210 0136 97E7     		b	.L37
+ 1211              	.LVL105:
+ 1212              	.L43:
  359:Core/Src/main.c **** 					&& (x_i * x_i + y_i * y_i) <= 4.0) {
- 1155              		.loc 1 359 10 view .LVU217
- 1156              	.LBE25:
- 1157              	.LBE22:
+ 1213              		.loc 1 359 10 view .LVU235
+ 1214              	.LBE26:
+ 1215              	.LBE23:
  352:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
- 1158              		.loc 1 352 33 is_stmt 1 discriminator 2 view .LVU218
- 1159 0138 0E9B     		ldr	r3, [sp, #56]
- 1160              	.LVL104:
+ 1216              		.loc 1 352 33 is_stmt 1 discriminator 2 view .LVU236
+ 1217 0138 0E9B     		ldr	r3, [sp, #56]
+ 1218              	.LVL106:
  352:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
- 1161              		.loc 1 352 33 is_stmt 0 discriminator 2 view .LVU219
- 1162 013a 0133     		adds	r3, r3, #1
- 1163 013c 0E93     		str	r3, [sp, #56]
- 1164              	.LVL105:
- 1165              	.L31:
+ 1219              		.loc 1 352 33 is_stmt 0 discriminator 2 view .LVU237
+ 1220 013a 0133     		adds	r3, r3, #1
+ 1221 013c 0E93     		str	r3, [sp, #56]
+ 1222              	.LVL107:
+ 1223              	.L36:
  352:Core/Src/main.c **** 		for (int x = 0; x < (width); x++) {
- 1166              		.loc 1 352 20 is_stmt 1 discriminator 1 view .LVU220
- 1167 013e 0E9B     		ldr	r3, [sp, #56]
- 1168 0140 0F9A     		ldr	r2, [sp, #60]
- 1169 0142 9342     		cmp	r3, r2
- 1170 0144 08DA     		bge	.L39
- 1171              	.LBB26:
+ 1224              		.loc 1 352 20 is_stmt 1 discriminator 1 view .LVU238
+ 1225 013e 0E9B     		ldr	r3, [sp, #56]
+ 1226 0140 0F9A     		ldr	r2, [sp, #60]
+ 1227 0142 9342     		cmp	r3, r2
+ 1228 0144 08DA     		bge	.L44
+ 1229              	.LBB27:
  353:Core/Src/main.c **** 			double x_0 = (((double) x) / width) * 3.5 - 2.5;
- 1172              		.loc 1 353 12 is_stmt 0 view .LVU221
- 1173 0146 0023     		movs	r3, #0
- 1174 0148 9A46     		mov	r10, r3
- 1175 014a 0E9B     		ldr	r3, [sp, #56]
- 1176 014c 9B46     		mov	fp, r3
- 1177 014e 5346     		mov	r3, r10
- 1178 0150 0A93     		str	r3, [sp, #40]
- 1179 0152 0F9B     		ldr	r3, [sp, #60]
- 1180 0154 9A46     		mov	r10, r3
- 1181 0156 B4E7     		b	.L36
- 1182              	.LVL106:
- 1183              	.L39:
- 353:Core/Src/main.c **** 			double x_0 = (((double) x) / width) * 3.5 - 2.5;
- 1184              		.loc 1 353 12 view .LVU222
- 1185              	.LBE26:
- 1186              	.LBE27:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 30
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 31
 
 
+ 1230              		.loc 1 353 12 is_stmt 0 view .LVU239
+ 1231 0146 0023     		movs	r3, #0
+ 1232 0148 9A46     		mov	r10, r3
+ 1233 014a 0E9B     		ldr	r3, [sp, #56]
+ 1234 014c 9B46     		mov	fp, r3
+ 1235 014e 5346     		mov	r3, r10
+ 1236 0150 0A93     		str	r3, [sp, #40]
+ 1237 0152 0F9B     		ldr	r3, [sp, #60]
+ 1238 0154 9A46     		mov	r10, r3
+ 1239 0156 B4E7     		b	.L41
+ 1240              	.LVL108:
+ 1241              	.L44:
+ 353:Core/Src/main.c **** 			double x_0 = (((double) x) / width) * 3.5 - 2.5;
+ 1242              		.loc 1 353 12 view .LVU240
+ 1243              	.LBE27:
+ 1244              	.LBE28:
  367:Core/Src/main.c **** 		}
  368:Core/Src/main.c **** 	}
  369:Core/Src/main.c **** 	return mandelbrot_sum;
- 1187              		.loc 1 369 2 is_stmt 1 view .LVU223
+ 1245              		.loc 1 369 2 is_stmt 1 view .LVU241
  370:Core/Src/main.c **** }
- 1188              		.loc 1 370 1 is_stmt 0 view .LVU224
- 1189 0158 0C98     		ldr	r0, [sp, #48]
- 1190 015a 0D99     		ldr	r1, [sp, #52]
- 1191 015c 11B0     		add	sp, sp, #68
- 1192              		@ sp needed
- 1193              	.LVL107:
- 1194              		.loc 1 370 1 view .LVU225
- 1195 015e F0BC     		pop	{r4, r5, r6, r7}
- 1196 0160 BB46     		mov	fp, r7
- 1197 0162 B246     		mov	r10, r6
- 1198 0164 A946     		mov	r9, r5
- 1199 0166 A046     		mov	r8, r4
- 1200 0168 F0BD     		pop	{r4, r5, r6, r7, pc}
- 1201              	.L41:
- 1202 016a C046     		.align	2
- 1203              	.L40:
- 1204 016c 00001040 		.word	1074790400
- 1205 0170 00000C40 		.word	1074528256
- 1206 0174 00000440 		.word	1074003968
- 1207 0178 0000F03F 		.word	1072693248
- 1208              		.cfi_endproc
- 1209              	.LFE45:
- 1211              		.section	.text.Error_Handler,"ax",%progbits
- 1212              		.align	1
- 1213              		.global	Error_Handler
- 1214              		.syntax unified
- 1215              		.code	16
- 1216              		.thumb_func
- 1218              	Error_Handler:
- 1219              	.LFB46:
+ 1246              		.loc 1 370 1 is_stmt 0 view .LVU242
+ 1247 0158 0C98     		ldr	r0, [sp, #48]
+ 1248 015a 0D99     		ldr	r1, [sp, #52]
+ 1249 015c 11B0     		add	sp, sp, #68
+ 1250              		@ sp needed
+ 1251              	.LVL109:
+ 1252              		.loc 1 370 1 view .LVU243
+ 1253 015e F0BC     		pop	{r4, r5, r6, r7}
+ 1254 0160 BB46     		mov	fp, r7
+ 1255 0162 B246     		mov	r10, r6
+ 1256 0164 A946     		mov	r9, r5
+ 1257 0166 A046     		mov	r8, r4
+ 1258 0168 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 1259              	.L46:
+ 1260 016a C046     		.align	2
+ 1261              	.L45:
+ 1262 016c 00001040 		.word	1074790400
+ 1263 0170 00000C40 		.word	1074528256
+ 1264 0174 00000440 		.word	1074003968
+ 1265 0178 0000F03F 		.word	1072693248
+ 1266              		.cfi_endproc
+ 1267              	.LFE45:
+ 1269              		.section	.text.Error_Handler,"ax",%progbits
+ 1270              		.align	1
+ 1271              		.global	Error_Handler
+ 1272              		.syntax unified
+ 1273              		.code	16
+ 1274              		.thumb_func
+ 1276              	Error_Handler:
+ 1277              	.LFB46:
  371:Core/Src/main.c **** 
  372:Core/Src/main.c **** /* USER CODE END 4 */
  373:Core/Src/main.c **** 
  374:Core/Src/main.c **** /**
  375:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
  376:Core/Src/main.c ****   * @retval None
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 32
+
+
  377:Core/Src/main.c ****   */
  378:Core/Src/main.c **** void Error_Handler(void)
  379:Core/Src/main.c **** {
- 1220              		.loc 1 379 1 is_stmt 1 view -0
- 1221              		.cfi_startproc
- 1222              		@ Volatile: function does not return.
- 1223              		@ args = 0, pretend = 0, frame = 0
- 1224              		@ frame_needed = 0, uses_anonymous_args = 0
- 1225              		@ link register save eliminated.
+ 1278              		.loc 1 379 1 is_stmt 1 view -0
+ 1279              		.cfi_startproc
+ 1280              		@ Volatile: function does not return.
+ 1281              		@ args = 0, pretend = 0, frame = 0
+ 1282              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1283              		@ link register save eliminated.
  380:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
  381:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
  382:Core/Src/main.c ****   __disable_irq();
- 1226              		.loc 1 382 3 view .LVU227
- 1227              	.LBB28:
- 1228              	.LBI28:
- 1229              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 31
-
-
+ 1284              		.loc 1 382 3 view .LVU245
+ 1285              	.LBB29:
+ 1286              	.LBI29:
+ 1287              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
    3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
@@ -1842,6 +1918,9 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
   39:Drivers/CMSIS/Include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
   40:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ASM
   41:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ASM                                  __asm
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 33
+
+
   42:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   43:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
   44:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
@@ -1858,9 +1937,6 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
   55:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
   56:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
   57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 32
-
-
   58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
   59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
   60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -1902,6 +1978,9 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
   96:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
   97:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
   98:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 34
+
+
   99:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
  100:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
  101:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -1918,9 +1997,6 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  112:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  113:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
  114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 33
-
-
  115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  116:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  117:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1947,540 +2023,519 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 1
  138:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  139:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  140:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
- 1230              		.loc 2 140 27 view .LVU228
- 1231              	.LBB29:
+ 1288              		.loc 2 140 27 view .LVU246
+ 1289              	.LBB30:
  141:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  142:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
- 1232              		.loc 2 142 3 view .LVU229
- 1233              		.syntax divided
- 1234              	@ 142 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 1235 0000 72B6     		cpsid i
- 1236              	@ 0 "" 2
- 1237              		.thumb
- 1238              		.syntax unified
- 1239              	.L43:
- 1240              	.LBE29:
- 1241              	.LBE28:
+ 1290              		.loc 2 142 3 view .LVU247
+ 1291              		.syntax divided
+ 1292              	@ 142 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 1293 0000 72B6     		cpsid i
+ 1294              	@ 0 "" 2
+ 1295              		.thumb
+ 1296              		.syntax unified
+ 1297              	.L48:
+ 1298              	.LBE30:
+ 1299              	.LBE29:
  383:Core/Src/main.c ****   while (1)
- 1242              		.loc 1 383 3 view .LVU230
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 35
+
+
+ 1300              		.loc 1 383 3 view .LVU248
  384:Core/Src/main.c ****   {
  385:Core/Src/main.c ****   }
- 1243              		.loc 1 385 3 view .LVU231
+ 1301              		.loc 1 385 3 view .LVU249
  383:Core/Src/main.c ****   while (1)
- 1244              		.loc 1 383 9 view .LVU232
- 1245 0002 FEE7     		b	.L43
- 1246              		.cfi_endproc
- 1247              	.LFE46:
- 1249              		.section	.text.SystemClock_Config,"ax",%progbits
- 1250              		.align	1
- 1251              		.global	SystemClock_Config
- 1252              		.syntax unified
- 1253              		.code	16
- 1254              		.thumb_func
- 1256              	SystemClock_Config:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 34
-
-
- 1257              	.LFB41:
+ 1302              		.loc 1 383 9 view .LVU250
+ 1303 0002 FEE7     		b	.L48
+ 1304              		.cfi_endproc
+ 1305              	.LFE46:
+ 1307              		.section	.text.SystemClock_Config,"ax",%progbits
+ 1308              		.align	1
+ 1309              		.global	SystemClock_Config
+ 1310              		.syntax unified
+ 1311              		.code	16
+ 1312              		.thumb_func
+ 1314              	SystemClock_Config:
+ 1315              	.LFB41:
  214:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 1258              		.loc 1 214 1 view -0
- 1259              		.cfi_startproc
- 1260              		@ args = 0, pretend = 0, frame = 64
- 1261              		@ frame_needed = 0, uses_anonymous_args = 0
- 1262 0000 00B5     		push	{lr}
- 1263              	.LCFI11:
- 1264              		.cfi_def_cfa_offset 4
- 1265              		.cfi_offset 14, -4
- 1266 0002 91B0     		sub	sp, sp, #68
- 1267              	.LCFI12:
- 1268              		.cfi_def_cfa_offset 72
+ 1316              		.loc 1 214 1 view -0
+ 1317              		.cfi_startproc
+ 1318              		@ args = 0, pretend = 0, frame = 64
+ 1319              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1320 0000 00B5     		push	{lr}
+ 1321              	.LCFI11:
+ 1322              		.cfi_def_cfa_offset 4
+ 1323              		.cfi_offset 14, -4
+ 1324 0002 91B0     		sub	sp, sp, #68
+ 1325              	.LCFI12:
+ 1326              		.cfi_def_cfa_offset 72
  215:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 1269              		.loc 1 215 3 view .LVU234
+ 1327              		.loc 1 215 3 view .LVU252
  215:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 1270              		.loc 1 215 22 is_stmt 0 view .LVU235
- 1271 0004 3022     		movs	r2, #48
- 1272 0006 0021     		movs	r1, #0
- 1273 0008 04A8     		add	r0, sp, #16
- 1274 000a FFF7FEFF 		bl	memset
- 1275              	.LVL108:
+ 1328              		.loc 1 215 22 is_stmt 0 view .LVU253
+ 1329 0004 3022     		movs	r2, #48
+ 1330 0006 0021     		movs	r1, #0
+ 1331 0008 04A8     		add	r0, sp, #16
+ 1332 000a FFF7FEFF 		bl	memset
+ 1333              	.LVL110:
  216:Core/Src/main.c **** 
- 1276              		.loc 1 216 3 is_stmt 1 view .LVU236
+ 1334              		.loc 1 216 3 is_stmt 1 view .LVU254
  216:Core/Src/main.c **** 
- 1277              		.loc 1 216 22 is_stmt 0 view .LVU237
- 1278 000e 1022     		movs	r2, #16
- 1279 0010 0021     		movs	r1, #0
- 1280 0012 6846     		mov	r0, sp
- 1281 0014 FFF7FEFF 		bl	memset
- 1282              	.LVL109:
+ 1335              		.loc 1 216 22 is_stmt 0 view .LVU255
+ 1336 000e 1022     		movs	r2, #16
+ 1337 0010 0021     		movs	r1, #0
+ 1338 0012 6846     		mov	r0, sp
+ 1339 0014 FFF7FEFF 		bl	memset
+ 1340              	.LVL111:
  221:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 1283              		.loc 1 221 3 is_stmt 1 view .LVU238
+ 1341              		.loc 1 221 3 is_stmt 1 view .LVU256
  221:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 1284              		.loc 1 221 36 is_stmt 0 view .LVU239
- 1285 0018 0223     		movs	r3, #2
- 1286 001a 0493     		str	r3, [sp, #16]
+ 1342              		.loc 1 221 36 is_stmt 0 view .LVU257
+ 1343 0018 0223     		movs	r3, #2
+ 1344 001a 0493     		str	r3, [sp, #16]
  222:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 1287              		.loc 1 222 3 is_stmt 1 view .LVU240
+ 1345              		.loc 1 222 3 is_stmt 1 view .LVU258
  222:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 1288              		.loc 1 222 30 is_stmt 0 view .LVU241
- 1289 001c 0122     		movs	r2, #1
- 1290 001e 0792     		str	r2, [sp, #28]
+ 1346              		.loc 1 222 30 is_stmt 0 view .LVU259
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 36
+
+
+ 1347 001c 0122     		movs	r2, #1
+ 1348 001e 0792     		str	r2, [sp, #28]
  223:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 1291              		.loc 1 223 3 is_stmt 1 view .LVU242
+ 1349              		.loc 1 223 3 is_stmt 1 view .LVU260
  223:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 1292              		.loc 1 223 41 is_stmt 0 view .LVU243
- 1293 0020 0F32     		adds	r2, r2, #15
- 1294 0022 0892     		str	r2, [sp, #32]
+ 1350              		.loc 1 223 41 is_stmt 0 view .LVU261
+ 1351 0020 0F32     		adds	r2, r2, #15
+ 1352 0022 0892     		str	r2, [sp, #32]
  224:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
- 1295              		.loc 1 224 3 is_stmt 1 view .LVU244
+ 1353              		.loc 1 224 3 is_stmt 1 view .LVU262
  224:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
- 1296              		.loc 1 224 34 is_stmt 0 view .LVU245
- 1297 0024 0C93     		str	r3, [sp, #48]
+ 1354              		.loc 1 224 34 is_stmt 0 view .LVU263
+ 1355 0024 0C93     		str	r3, [sp, #48]
  225:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL12;
- 1298              		.loc 1 225 3 is_stmt 1 view .LVU246
+ 1356              		.loc 1 225 3 is_stmt 1 view .LVU264
  226:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 35
-
-
- 1299              		.loc 1 226 3 view .LVU247
+ 1357              		.loc 1 226 3 view .LVU265
  226:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
- 1300              		.loc 1 226 32 is_stmt 0 view .LVU248
- 1301 0026 A023     		movs	r3, #160
- 1302 0028 9B03     		lsls	r3, r3, #14
- 1303 002a 0E93     		str	r3, [sp, #56]
+ 1358              		.loc 1 226 32 is_stmt 0 view .LVU266
+ 1359 0026 A023     		movs	r3, #160
+ 1360 0028 9B03     		lsls	r3, r3, #14
+ 1361 002a 0E93     		str	r3, [sp, #56]
  227:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 1304              		.loc 1 227 3 is_stmt 1 view .LVU249
+ 1362              		.loc 1 227 3 is_stmt 1 view .LVU267
  228:Core/Src/main.c ****   {
- 1305              		.loc 1 228 3 view .LVU250
+ 1363              		.loc 1 228 3 view .LVU268
  228:Core/Src/main.c ****   {
- 1306              		.loc 1 228 7 is_stmt 0 view .LVU251
- 1307 002c 04A8     		add	r0, sp, #16
- 1308 002e FFF7FEFF 		bl	HAL_RCC_OscConfig
- 1309              	.LVL110:
+ 1364              		.loc 1 228 7 is_stmt 0 view .LVU269
+ 1365 002c 04A8     		add	r0, sp, #16
+ 1366 002e FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 1367              	.LVL112:
  228:Core/Src/main.c ****   {
- 1310              		.loc 1 228 6 discriminator 1 view .LVU252
- 1311 0032 0028     		cmp	r0, #0
- 1312 0034 0ED1     		bne	.L47
+ 1368              		.loc 1 228 6 discriminator 1 view .LVU270
+ 1369 0032 0028     		cmp	r0, #0
+ 1370 0034 0ED1     		bne	.L52
  235:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1;
- 1313              		.loc 1 235 3 is_stmt 1 view .LVU253
+ 1371              		.loc 1 235 3 is_stmt 1 view .LVU271
  235:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1;
- 1314              		.loc 1 235 31 is_stmt 0 view .LVU254
- 1315 0036 0723     		movs	r3, #7
- 1316 0038 0093     		str	r3, [sp]
+ 1372              		.loc 1 235 31 is_stmt 0 view .LVU272
+ 1373 0036 0723     		movs	r3, #7
+ 1374 0038 0093     		str	r3, [sp]
  237:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 1317              		.loc 1 237 3 is_stmt 1 view .LVU255
+ 1375              		.loc 1 237 3 is_stmt 1 view .LVU273
  237:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 1318              		.loc 1 237 34 is_stmt 0 view .LVU256
- 1319 003a 053B     		subs	r3, r3, #5
- 1320 003c 0193     		str	r3, [sp, #4]
+ 1376              		.loc 1 237 34 is_stmt 0 view .LVU274
+ 1377 003a 053B     		subs	r3, r3, #5
+ 1378 003c 0193     		str	r3, [sp, #4]
  238:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 1321              		.loc 1 238 3 is_stmt 1 view .LVU257
+ 1379              		.loc 1 238 3 is_stmt 1 view .LVU275
  238:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 1322              		.loc 1 238 35 is_stmt 0 view .LVU258
- 1323 003e 0023     		movs	r3, #0
- 1324 0040 0293     		str	r3, [sp, #8]
+ 1380              		.loc 1 238 35 is_stmt 0 view .LVU276
+ 1381 003e 0023     		movs	r3, #0
+ 1382 0040 0293     		str	r3, [sp, #8]
  239:Core/Src/main.c **** 
- 1325              		.loc 1 239 3 is_stmt 1 view .LVU259
+ 1383              		.loc 1 239 3 is_stmt 1 view .LVU277
  239:Core/Src/main.c **** 
- 1326              		.loc 1 239 36 is_stmt 0 view .LVU260
- 1327 0042 0393     		str	r3, [sp, #12]
+ 1384              		.loc 1 239 36 is_stmt 0 view .LVU278
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 37
+
+
+ 1385 0042 0393     		str	r3, [sp, #12]
  241:Core/Src/main.c ****   {
- 1328              		.loc 1 241 3 is_stmt 1 view .LVU261
+ 1386              		.loc 1 241 3 is_stmt 1 view .LVU279
  241:Core/Src/main.c ****   {
- 1329              		.loc 1 241 7 is_stmt 0 view .LVU262
- 1330 0044 0121     		movs	r1, #1
- 1331 0046 6846     		mov	r0, sp
- 1332 0048 FFF7FEFF 		bl	HAL_RCC_ClockConfig
- 1333              	.LVL111:
+ 1387              		.loc 1 241 7 is_stmt 0 view .LVU280
+ 1388 0044 0121     		movs	r1, #1
+ 1389 0046 6846     		mov	r0, sp
+ 1390 0048 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 1391              	.LVL113:
  241:Core/Src/main.c ****   {
- 1334              		.loc 1 241 6 discriminator 1 view .LVU263
- 1335 004c 0028     		cmp	r0, #0
- 1336 004e 03D1     		bne	.L48
+ 1392              		.loc 1 241 6 discriminator 1 view .LVU281
+ 1393 004c 0028     		cmp	r0, #0
+ 1394 004e 03D1     		bne	.L53
  245:Core/Src/main.c **** 
- 1337              		.loc 1 245 1 view .LVU264
- 1338 0050 11B0     		add	sp, sp, #68
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 36
-
-
- 1339              		@ sp needed
- 1340 0052 00BD     		pop	{pc}
- 1341              	.L47:
+ 1395              		.loc 1 245 1 view .LVU282
+ 1396 0050 11B0     		add	sp, sp, #68
+ 1397              		@ sp needed
+ 1398 0052 00BD     		pop	{pc}
+ 1399              	.L52:
  230:Core/Src/main.c ****   }
- 1342              		.loc 1 230 5 is_stmt 1 view .LVU265
- 1343 0054 FFF7FEFF 		bl	Error_Handler
- 1344              	.LVL112:
- 1345              	.L48:
+ 1400              		.loc 1 230 5 is_stmt 1 view .LVU283
+ 1401 0054 FFF7FEFF 		bl	Error_Handler
+ 1402              	.LVL114:
+ 1403              	.L53:
  243:Core/Src/main.c ****   }
- 1346              		.loc 1 243 5 view .LVU266
- 1347 0058 FFF7FEFF 		bl	Error_Handler
- 1348              	.LVL113:
- 1349              		.cfi_endproc
- 1350              	.LFE41:
- 1352              		.section	.text.main,"ax",%progbits
- 1353              		.align	1
- 1354              		.global	main
- 1355              		.syntax unified
- 1356              		.code	16
- 1357              		.thumb_func
- 1359              	main:
- 1360              	.LFB40:
+ 1404              		.loc 1 243 5 view .LVU284
+ 1405 0058 FFF7FEFF 		bl	Error_Handler
+ 1406              	.LVL115:
+ 1407              		.cfi_endproc
+ 1408              	.LFE41:
+ 1410              		.section	.text.main,"ax",%progbits
+ 1411              		.align	1
+ 1412              		.global	main
+ 1413              		.syntax unified
+ 1414              		.code	16
+ 1415              		.thumb_func
+ 1417              	main:
+ 1418              	.LFB40:
   93:Core/Src/main.c **** 
- 1361              		.loc 1 93 1 view -0
- 1362              		.cfi_startproc
- 1363              		@ args = 0, pretend = 0, frame = 0
- 1364              		@ frame_needed = 0, uses_anonymous_args = 0
- 1365 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 1366              	.LCFI13:
- 1367              		.cfi_def_cfa_offset 24
- 1368              		.cfi_offset 3, -24
- 1369              		.cfi_offset 4, -20
- 1370              		.cfi_offset 5, -16
- 1371              		.cfi_offset 6, -12
- 1372              		.cfi_offset 7, -8
- 1373              		.cfi_offset 14, -4
- 1374 0002 DE46     		mov	lr, fp
- 1375 0004 5746     		mov	r7, r10
- 1376 0006 4E46     		mov	r6, r9
- 1377 0008 4546     		mov	r5, r8
- 1378 000a E0B5     		push	{r5, r6, r7, lr}
- 1379              	.LCFI14:
- 1380              		.cfi_def_cfa_offset 40
- 1381              		.cfi_offset 8, -40
- 1382              		.cfi_offset 9, -36
- 1383              		.cfi_offset 10, -32
- 1384              		.cfi_offset 11, -28
+ 1419              		.loc 1 93 1 view -0
+ 1420              		.cfi_startproc
+ 1421              		@ args = 0, pretend = 0, frame = 0
+ 1422              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1423 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 1424              	.LCFI13:
+ 1425              		.cfi_def_cfa_offset 24
+ 1426              		.cfi_offset 3, -24
+ 1427              		.cfi_offset 4, -20
+ 1428              		.cfi_offset 5, -16
+ 1429              		.cfi_offset 6, -12
+ 1430              		.cfi_offset 7, -8
+ 1431              		.cfi_offset 14, -4
+ 1432 0002 CE46     		mov	lr, r9
+ 1433 0004 4746     		mov	r7, r8
+ 1434 0006 80B5     		push	{r7, lr}
+ 1435              	.LCFI14:
+ 1436              		.cfi_def_cfa_offset 32
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 38
+
+
+ 1437              		.cfi_offset 8, -32
+ 1438              		.cfi_offset 9, -28
  102:Core/Src/main.c **** 
- 1385              		.loc 1 102 3 view .LVU268
- 1386 000c FFF7FEFF 		bl	HAL_Init
- 1387              	.LVL114:
+ 1439              		.loc 1 102 3 view .LVU286
+ 1440 0008 FFF7FEFF 		bl	HAL_Init
+ 1441              	.LVL116:
  109:Core/Src/main.c **** 
- 1388              		.loc 1 109 3 view .LVU269
- 1389 0010 FFF7FEFF 		bl	SystemClock_Config
- 1390              	.LVL115:
+ 1442              		.loc 1 109 3 view .LVU287
+ 1443 000c FFF7FEFF 		bl	SystemClock_Config
+ 1444              	.LVL117:
  116:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
- 1391              		.loc 1 116 3 view .LVU270
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 37
-
-
- 1392 0014 FFF7FEFF 		bl	MX_GPIO_Init
- 1393              	.LVL116:
- 1394              	.L53:
- 123:Core/Src/main.c ****   {
- 1395              		.loc 1 123 3 view .LVU271
- 184:Core/Src/main.c **** 			for (int i = 0;
- 1396              		.loc 1 184 3 view .LVU272
- 1397              	.LBB30:
- 184:Core/Src/main.c **** 			for (int i = 0;
- 1398              		.loc 1 184 8 view .LVU273
- 184:Core/Src/main.c **** 			for (int i = 0;
- 1399              		.loc 1 184 12 is_stmt 0 view .LVU274
- 1400 0018 0023     		movs	r3, #0
- 1401 001a 9846     		mov	r8, r3
- 1402 001c 40E0     		b	.L50
- 1403              	.LVL117:
- 1404              	.L51:
- 1405              	.LBB31:
+ 1445              		.loc 1 116 3 view .LVU288
+ 1446 0010 FFF7FEFF 		bl	MX_GPIO_Init
+ 1447              	.LVL118:
+ 1448 0014 39E0     		b	.L57
+ 1449              	.LVL119:
+ 1450              	.L56:
+ 1451              	.LBB31:
  188:Core/Src/main.c **** 				Dimension_val = image_dimension[i];
- 1406              		.loc 1 188 5 is_stmt 1 view .LVU275
+ 1452              		.loc 1 188 5 view .LVU289
  188:Core/Src/main.c **** 				Dimension_val = image_dimension[i];
- 1407              		.loc 1 188 23 is_stmt 0 view .LVU276
- 1408 001e 234C     		ldr	r4, .L55
- 1409 0020 4346     		mov	r3, r8
- 1410 0022 9B00     		lsls	r3, r3, #2
- 1411 0024 9A46     		mov	r10, r3
- 1412 0026 1A59     		ldr	r2, [r3, r4]
+ 1453              		.loc 1 188 23 is_stmt 0 view .LVU290
+ 1454 0016 1E4B     		ldr	r3, .L58
+ 1455 0018 9846     		mov	r8, r3
+ 1456 001a 9A68     		ldr	r2, [r3, #8]
  188:Core/Src/main.c **** 				Dimension_val = image_dimension[i];
- 1413              		.loc 1 188 15 view .LVU277
- 1414 0028 214B     		ldr	r3, .L55+4
- 1415 002a 1A60     		str	r2, [r3]
+ 1457              		.loc 1 188 15 view .LVU291
+ 1458 001c 1D4B     		ldr	r3, .L58+4
+ 1459 001e 1A60     		str	r2, [r3]
  189:Core/Src/main.c **** 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a c
- 1416              		.loc 1 189 5 is_stmt 1 view .LVU278
+ 1460              		.loc 1 189 5 is_stmt 1 view .LVU292
  189:Core/Src/main.c **** 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a c
- 1417              		.loc 1 189 36 is_stmt 0 view .LVU279
- 1418 002c 214D     		ldr	r5, .L55+8
- 1419 002e B300     		lsls	r3, r6, #2
- 1420 0030 9B46     		mov	fp, r3
- 1421 0032 5A59     		ldr	r2, [r3, r5]
+ 1461              		.loc 1 189 36 is_stmt 0 view .LVU293
+ 1462 0020 1D4C     		ldr	r4, .L58+8
+ 1463 0022 AB00     		lsls	r3, r5, #2
+ 1464 0024 9946     		mov	r9, r3
+ 1465 0026 1A59     		ldr	r2, [r3, r4]
  189:Core/Src/main.c **** 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a c
- 1422              		.loc 1 189 19 view .LVU280
- 1423 0034 204B     		ldr	r3, .L55+12
- 1424 0036 1A60     		str	r2, [r3]
+ 1466              		.loc 1 189 19 view .LVU294
+ 1467 0028 1C4B     		ldr	r3, .L58+12
+ 1468 002a 1A60     		str	r2, [r3]
  190:Core/Src/main.c **** 				start_time = HAL_GetTick(); //Record start time
- 1425              		.loc 1 190 5 is_stmt 1 view .LVU281
- 1426 0038 204F     		ldr	r7, .L55+16
- 1427 003a 0122     		movs	r2, #1
- 1428 003c 0121     		movs	r1, #1
- 1429 003e 3800     		movs	r0, r7
- 1430 0040 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1431              	.LVL118:
+ 1469              		.loc 1 190 5 is_stmt 1 view .LVU295
+ 1470 002c 1C4E     		ldr	r6, .L58+16
+ 1471 002e 0122     		movs	r2, #1
+ 1472 0030 0121     		movs	r1, #1
+ 1473 0032 3000     		movs	r0, r6
+ 1474 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1475              	.LVL120:
  191:Core/Src/main.c **** 				checksum = calculate_mandelbrot_var_fixed_point_arithmetic(
- 1432              		.loc 1 191 5 view .LVU282
+ 1476              		.loc 1 191 5 view .LVU296
  191:Core/Src/main.c **** 				checksum = calculate_mandelbrot_var_fixed_point_arithmetic(
- 1433              		.loc 1 191 18 is_stmt 0 view .LVU283
- 1434 0044 FFF7FEFF 		bl	HAL_GetTick
- 1435              	.LVL119:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 38
+ 1477              		.loc 1 191 18 is_stmt 0 view .LVU297
+ 1478 0038 FFF7FEFF 		bl	HAL_GetTick
+ 1479              	.LVL121:
+ 191:Core/Src/main.c **** 				checksum = calculate_mandelbrot_var_fixed_point_arithmetic(
+ 1480              		.loc 1 191 16 discriminator 1 view .LVU298
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 39
 
 
- 191:Core/Src/main.c **** 				checksum = calculate_mandelbrot_var_fixed_point_arithmetic(
- 1436              		.loc 1 191 16 discriminator 1 view .LVU284
- 1437 0048 1D4B     		ldr	r3, .L55+20
- 1438 004a 9946     		mov	r9, r3
- 1439 004c 1860     		str	r0, [r3]
- 192:Core/Src/main.c **** 						image_dimension[i], image_dimension[i], Test_ITER,Scales[j]); // Compute Mandelbrot
- 1440              		.loc 1 192 5 is_stmt 1 view .LVU285
- 192:Core/Src/main.c **** 						image_dimension[i], image_dimension[i], Test_ITER,Scales[j]); // Compute Mandelbrot
- 1441              		.loc 1 192 16 is_stmt 0 view .LVU286
- 1442 004e 5B46     		mov	r3, fp
- 1443 0050 5859     		ldr	r0, [r3, r5]
- 1444 0052 5346     		mov	r3, r10
- 1445 0054 1B59     		ldr	r3, [r3, r4]
- 1446 0056 1B4A     		ldr	r2, .L55+24
- 1447 0058 1268     		ldr	r2, [r2]
- 1448 005a 0100     		movs	r1, r0
- 1449 005c FFF7FEFF 		bl	calculate_mandelbrot_var_fixed_point_arithmetic
- 1450              	.LVL120:
- 192:Core/Src/main.c **** 						image_dimension[i], image_dimension[i], Test_ITER,Scales[j]); // Compute Mandelbrot
- 1451              		.loc 1 192 14 discriminator 1 view .LVU287
- 1452 0060 194B     		ldr	r3, .L55+28
- 1453 0062 1860     		str	r0, [r3]
- 1454 0064 5960     		str	r1, [r3, #4]
+ 1481 003c 194F     		ldr	r7, .L58+20
+ 1482 003e 3860     		str	r0, [r7]
+ 192:Core/Src/main.c **** 						image_dimension[i], image_dimension[i], Test_ITER,Scales[2]); // Compute Mandelbrot
+ 1483              		.loc 1 192 5 is_stmt 1 view .LVU299
+ 192:Core/Src/main.c **** 						image_dimension[i], image_dimension[i], Test_ITER,Scales[2]); // Compute Mandelbrot
+ 1484              		.loc 1 192 16 is_stmt 0 view .LVU300
+ 1485 0040 4B46     		mov	r3, r9
+ 1486 0042 1859     		ldr	r0, [r3, r4]
+ 1487 0044 4346     		mov	r3, r8
+ 1488 0046 9B68     		ldr	r3, [r3, #8]
+ 1489 0048 174A     		ldr	r2, .L58+24
+ 1490 004a 1268     		ldr	r2, [r2]
+ 1491 004c 0100     		movs	r1, r0
+ 1492 004e FFF7FEFF 		bl	calculate_mandelbrot_var_fixed_point_arithmetic
+ 1493              	.LVL122:
+ 192:Core/Src/main.c **** 						image_dimension[i], image_dimension[i], Test_ITER,Scales[2]); // Compute Mandelbrot
+ 1494              		.loc 1 192 14 discriminator 1 view .LVU301
+ 1495 0052 164B     		ldr	r3, .L58+28
+ 1496 0054 1860     		str	r0, [r3]
+ 1497 0056 5960     		str	r1, [r3, #4]
  196:Core/Src/main.c **** 				execution_time = end_time - start_time;
- 1455              		.loc 1 196 5 is_stmt 1 view .LVU288
+ 1498              		.loc 1 196 5 is_stmt 1 view .LVU302
  196:Core/Src/main.c **** 				execution_time = end_time - start_time;
- 1456              		.loc 1 196 16 is_stmt 0 view .LVU289
- 1457 0066 FFF7FEFF 		bl	HAL_GetTick
- 1458              	.LVL121:
+ 1499              		.loc 1 196 16 is_stmt 0 view .LVU303
+ 1500 0058 FFF7FEFF 		bl	HAL_GetTick
+ 1501              	.LVL123:
  196:Core/Src/main.c **** 				execution_time = end_time - start_time;
- 1459              		.loc 1 196 14 discriminator 1 view .LVU290
- 1460 006a 184B     		ldr	r3, .L55+32
- 1461 006c 1860     		str	r0, [r3]
+ 1502              		.loc 1 196 14 discriminator 1 view .LVU304
+ 1503 005c 144B     		ldr	r3, .L58+32
+ 1504 005e 1860     		str	r0, [r3]
  197:Core/Src/main.c **** 
- 1462              		.loc 1 197 5 is_stmt 1 view .LVU291
+ 1505              		.loc 1 197 5 is_stmt 1 view .LVU305
  197:Core/Src/main.c **** 
- 1463              		.loc 1 197 31 is_stmt 0 view .LVU292
- 1464 006e 4B46     		mov	r3, r9
- 1465 0070 1B68     		ldr	r3, [r3]
- 1466 0072 C01A     		subs	r0, r0, r3
+ 1506              		.loc 1 197 31 is_stmt 0 view .LVU306
+ 1507 0060 3B68     		ldr	r3, [r7]
+ 1508 0062 C01A     		subs	r0, r0, r3
  197:Core/Src/main.c **** 
- 1467              		.loc 1 197 20 view .LVU293
- 1468 0074 164B     		ldr	r3, .L55+36
- 1469 0076 1860     		str	r0, [r3]
+ 1509              		.loc 1 197 20 view .LVU307
+ 1510 0064 134B     		ldr	r3, .L58+36
+ 1511 0066 1860     		str	r0, [r3]
  199:Core/Src/main.c **** 				HAL_Delay(1000);
- 1470              		.loc 1 199 5 is_stmt 1 view .LVU294
- 1471 0078 0122     		movs	r2, #1
- 1472 007a 0221     		movs	r1, #2
- 1473 007c 3800     		movs	r0, r7
- 1474 007e FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1475              	.LVL122:
+ 1512              		.loc 1 199 5 is_stmt 1 view .LVU308
+ 1513 0068 0122     		movs	r2, #1
+ 1514 006a 0221     		movs	r1, #2
+ 1515 006c 3000     		movs	r0, r6
+ 1516 006e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1517              	.LVL124:
  200:Core/Src/main.c **** 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1,
- 1476              		.loc 1 200 5 view .LVU295
- 1477 0082 FA20     		movs	r0, #250
- 1478 0084 8000     		lsls	r0, r0, #2
- 1479 0086 FFF7FEFF 		bl	HAL_Delay
- 1480              	.LVL123:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 39
-
-
+ 1518              		.loc 1 200 5 view .LVU309
+ 1519 0072 FA20     		movs	r0, #250
+ 1520 0074 8000     		lsls	r0, r0, #2
+ 1521 0076 FFF7FEFF 		bl	HAL_Delay
+ 1522              	.LVL125:
  201:Core/Src/main.c **** 						GPIO_PIN_RESET); // reset LEDS for next cycle
- 1481              		.loc 1 201 5 view .LVU296
- 1482 008a 0022     		movs	r2, #0
- 1483 008c 0321     		movs	r1, #3
- 1484 008e 3800     		movs	r0, r7
- 1485 0090 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1486              	.LVL124:
- 187:Core/Src/main.c **** 				Scale_val = Scales[j];
- 1487              		.loc 1 187 7 view .LVU297
- 1488 0094 0136     		adds	r6, r6, #1
- 1489              	.LVL125:
- 1490              	.L52:
+ 1523              		.loc 1 201 5 view .LVU310
+ 1524 007a 0022     		movs	r2, #0
+ 1525 007c 0321     		movs	r1, #3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 40
+
+
+ 1526 007e 3000     		movs	r0, r6
+ 1527 0080 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1528              	.LVL126:
+ 187:Core/Src/main.c **** 				Scale_val = Scales[2];
+ 1529              		.loc 1 187 7 view .LVU311
+ 1530 0084 0135     		adds	r5, r5, #1
+ 1531              	.LVL127:
+ 1532              	.L55:
  186:Core/Src/main.c **** 					i++) {
- 1491              		.loc 1 186 8 view .LVU298
- 1492 0096 042E     		cmp	r6, #4
- 1493 0098 C1D9     		bls	.L51
- 1494              	.LBE31:
- 184:Core/Src/main.c **** 			for (int i = 0;
- 1495              		.loc 1 184 62 discriminator 2 view .LVU299
- 1496 009a 0123     		movs	r3, #1
- 1497 009c 9C46     		mov	ip, r3
- 1498 009e E044     		add	r8, r8, ip
- 1499              	.LVL126:
- 1500              	.L50:
- 184:Core/Src/main.c **** 			for (int i = 0;
- 1501              		.loc 1 184 21 discriminator 1 view .LVU300
- 1502 00a0 4346     		mov	r3, r8
- 1503 00a2 022B     		cmp	r3, #2
- 1504 00a4 B8D8     		bhi	.L53
- 1505              	.LBB32:
+ 1533              		.loc 1 186 8 view .LVU312
+ 1534 0086 042D     		cmp	r5, #4
+ 1535 0088 C5D9     		bls	.L56
+ 1536              	.LVL128:
+ 1537              	.L57:
+ 186:Core/Src/main.c **** 					i++) {
+ 1538              		.loc 1 186 8 is_stmt 0 view .LVU313
+ 1539              	.LBE31:
+ 123:Core/Src/main.c ****   {
+ 1540              		.loc 1 123 3 is_stmt 1 view .LVU314
  185:Core/Src/main.c **** 					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
- 1506              		.loc 1 185 13 is_stmt 0 view .LVU301
- 1507 00a6 0026     		movs	r6, #0
- 1508 00a8 F5E7     		b	.L52
- 1509              	.L56:
- 1510 00aa C046     		.align	2
- 1511              	.L55:
- 1512 00ac 00000000 		.word	Scales
- 1513 00b0 00000000 		.word	Scale_val
- 1514 00b4 00000000 		.word	image_dimension
- 1515 00b8 00000000 		.word	Dimension_val
- 1516 00bc 00040048 		.word	1207960576
- 1517 00c0 00000000 		.word	start_time
- 1518 00c4 00000000 		.word	Test_ITER
- 1519 00c8 00000000 		.word	checksum
- 1520 00cc 00000000 		.word	end_time
- 1521 00d0 00000000 		.word	execution_time
- 1522              	.LBE32:
- 1523              	.LBE30:
- 1524              		.cfi_endproc
- 1525              	.LFE40:
- 1527              		.global	Scales
- 1528              		.section	.data.Scales,"aw"
- 1529              		.align	2
- 1532              	Scales:
- 1533 0000 E8030000 		.word	1000
- 1534 0004 10270000 		.word	10000
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 40
-
-
- 1535 0008 40420F00 		.word	1000000
- 1536              		.global	Scale_val
- 1537              		.section	.bss.Scale_val,"aw",%nobits
- 1538              		.align	2
- 1541              	Scale_val:
- 1542 0000 00000000 		.space	4
- 1543              		.global	Iter_val
- 1544              		.section	.bss.Iter_val,"aw",%nobits
- 1545              		.align	2
- 1548              	Iter_val:
- 1549 0000 00000000 		.space	4
- 1550              		.global	Dimension_val
- 1551              		.section	.bss.Dimension_val,"aw",%nobits
- 1552              		.align	2
- 1555              	Dimension_val:
- 1556 0000 00000000 		.space	4
- 1557              		.global	MAX_iter
- 1558              		.section	.data.MAX_iter,"aw"
- 1559              		.align	2
- 1562              	MAX_iter:
- 1563 0000 64000000 		.word	100
- 1564 0004 FA000000 		.word	250
- 1565 0008 F4010000 		.word	500
- 1566 000c EE020000 		.word	750
- 1567 0010 E8030000 		.word	1000
- 1568              		.global	state
- 1569              		.section	.bss.state,"aw",%nobits
- 1572              	state:
- 1573 0000 00       		.space	1
- 1574              		.global	run_Count
- 1575              		.section	.bss.run_Count,"aw",%nobits
+ 1541              		.loc 1 185 4 view .LVU315
+ 1542              	.LBB32:
+ 185:Core/Src/main.c **** 					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+ 1543              		.loc 1 185 9 view .LVU316
+ 185:Core/Src/main.c **** 					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+ 1544              		.loc 1 185 13 is_stmt 0 view .LVU317
+ 1545 008a 0025     		movs	r5, #0
+ 185:Core/Src/main.c **** 					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+ 1546              		.loc 1 185 4 view .LVU318
+ 1547 008c FBE7     		b	.L55
+ 1548              	.L59:
+ 1549 008e C046     		.align	2
+ 1550              	.L58:
+ 1551 0090 00000000 		.word	Scales
+ 1552 0094 00000000 		.word	Scale_val
+ 1553 0098 00000000 		.word	image_dimension
+ 1554 009c 00000000 		.word	Dimension_val
+ 1555 00a0 00040048 		.word	1207960576
+ 1556 00a4 00000000 		.word	start_time
+ 1557 00a8 00000000 		.word	Test_ITER
+ 1558 00ac 00000000 		.word	checksum
+ 1559 00b0 00000000 		.word	end_time
+ 1560 00b4 00000000 		.word	execution_time
+ 1561              	.LBE32:
+ 1562              		.cfi_endproc
+ 1563              	.LFE40:
+ 1565              		.global	Scales
+ 1566              		.section	.data.Scales,"aw"
+ 1567              		.align	2
+ 1570              	Scales:
+ 1571 0000 E8030000 		.word	1000
+ 1572 0004 10270000 		.word	10000
+ 1573 0008 40420F00 		.word	1000000
+ 1574              		.global	Scale_val
+ 1575              		.section	.bss.Scale_val,"aw",%nobits
  1576              		.align	2
- 1579              	run_Count:
+ 1579              	Scale_val:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 41
+
+
  1580 0000 00000000 		.space	4
- 1581              		.global	image_dimension
- 1582              		.section	.data.image_dimension,"aw"
+ 1581              		.global	Iter_val
+ 1582              		.section	.bss.Iter_val,"aw",%nobits
  1583              		.align	2
- 1586              	image_dimension:
- 1587 0000 80000000 		.word	128
- 1588 0004 A0000000 		.word	160
- 1589 0008 C0000000 		.word	192
- 1590 000c E0000000 		.word	224
- 1591 0010 00010000 		.word	256
- 1592              		.global	Test_ITER
- 1593              		.section	.data.Test_ITER,"aw"
- 1594              		.align	2
- 1597              	Test_ITER:
- 1598 0000 64000000 		.word	100
- 1599              		.global	checksum
- 1600              		.section	.bss.checksum,"aw",%nobits
- 1601              		.align	3
- 1604              	checksum:
- 1605 0000 00000000 		.space	8
- 1605      00000000 
- 1606              		.global	execution_time
- 1607              		.section	.bss.execution_time,"aw",%nobits
- 1608              		.align	2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 41
+ 1586              	Iter_val:
+ 1587 0000 00000000 		.space	4
+ 1588              		.global	Dimension_val
+ 1589              		.section	.bss.Dimension_val,"aw",%nobits
+ 1590              		.align	2
+ 1593              	Dimension_val:
+ 1594 0000 00000000 		.space	4
+ 1595              		.global	MAX_iter
+ 1596              		.section	.data.MAX_iter,"aw"
+ 1597              		.align	2
+ 1600              	MAX_iter:
+ 1601 0000 64000000 		.word	100
+ 1602 0004 FA000000 		.word	250
+ 1603 0008 F4010000 		.word	500
+ 1604 000c EE020000 		.word	750
+ 1605 0010 E8030000 		.word	1000
+ 1606              		.global	state
+ 1607              		.section	.bss.state,"aw",%nobits
+ 1610              	state:
+ 1611 0000 00       		.space	1
+ 1612              		.global	run_Count
+ 1613              		.section	.bss.run_Count,"aw",%nobits
+ 1614              		.align	2
+ 1617              	run_Count:
+ 1618 0000 00000000 		.space	4
+ 1619              		.global	image_dimension
+ 1620              		.section	.data.image_dimension,"aw"
+ 1621              		.align	2
+ 1624              	image_dimension:
+ 1625 0000 80000000 		.word	128
+ 1626 0004 A0000000 		.word	160
+ 1627 0008 C0000000 		.word	192
+ 1628 000c E0000000 		.word	224
+ 1629 0010 00010000 		.word	256
+ 1630              		.global	Test_ITER
+ 1631              		.section	.data.Test_ITER,"aw"
+ 1632              		.align	2
+ 1635              	Test_ITER:
+ 1636 0000 64000000 		.word	100
+ 1637              		.global	checksum
+ 1638              		.section	.bss.checksum,"aw",%nobits
+ 1639              		.align	3
+ 1642              	checksum:
+ 1643 0000 00000000 		.space	8
+ 1643      00000000 
+ 1644              		.global	execution_time
+ 1645              		.section	.bss.execution_time,"aw",%nobits
+ 1646              		.align	2
+ 1649              	execution_time:
+ 1650 0000 00000000 		.space	4
+ 1651              		.global	end_time
+ 1652              		.section	.bss.end_time,"aw",%nobits
+ 1653              		.align	2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 42
 
 
- 1611              	execution_time:
- 1612 0000 00000000 		.space	4
- 1613              		.global	end_time
- 1614              		.section	.bss.end_time,"aw",%nobits
- 1615              		.align	2
- 1618              	end_time:
- 1619 0000 00000000 		.space	4
- 1620              		.global	start_time
- 1621              		.section	.bss.start_time,"aw",%nobits
- 1622              		.align	2
- 1625              	start_time:
- 1626 0000 00000000 		.space	4
- 1627              		.global	task7_variables
- 1628              		.section	.bss.task7_variables,"aw",%nobits
- 1629              		.align	2
- 1632              	task7_variables:
- 1633 0000 00000000 		.space	8
- 1633      00000000 
- 1634              		.text
- 1635              	.Letext0:
- 1636              		.file 3 "C:\\ST\\STM32CubeIDE_1.19.0\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltool
- 1637              		.file 4 "C:\\ST\\STM32CubeIDE_1.19.0\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltool
- 1638              		.file 5 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f051x8.h"
- 1639              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
- 1640              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h"
- 1641              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h"
- 1642              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
- 1643              		.file 10 "<built-in>"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 42
+ 1656              	end_time:
+ 1657 0000 00000000 		.space	4
+ 1658              		.global	start_time
+ 1659              		.section	.bss.start_time,"aw",%nobits
+ 1660              		.align	2
+ 1663              	start_time:
+ 1664 0000 00000000 		.space	4
+ 1665              		.global	task7_variables
+ 1666              		.section	.bss.task7_variables,"aw",%nobits
+ 1667              		.align	2
+ 1670              	task7_variables:
+ 1671 0000 00000000 		.space	8
+ 1671      00000000 
+ 1672              		.text
+ 1673              	.Letext0:
+ 1674              		.file 3 "C:\\ST\\STM32CubeIDE_1.19.0\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ 1675              		.file 4 "C:\\ST\\STM32CubeIDE_1.19.0\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ 1676              		.file 5 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f051x8.h"
+ 1677              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
+ 1678              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h"
+ 1679              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h"
+ 1680              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
+ 1681              		.file 10 "<built-in>"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 43
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:19     .text.MX_GPIO_Init:00000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:24     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:131    .text.MX_GPIO_Init:0000006c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:139    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:145    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 calculate_mandelbrot_fixed_point_arithmetic
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:501    .text.calculate_mandelbrot_fixed_point_arithmetic:000001d4 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:511    .text.calculate_mandelbrot_var_fixed_point_arithmetic:00000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:517    .text.calculate_mandelbrot_var_fixed_point_arithmetic:00000000 calculate_mandelbrot_var_fixed_point_arithmetic
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:880    .text.calculate_mandelbrot_var_fixed_point_arithmetic:000001b8 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1632   .bss.task7_variables:00000000 task7_variables
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:890    .text.calculate_mandelbrot_double:00000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:896    .text.calculate_mandelbrot_double:00000000 calculate_mandelbrot_double
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1204   .text.calculate_mandelbrot_double:0000016c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1212   .text.Error_Handler:00000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1218   .text.Error_Handler:00000000 Error_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1250   .text.SystemClock_Config:00000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1256   .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1353   .text.main:00000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1359   .text.main:00000000 main
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1512   .text.main:000000ac $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1532   .data.Scales:00000000 Scales
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1541   .bss.Scale_val:00000000 Scale_val
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1586   .data.image_dimension:00000000 image_dimension
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1555   .bss.Dimension_val:00000000 Dimension_val
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1625   .bss.start_time:00000000 start_time
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1597   .data.Test_ITER:00000000 Test_ITER
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1604   .bss.checksum:00000000 checksum
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1618   .bss.end_time:00000000 end_time
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1611   .bss.execution_time:00000000 execution_time
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1529   .data.Scales:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1538   .bss.Scale_val:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1548   .bss.Iter_val:00000000 Iter_val
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1545   .bss.Iter_val:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1552   .bss.Dimension_val:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1562   .data.MAX_iter:00000000 MAX_iter
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1559   .data.MAX_iter:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1572   .bss.state:00000000 state
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1573   .bss.state:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1579   .bss.run_Count:00000000 run_Count
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1576   .bss.run_Count:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1583   .data.image_dimension:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1594   .data.Test_ITER:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1601   .bss.checksum:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1608   .bss.execution_time:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1615   .bss.end_time:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1622   .bss.start_time:00000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s:1629   .bss.task7_variables:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:19     .text.MX_GPIO_Init:00000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:24     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:131    .text.MX_GPIO_Init:0000006c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:139    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:145    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 calculate_mandelbrot_fixed_point_arithmetic
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:501    .text.calculate_mandelbrot_fixed_point_arithmetic:000001d4 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:512    .text.calculate_mandelbrot_var_fixed_point_arithmetic:00000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:518    .text.calculate_mandelbrot_var_fixed_point_arithmetic:00000000 calculate_mandelbrot_var_fixed_point_arithmetic
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:937    .text.calculate_mandelbrot_var_fixed_point_arithmetic:000001f8 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1670   .bss.task7_variables:00000000 task7_variables
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:948    .text.calculate_mandelbrot_double:00000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:954    .text.calculate_mandelbrot_double:00000000 calculate_mandelbrot_double
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1262   .text.calculate_mandelbrot_double:0000016c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1270   .text.Error_Handler:00000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1276   .text.Error_Handler:00000000 Error_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1308   .text.SystemClock_Config:00000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1314   .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1411   .text.main:00000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1417   .text.main:00000000 main
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1551   .text.main:00000090 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1570   .data.Scales:00000000 Scales
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1579   .bss.Scale_val:00000000 Scale_val
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1624   .data.image_dimension:00000000 image_dimension
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1593   .bss.Dimension_val:00000000 Dimension_val
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1663   .bss.start_time:00000000 start_time
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1635   .data.Test_ITER:00000000 Test_ITER
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1642   .bss.checksum:00000000 checksum
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1656   .bss.end_time:00000000 end_time
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1649   .bss.execution_time:00000000 execution_time
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1567   .data.Scales:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1576   .bss.Scale_val:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1586   .bss.Iter_val:00000000 Iter_val
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1583   .bss.Iter_val:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1590   .bss.Dimension_val:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1600   .data.MAX_iter:00000000 MAX_iter
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1597   .data.MAX_iter:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1610   .bss.state:00000000 state
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1611   .bss.state:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1617   .bss.run_Count:00000000 run_Count
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1614   .bss.run_Count:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1621   .data.image_dimension:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1632   .data.Test_ITER:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1639   .bss.checksum:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1646   .bss.execution_time:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1653   .bss.end_time:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1660   .bss.start_time:00000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s:1667   .bss.task7_variables:00000000 $d
 
 UNDEFINED SYMBOLS
 memset
@@ -2489,12 +2544,13 @@ HAL_GPIO_Init
 __aeabi_ldivmod
 __aeabi_lmul
 __aeabi_i2d
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccQK72Wj.s 			page 43
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccsGjISm.s 			page 44
 
 
 __aeabi_dmul
 __aeabi_d2lz
 __aeabi_dadd
+__aeabi_idiv
 __aeabi_ddiv
 __aeabi_dsub
 __aeabi_dcmple
