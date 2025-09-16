@@ -125,6 +125,53 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    /*Base Mandelbrot Code Implementation*/
+
+		if (!run_Count) {
+			// Added to distinguish between which mode is running
+			state = true; //  true implies fixed point arithmetic is in use.
+			run_Count = 1;
+		}
+
+//		for (int i = 0;
+//				i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+//				i++) {
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
+//			start_time = HAL_GetTick(); //Record start time
+//			checksum = calculate_mandelbrot_fixed_point_arithmetic(
+//					image_dimension[i], image_dimension[i], Test_ITER); // Compute Mandelbrot
+//
+//			/*Retrieve end time and compute execution time*/
+//			end_time = HAL_GetTick();
+//			execution_time = end_time - start_time;
+//
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
+//			HAL_Delay(1000);
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
+//		}
+
+		if (run_Count) {
+			// Added to distinguish between which mode is running
+			state = false; //False implies double method is in use
+			run_Count = 0;
+		}
+
+		for (int i = 0;
+				i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+				i++) {
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
+			start_time = HAL_GetTick(); //Record start time
+			checksum = calculate_mandelbrot_double(image_dimension[i],
+					image_dimension[i], Test_ITER); // Compute Mandelbrot
+
+			/*Retrieve end time and compute execution time*/
+			end_time = HAL_GetTick();
+			execution_time = end_time - start_time;
+
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
+			HAL_Delay(1000);
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
+		}
 	/*Code for Task 2 execution - Remove comments from lines 120 to 174 to run */
 //		if (!run_Count) {
 //			// Added to distinguish between which mode is running
@@ -179,29 +226,28 @@ int main(void)
 //			}
 //		}
 //
-//	}
-  /*Code for Task 7 */
-		//for (int j = 0; j < (sizeof(Scales) / sizeof(Scales[0])); j++) {
-			for (int i = 0;
-					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
-					i++) {
-				Scale_val = Scales[2];
-				Dimension_val = image_dimension[i];
-				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
-				start_time = HAL_GetTick(); //Record start time
-				checksum = calculate_mandelbrot_var_fixed_point_arithmetic(
-						image_dimension[i], image_dimension[i], Test_ITER,Scales[2]); // Compute Mandelbrot
-
-				/*Retrieve end time and compute execution time*/
-				end_time = HAL_GetTick();
-				execution_time = end_time - start_time;
-
-				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
-				HAL_Delay(1000);
-				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1,
-						GPIO_PIN_RESET); // reset LEDS for next cycle
-			}
-		//}
+//  /*Code for Task 7 */
+//		for (int j = 0; j < (sizeof(Scales) / sizeof(Scales[0])); j++) {
+//			for (int i = 0;
+//					i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+//					i++) {
+//				Scale_val = Scales[j];
+//				Dimension_val = image_dimension[i];
+//				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
+//				start_time = HAL_GetTick(); //Record start time
+//				checksum = calculate_mandelbrot_var_fixed_point_arithmetic(
+//						image_dimension[i], image_dimension[i], Test_ITER,Scales[j]); // Compute Mandelbrot
+//
+//				/*Retrieve end time and compute execution time*/
+//				end_time = HAL_GetTick();
+//				execution_time = end_time - start_time;
+//
+//				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
+//				HAL_Delay(1000);
+//				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1,
+//						GPIO_PIN_RESET); // reset LEDS for next cycle
+//			}
+//  	  }
   }
   /* USER CODE END 3 */
 }
