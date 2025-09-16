@@ -25,6 +25,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include "stm32f0xx.h"
+#include "core_cm0.h"
+
 #include <stdbool.h> // Added for preference
 /* USER CODE END Includes */
 
@@ -64,6 +66,11 @@ typedef struct {
   int Iter_val = 0;
   int Scale_val = 0;
   int Scales[3] = {1000,10000,1000000};
+  int32_t throughput = 0;
+  uint64_t clock_cycles = 0;
+  uint64_t Cycles_st = 0;
+  uint64_t Cycles_en = 0;
+  int32_t Pixel_count = 0;
 
 // - Performance timing variables (e.g execution time, throughput, pixels per second, clock cycles)
 
@@ -77,12 +84,19 @@ static void MX_GPIO_Init(void);
 uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations);
 uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations);
 uint64_t calculate_mandelbrot_var_fixed_point_arithmetic(int width, int height, int max_iterations, int Scale);
+void TIM2_Init(void);
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void TIM2_Init(void) {
+    __HAL_RCC_TIM2_CLK_ENABLE();
+    TIM2->PSC = 0;       // no prescaler
+    TIM2->ARR = 0xFFFFFFFF;
+    TIM2->CNT = 0;
+    TIM2->CR1 |= TIM_CR1_CEN;
+}
 /* USER CODE END 0 */
 
 /**
@@ -115,7 +129,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-
+  TIM2_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -126,14 +140,14 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     /*Base Mandelbrot Code Implementation*/
-
-		if (!run_Count) {
-			// Added to distinguish between which mode is running
-			state = true; //  true implies fixed point arithmetic is in use.
-			run_Count = 1;
-		}
-
-//		for (int i = 0;
+//
+//		if (!run_Count) {
+//			// Added to distinguish between which mode is running
+//			state = true; //  true implies fixed point arithmetic is in use.
+//			run_Count = 1;
+//		}
+//
+//  		for (int i = 0;
 //				i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
 //				i++) {
 //			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
@@ -149,29 +163,29 @@ int main(void)
 //			HAL_Delay(1000);
 //			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
 //		}
-
-		if (run_Count) {
-			// Added to distinguish between which mode is running
-			state = false; //False implies double method is in use
-			run_Count = 0;
-		}
-
-		for (int i = 0;
-				i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
-				i++) {
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
-			start_time = HAL_GetTick(); //Record start time
-			checksum = calculate_mandelbrot_double(image_dimension[i],
-					image_dimension[i], Test_ITER); // Compute Mandelbrot
-
-			/*Retrieve end time and compute execution time*/
-			end_time = HAL_GetTick();
-			execution_time = end_time - start_time;
-
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
-			HAL_Delay(1000);
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
-		}
+//
+//		if (run_Count) {
+//			// Added to distinguish between which mode is running
+//			state = false; //False implies double method is in use
+//			run_Count = 0;
+//		}
+//
+//		for (int i = 0;
+//				i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+//				i++) {
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
+//			start_time = HAL_GetTick(); //Record start time
+//			checksum = calculate_mandelbrot_double(image_dimension[i],
+//					image_dimension[i], Test_ITER); // Compute Mandelbrot
+//
+//			/*Retrieve end time and compute execution time*/
+//			end_time = HAL_GetTick();
+//			execution_time = end_time - start_time;
+//
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
+//			HAL_Delay(1000);
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
+//		}
 	/*Code for Task 2 execution - Remove comments from lines 120 to 174 to run */
 //		if (!run_Count) {
 //			// Added to distinguish between which mode is running
@@ -226,6 +240,29 @@ int main(void)
 //			}
 //		}
 //
+//  /*Code for Task 4*/
+		for (int i = 0;
+				i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+				i++) {
+			Dimension_val = image_dimension[i];
+			Pixel_count = image_dimension[i]*image_dimension[i];
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
+			start_time = HAL_GetTick(); //Record start time
+			Cycles_st = TIM2->CNT;
+			checksum = calculate_mandelbrot_double(image_dimension[i],
+					image_dimension[i], Test_ITER); // Compute Mandelbrot
+
+			/*Retrieve end time and compute execution time*/
+			end_time = HAL_GetTick();
+			Cycles_en = TIM2->CNT;
+			execution_time = end_time - start_time;
+			clock_cycles = Cycles_en - Cycles_st;
+			throughput = (Pixel_count*1000)/execution_time;
+
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
+			HAL_Delay(1000);
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
+		}
 //  /*Code for Task 7 */
 //		for (int j = 0; j < (sizeof(Scales) / sizeof(Scales[0])); j++) {
 //			for (int i = 0;
