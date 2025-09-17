@@ -115,37 +115,37 @@ int main(void)
 	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 
 	  //TODO: Benchmark and Profile Performance
-	    if (record)
-	     		{record=0;} // this will run first since record is initially set =1,then record is set to 0 and  0 in live expression means mandelbrot_fixed_point_arithmetic is running
-	     for(int i=0;i<5;i++){
-	   	//TODO: Turn on LED 0 to signify the start of the operation
-
-	   	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
-
-	   	//TODO: Record the start time
-	   	start_time = HAL_GetTick();
-
-
-	   	//TODO: Call the Mandelbrot Function and store the output in the checksum variable defined initially
-	   	checksum = calculate_mandelbrot_fixed_point_arithmetic (image_dimension[i],image_dimension[i],MAX_ITER);
-
-	   	//TODO: Record the end time
-	   	end_time = HAL_GetTick();
-
-	   	//TODO: Calculate the execution time
-	   	execution_time = end_time - start_time;
-
-	   	//TODO: Turn on LED 1 to signify the end of the operation
-	   	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
-
-	   	//TODO: Hold the LEDs on for a 1s delay
-	   	HAL_Delay (1000);
-	   	//TODO: Turn off the LEDs
-	   	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
-	   	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
-
-
-	     }
+//	    if (record)
+//	     		{record=0;} // this will run first since record is initially set =1,then record is set to 0 and  0 in live expression means mandelbrot_fixed_point_arithmetic is running
+//	     for(int i=0;i<5;i++){
+//	   	//TODO: Turn on LED 0 to signify the start of the operation
+//
+//	   	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+//
+//	   	//TODO: Record the start time
+//	   	start_time = HAL_GetTick();
+//
+//
+//	   	//TODO: Call the Mandelbrot Function and store the output in the checksum variable defined initially
+//	   	//checksum = calculate_mandelbrot_fixed_point_arithmetic (image_dimension[i],image_dimension[i],MAX_ITER);
+//
+//	   	//TODO: Record the end time
+//	   	end_time = HAL_GetTick();
+//
+//	   	//TODO: Calculate the execution time
+//	   	execution_time = end_time - start_time;
+//
+//	   	//TODO: Turn on LED 1 to signify the end of the operation
+//	   	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+//
+//	   	//TODO: Hold the LEDs on for a 1s delay
+//	   	HAL_Delay (1000);
+//	   	//TODO: Turn off the LEDs
+//	   	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+//	   	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+//
+//
+//	     }
 	    if (!record)
 	    	{record=1;} //since record was previously set to 0 in previous function, it is now set to 1 and 1 in live expression means that mandelbrot_double is running
 	    for(int i=0;i<5;i++){
