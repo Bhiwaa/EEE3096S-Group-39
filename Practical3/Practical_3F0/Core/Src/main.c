@@ -59,6 +59,8 @@ typedef struct {
   uint64_t checksum;
   int Test_ITER = 100;
   int image_dimension[5] = {128, 160, 192, 224, 256};
+  int Image_width[6] = {333,580,768,1280,1440,1920};
+  int Image_height[6] = {480,480,576,720,1080,1080};
   int run_Count = 0;
   bool state;
   int MAX_iter[5] = {100,250,500,750,1000};
@@ -66,6 +68,8 @@ typedef struct {
   int Iter_val = 0;
   int Scale_val = 0;
   int Scales[3] = {1000,10000,1000000};
+  int Height_Val = 0;
+  int Width_Val = 0;
   int32_t throughput = 0;
   uint64_t clock_cycles = 0;
   uint64_t Cycles_st = 0;
@@ -163,7 +167,7 @@ int main(void)
 //			HAL_Delay(1000);
 //			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
 //		}
-//
+
 //		if (run_Count) {
 //			// Added to distinguish between which mode is running
 //			state = false; //False implies double method is in use
@@ -240,29 +244,53 @@ int main(void)
 //			}
 //		}
 //
-//  /*Code for Task 4*/
+//  /*Code for Task 3*/
+//		for (int i = 0;
+//				i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+//				i++) {
+//			Dimension_val = image_dimension[i];
+//			Pixel_count = image_dimension[i]*image_dimension[i];
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
+//			start_time = HAL_GetTick(); //Record start time
+//			Cycles_st = TIM2->CNT;
+//			checksum = calculate_mandelbrot_double(image_dimension[i],
+//					image_dimension[i], Test_ITER); // Compute Mandelbrot
+//
+//			/*Retrieve end time and compute execution time*/
+//			end_time = HAL_GetTick();
+//			Cycles_en = TIM2->CNT;
+//			execution_time = end_time - start_time;
+//			if(Cycles_en >= Cycles_st) {
+//			    clock_cycles = Cycles_en - Cycles_st;
+//			} else {
+//			    // TIM2 overflowed once
+//			    clock_cycles = ((uint64_t)0xFFFFFFFF - Cycles_st) + Cycles_en + 1;
+//			}
+//			throughput = (Pixel_count*1000)/execution_time;
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
+//			HAL_Delay(1000);
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
+//		}
+	/*Code for Task 4*/
 		for (int i = 0;
-				i < (sizeof(image_dimension) / sizeof(image_dimension[0]));
+				i < (sizeof(Image_width) / sizeof(Image_width[0]));
 				i++) {
-			Dimension_val = image_dimension[i];
-			Pixel_count = image_dimension[i]*image_dimension[i];
+			Width_Val = Image_width[i];
+			Height_Val = Image_height[i];
 			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
 			start_time = HAL_GetTick(); //Record start time
-			Cycles_st = TIM2->CNT;
-			checksum = calculate_mandelbrot_double(image_dimension[i],
-					image_dimension[i], Test_ITER); // Compute Mandelbrot
+			checksum = calculate_mandelbrot_fixed_point_arithmetic(
+					Image_width[i], Image_height[i], Test_ITER); // Compute Mandelbrot
 
 			/*Retrieve end time and compute execution time*/
 			end_time = HAL_GetTick();
-			Cycles_en = TIM2->CNT;
 			execution_time = end_time - start_time;
-			clock_cycles = Cycles_en - Cycles_st;
-			throughput = (Pixel_count*1000)/execution_time;
 
 			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
 			HAL_Delay(1000);
 			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
 		}
+
 //  /*Code for Task 7 */
 //		for (int j = 0; j < (sizeof(Scales) / sizeof(Scales[0])); j++) {
 //			for (int i = 0;
