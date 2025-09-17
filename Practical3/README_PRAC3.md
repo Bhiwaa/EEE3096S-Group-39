@@ -1,0 +1,1 @@
+Practical 3 entails performing a benchmark between the STM32F0 and the STM32F4 across various functionality. This folder holds program files, resource links and data spreedsheets used during the practical implementation.

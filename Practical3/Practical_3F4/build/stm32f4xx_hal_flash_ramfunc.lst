@@ -1,0 +1,488 @@
+ARM GAS  C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32f4xx_hal_flash_ramfunc.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c"
+  18              		.section	.RamFunc,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.global	HAL_FLASHEx_StopFlashInterfaceClk
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	HAL_FLASHEx_StopFlashInterfaceClk:
+  27              	.LFB134:
+   1:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /**
+   2:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   ******************************************************************************
+   3:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @file    stm32f4xx_hal_flash_ramfunc.c
+   4:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @author  MCD Application Team
+   5:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief   FLASH RAMFUNC module driver.
+   6:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *          This file provides a FLASH firmware functions which should be
+   7:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *          executed from internal SRAM
+   8:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *            + Stop/Start the flash interface while System Run
+   9:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *            + Enable/Disable the flash sleep while System Run
+  10:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   @verbatim
+  11:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   ==============================================================================
+  12:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****                     ##### APIs executed from Internal RAM #####
+  13:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   ==============================================================================
+  14:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   [..]
+  15:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     *** ARM Compiler ***
+  16:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     --------------------
+  17:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using the toolchain options.
+  18:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****          Functions that are be executed in RAM should reside in a separate
+  19:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****          source module. Using the 'Options for File' dialog you can simply change
+  20:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****          the 'Code / Const' area of a module to a memory space in physical RAM.
+  21:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****          Available memory areas are declared in the 'Target' tab of the
+  22:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****          Options for Target' dialog.
+  23:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  24:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     *** ICCARM Compiler ***
+  25:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     -----------------------
+  26:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using a specific toolchain keyword "__ramfunc".
+  27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     *** GNU Compiler ***
+  29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     --------------------
+  30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using a specific toolchain attribute
+  31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****          "__attribute__((section(".RamFunc")))".
+ARM GAS  C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s 			page 2
+
+
+  32:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  33:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   @endverbatim
+  34:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   ******************************************************************************
+  35:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @attention
+  36:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *
+  37:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * Copyright (c) 2017 STMicroelectronics.
+  38:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * All rights reserved.
+  39:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *
+  40:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * This software is licensed under terms that can be found in the LICENSE file in
+  41:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * the root directory of this software component.
+  42:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  43:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   ******************************************************************************
+  44:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
+  45:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  46:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /* Includes ------------------------------------------------------------------*/
+  47:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** #include "stm32f4xx_hal.h"
+  48:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  49:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /** @addtogroup STM32F4xx_HAL_Driver
+  50:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @{
+  51:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
+  52:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  53:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /** @defgroup FLASH_RAMFUNC FLASH RAMFUNC
+  54:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief FLASH functions executed from RAM
+  55:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @{
+  56:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
+  57:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** #ifdef HAL_FLASH_MODULE_ENABLED
+  58:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** #if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx) || defined(STM32F411xE) ||
+  59:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     defined(STM32F412Rx) || defined(STM32F412Cx)
+  60:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  61:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /* Private typedef -----------------------------------------------------------*/
+  62:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /* Private define ------------------------------------------------------------*/
+  63:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /* Private macro -------------------------------------------------------------*/
+  64:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /* Private variables ---------------------------------------------------------*/
+  65:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /* Private function prototypes -----------------------------------------------*/
+  66:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /* Exported functions --------------------------------------------------------*/
+  67:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /** @defgroup FLASH_RAMFUNC_Exported_Functions FLASH RAMFUNC Exported Functions
+  68:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @{
+  69:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
+  70:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  71:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /** @defgroup FLASH_RAMFUNC_Exported_Functions_Group1 Peripheral features functions executed from i
+  72:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *  @brief Peripheral Extended features functions
+  73:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *
+  74:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** @verbatim
+  75:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  76:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****  ===============================================================================
+  77:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****                       ##### ramfunc functions #####
+  78:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****  ===============================================================================
+  79:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     [..]
+  80:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     This subsection provides a set of functions that should be executed from RAM
+  81:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     transfers.
+  82:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  83:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** @endverbatim
+  84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @{
+  85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
+  86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+  87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /**
+  88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief Stop the flash interface while System Run
+ARM GAS  C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s 			page 3
+
+
+  89:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode is only available for STM32F41xxx/STM32F446xx devices.
+  90:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode couldn't be set while executing with the flash itself.
+  91:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *        It should be done with specific routine executed from RAM.
+  92:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @retval HAL status
+  93:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
+  94:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_StopFlashInterfaceClk(void)
+  95:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** {
+  28              		.loc 1 95 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  96:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
+  97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+  33              		.loc 1 97 3 view .LVU1
+  34              	.LBB2:
+  35              		.loc 1 97 3 view .LVU2
+  36              	.LBE2:
+  95:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
+  37              		.loc 1 95 1 is_stmt 0 view .LVU3
+  38 0000 82B0     		sub	sp, sp, #8
+  39              	.LCFI0:
+  40              		.cfi_def_cfa_offset 8
+  41              	.LBB3:
+  42              		.loc 1 97 3 view .LVU4
+  43 0002 094B     		ldr	r3, .L4
+  44              	.LBE3:
+  98:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Stop the flash interface while System Run */
+  99:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   SET_BIT(PWR->CR, PWR_CR_FISSR);
+  45              		.loc 1 99 3 view .LVU5
+  46 0004 0949     		ldr	r1, .L4+4
+  47              	.LBB4:
+  97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Stop the flash interface while System Run */
+  48              		.loc 1 97 3 view .LVU6
+  49 0006 0020     		movs	r0, #0
+  50 0008 0190     		str	r0, [sp, #4]
+  97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Stop the flash interface while System Run */
+  51              		.loc 1 97 3 is_stmt 1 view .LVU7
+  52 000a 1A6C     		ldr	r2, [r3, #64]
+  53 000c 42F08052 		orr	r2, r2, #268435456
+  54 0010 1A64     		str	r2, [r3, #64]
+  97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Stop the flash interface while System Run */
+  55              		.loc 1 97 3 view .LVU8
+  56 0012 1B6C     		ldr	r3, [r3, #64]
+  57 0014 03F08053 		and	r3, r3, #268435456
+  58 0018 0193     		str	r3, [sp, #4]
+  97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Stop the flash interface while System Run */
+  59              		.loc 1 97 3 view .LVU9
+  60 001a 019B     		ldr	r3, [sp, #4]
+  61              	.LBE4:
+  97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Stop the flash interface while System Run */
+  62              		.loc 1 97 3 view .LVU10
+  63              		.loc 1 99 3 view .LVU11
+  64 001c 0B68     		ldr	r3, [r1]
+  65 001e 43F40013 		orr	r3, r3, #2097152
+  66 0022 0B60     		str	r3, [r1]
+ 100:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+ARM GAS  C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s 			page 4
+
+
+ 101:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   return HAL_OK;
+  67              		.loc 1 101 3 view .LVU12
+ 102:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** }
+  68              		.loc 1 102 1 is_stmt 0 view .LVU13
+  69 0024 02B0     		add	sp, sp, #8
+  70              	.LCFI1:
+  71              		.cfi_def_cfa_offset 0
+  72              		@ sp needed
+  73 0026 7047     		bx	lr
+  74              	.L5:
+  75              		.align	2
+  76              	.L4:
+  77 0028 00380240 		.word	1073887232
+  78 002c 00700040 		.word	1073770496
+  79              		.cfi_endproc
+  80              	.LFE134:
+  82              		.align	1
+  83              		.p2align 2,,3
+  84              		.global	HAL_FLASHEx_StartFlashInterfaceClk
+  85              		.syntax unified
+  86              		.thumb
+  87              		.thumb_func
+  89              	HAL_FLASHEx_StartFlashInterfaceClk:
+  90              	.LFB135:
+ 103:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+ 104:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /**
+ 105:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief Start the flash interface while System Run
+ 106:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode is only available for STM32F411xx/STM32F446xx devices.
+ 107:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode couldn't be set while executing with the flash itself.
+ 108:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *        It should be done with specific routine executed from RAM.
+ 109:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @retval HAL status
+ 110:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
+ 111:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_StartFlashInterfaceClk(void)
+ 112:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** {
+  91              		.loc 1 112 1 is_stmt 1 view -0
+  92              		.cfi_startproc
+  93              		@ args = 0, pretend = 0, frame = 8
+  94              		@ frame_needed = 0, uses_anonymous_args = 0
+  95              		@ link register save eliminated.
+ 113:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
+ 114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+  96              		.loc 1 114 3 view .LVU15
+  97              	.LBB5:
+  98              		.loc 1 114 3 view .LVU16
+  99              	.LBE5:
+ 112:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
+ 100              		.loc 1 112 1 is_stmt 0 view .LVU17
+ 101 0030 82B0     		sub	sp, sp, #8
+ 102              	.LCFI2:
+ 103              		.cfi_def_cfa_offset 8
+ 104              	.LBB6:
+ 105              		.loc 1 114 3 view .LVU18
+ 106 0032 094B     		ldr	r3, .L8
+ 107              	.LBE6:
+ 115:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Start the flash interface while System Run */
+ 116:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   CLEAR_BIT(PWR->CR, PWR_CR_FISSR);
+ 108              		.loc 1 116 3 view .LVU19
+ARM GAS  C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s 			page 5
+
+
+ 109 0034 0949     		ldr	r1, .L8+4
+ 110              	.LBB7:
+ 114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Start the flash interface while System Run */
+ 111              		.loc 1 114 3 view .LVU20
+ 112 0036 0020     		movs	r0, #0
+ 113 0038 0190     		str	r0, [sp, #4]
+ 114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Start the flash interface while System Run */
+ 114              		.loc 1 114 3 is_stmt 1 view .LVU21
+ 115 003a 1A6C     		ldr	r2, [r3, #64]
+ 116 003c 42F08052 		orr	r2, r2, #268435456
+ 117 0040 1A64     		str	r2, [r3, #64]
+ 114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Start the flash interface while System Run */
+ 118              		.loc 1 114 3 view .LVU22
+ 119 0042 1B6C     		ldr	r3, [r3, #64]
+ 120 0044 03F08053 		and	r3, r3, #268435456
+ 121 0048 0193     		str	r3, [sp, #4]
+ 114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Start the flash interface while System Run */
+ 122              		.loc 1 114 3 view .LVU23
+ 123 004a 019B     		ldr	r3, [sp, #4]
+ 124              	.LBE7:
+ 114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Start the flash interface while System Run */
+ 125              		.loc 1 114 3 view .LVU24
+ 126              		.loc 1 116 3 view .LVU25
+ 127 004c 0B68     		ldr	r3, [r1]
+ 128 004e 23F40013 		bic	r3, r3, #2097152
+ 129 0052 0B60     		str	r3, [r1]
+ 117:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+ 118:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   return HAL_OK;
+ 130              		.loc 1 118 3 view .LVU26
+ 119:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** }
+ 131              		.loc 1 119 1 is_stmt 0 view .LVU27
+ 132 0054 02B0     		add	sp, sp, #8
+ 133              	.LCFI3:
+ 134              		.cfi_def_cfa_offset 0
+ 135              		@ sp needed
+ 136 0056 7047     		bx	lr
+ 137              	.L9:
+ 138              		.align	2
+ 139              	.L8:
+ 140 0058 00380240 		.word	1073887232
+ 141 005c 00700040 		.word	1073770496
+ 142              		.cfi_endproc
+ 143              	.LFE135:
+ 145              		.align	1
+ 146              		.p2align 2,,3
+ 147              		.global	HAL_FLASHEx_EnableFlashSleepMode
+ 148              		.syntax unified
+ 149              		.thumb
+ 150              		.thumb_func
+ 152              	HAL_FLASHEx_EnableFlashSleepMode:
+ 153              	.LFB136:
+ 120:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+ 121:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /**
+ 122:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief Enable the flash sleep while System Run
+ 123:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode is only available for STM32F41xxx/STM32F446xx devices.
+ 124:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode could n't be set while executing with the flash itself.
+ 125:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *        It should be done with specific routine executed from RAM.
+ARM GAS  C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s 			page 6
+
+
+ 126:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @retval HAL status
+ 127:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
+ 128:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_EnableFlashSleepMode(void)
+ 129:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** {
+ 154              		.loc 1 129 1 is_stmt 1 view -0
+ 155              		.cfi_startproc
+ 156              		@ args = 0, pretend = 0, frame = 8
+ 157              		@ frame_needed = 0, uses_anonymous_args = 0
+ 158              		@ link register save eliminated.
+ 130:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
+ 131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+ 159              		.loc 1 131 3 view .LVU29
+ 160              	.LBB8:
+ 161              		.loc 1 131 3 view .LVU30
+ 162              	.LBE8:
+ 129:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
+ 163              		.loc 1 129 1 is_stmt 0 view .LVU31
+ 164 0060 82B0     		sub	sp, sp, #8
+ 165              	.LCFI4:
+ 166              		.cfi_def_cfa_offset 8
+ 167              	.LBB9:
+ 168              		.loc 1 131 3 view .LVU32
+ 169 0062 094B     		ldr	r3, .L12
+ 170              	.LBE9:
+ 132:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable the flash sleep while System Run */
+ 133:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   SET_BIT(PWR->CR, PWR_CR_FMSSR);
+ 171              		.loc 1 133 3 view .LVU33
+ 172 0064 0949     		ldr	r1, .L12+4
+ 173              	.LBB10:
+ 131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable the flash sleep while System Run */
+ 174              		.loc 1 131 3 view .LVU34
+ 175 0066 0020     		movs	r0, #0
+ 176 0068 0190     		str	r0, [sp, #4]
+ 131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable the flash sleep while System Run */
+ 177              		.loc 1 131 3 is_stmt 1 view .LVU35
+ 178 006a 1A6C     		ldr	r2, [r3, #64]
+ 179 006c 42F08052 		orr	r2, r2, #268435456
+ 180 0070 1A64     		str	r2, [r3, #64]
+ 131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable the flash sleep while System Run */
+ 181              		.loc 1 131 3 view .LVU36
+ 182 0072 1B6C     		ldr	r3, [r3, #64]
+ 183 0074 03F08053 		and	r3, r3, #268435456
+ 184 0078 0193     		str	r3, [sp, #4]
+ 131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable the flash sleep while System Run */
+ 185              		.loc 1 131 3 view .LVU37
+ 186 007a 019B     		ldr	r3, [sp, #4]
+ 187              	.LBE10:
+ 131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable the flash sleep while System Run */
+ 188              		.loc 1 131 3 view .LVU38
+ 189              		.loc 1 133 3 view .LVU39
+ 190 007c 0B68     		ldr	r3, [r1]
+ 191 007e 43F48013 		orr	r3, r3, #1048576
+ 192 0082 0B60     		str	r3, [r1]
+ 134:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+ 135:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   return HAL_OK;
+ 193              		.loc 1 135 3 view .LVU40
+ 136:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** }
+ARM GAS  C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s 			page 7
+
+
+ 194              		.loc 1 136 1 is_stmt 0 view .LVU41
+ 195 0084 02B0     		add	sp, sp, #8
+ 196              	.LCFI5:
+ 197              		.cfi_def_cfa_offset 0
+ 198              		@ sp needed
+ 199 0086 7047     		bx	lr
+ 200              	.L13:
+ 201              		.align	2
+ 202              	.L12:
+ 203 0088 00380240 		.word	1073887232
+ 204 008c 00700040 		.word	1073770496
+ 205              		.cfi_endproc
+ 206              	.LFE136:
+ 208              		.align	1
+ 209              		.p2align 2,,3
+ 210              		.global	HAL_FLASHEx_DisableFlashSleepMode
+ 211              		.syntax unified
+ 212              		.thumb
+ 213              		.thumb_func
+ 215              	HAL_FLASHEx_DisableFlashSleepMode:
+ 216              	.LFB137:
+ 137:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+ 138:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /**
+ 139:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief Disable the flash sleep while System Run
+ 140:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode is only available for STM32F41xxx/STM32F446xx devices.
+ 141:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode couldn't be set while executing with the flash itself.
+ 142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *        It should be done with specific routine executed from RAM.
+ 143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @retval HAL status
+ 144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
+ 145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_DisableFlashSleepMode(void)
+ 146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** {
+ 217              		.loc 1 146 1 is_stmt 1 view -0
+ 218              		.cfi_startproc
+ 219              		@ args = 0, pretend = 0, frame = 8
+ 220              		@ frame_needed = 0, uses_anonymous_args = 0
+ 221              		@ link register save eliminated.
+ 147:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
+ 148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+ 222              		.loc 1 148 3 view .LVU43
+ 223              	.LBB11:
+ 224              		.loc 1 148 3 view .LVU44
+ 225              	.LBE11:
+ 146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
+ 226              		.loc 1 146 1 is_stmt 0 view .LVU45
+ 227 0090 82B0     		sub	sp, sp, #8
+ 228              	.LCFI6:
+ 229              		.cfi_def_cfa_offset 8
+ 230              	.LBB12:
+ 231              		.loc 1 148 3 view .LVU46
+ 232 0092 094B     		ldr	r3, .L16
+ 233              	.LBE12:
+ 149:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Disable the flash sleep while System Run */
+ 150:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   CLEAR_BIT(PWR->CR, PWR_CR_FMSSR);
+ 234              		.loc 1 150 3 view .LVU47
+ 235 0094 0949     		ldr	r1, .L16+4
+ 236              	.LBB13:
+ 148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Disable the flash sleep while System Run */
+ARM GAS  C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s 			page 8
+
+
+ 237              		.loc 1 148 3 view .LVU48
+ 238 0096 0020     		movs	r0, #0
+ 239 0098 0190     		str	r0, [sp, #4]
+ 148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Disable the flash sleep while System Run */
+ 240              		.loc 1 148 3 is_stmt 1 view .LVU49
+ 241 009a 1A6C     		ldr	r2, [r3, #64]
+ 242 009c 42F08052 		orr	r2, r2, #268435456
+ 243 00a0 1A64     		str	r2, [r3, #64]
+ 148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Disable the flash sleep while System Run */
+ 244              		.loc 1 148 3 view .LVU50
+ 245 00a2 1B6C     		ldr	r3, [r3, #64]
+ 246 00a4 03F08053 		and	r3, r3, #268435456
+ 247 00a8 0193     		str	r3, [sp, #4]
+ 148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Disable the flash sleep while System Run */
+ 248              		.loc 1 148 3 view .LVU51
+ 249 00aa 019B     		ldr	r3, [sp, #4]
+ 250              	.LBE13:
+ 148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Disable the flash sleep while System Run */
+ 251              		.loc 1 148 3 view .LVU52
+ 252              		.loc 1 150 3 view .LVU53
+ 253 00ac 0B68     		ldr	r3, [r1]
+ 254 00ae 23F48013 		bic	r3, r3, #1048576
+ 255 00b2 0B60     		str	r3, [r1]
+ 151:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+ 152:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   return HAL_OK;
+ 256              		.loc 1 152 3 view .LVU54
+ 153:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** }
+ 257              		.loc 1 153 1 is_stmt 0 view .LVU55
+ 258 00b4 02B0     		add	sp, sp, #8
+ 259              	.LCFI7:
+ 260              		.cfi_def_cfa_offset 0
+ 261              		@ sp needed
+ 262 00b6 7047     		bx	lr
+ 263              	.L17:
+ 264              		.align	2
+ 265              	.L16:
+ 266 00b8 00380240 		.word	1073887232
+ 267 00bc 00700040 		.word	1073770496
+ 268              		.cfi_endproc
+ 269              	.LFE137:
+ 271              		.text
+ 272              	.Letext0:
+ 273              		.file 2 "C:\\Users\\kaush\\STM32CubeIDE_1.19.0\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.ex
+ 274              		.file 3 "C:\\Users\\kaush\\STM32CubeIDE_1.19.0\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.ex
+ 275              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h"
+ 276              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ARM GAS  C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f4xx_hal_flash_ramfunc.c
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:19     .RamFunc:00000000 $t
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:26     .RamFunc:00000000 HAL_FLASHEx_StopFlashInterfaceClk
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:77     .RamFunc:00000028 $d
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:82     .RamFunc:00000030 $t
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:89     .RamFunc:00000030 HAL_FLASHEx_StartFlashInterfaceClk
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:140    .RamFunc:00000058 $d
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:145    .RamFunc:00000060 $t
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:152    .RamFunc:00000060 HAL_FLASHEx_EnableFlashSleepMode
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:203    .RamFunc:00000088 $d
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:208    .RamFunc:00000090 $t
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:215    .RamFunc:00000090 HAL_FLASHEx_DisableFlashSleepMode
+C:\Users\kaush\AppData\Local\Temp\ccmiWHbg.s:266    .RamFunc:000000b8 $d
+
+NO UNDEFINED SYMBOLS

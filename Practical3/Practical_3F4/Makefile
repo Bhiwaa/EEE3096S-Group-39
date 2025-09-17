@@ -19,12 +19,12 @@ TARGET = Practical_3F4
 ######################################
 # building variables
 ######################################
-# debug build?
+# debug build?fpu
 DEBUG = 1
 
 # TODO:Compiler Optimisation levels
 # optimization
-OPT = -Og
+OPT = -O3
 
 
 #######################################
@@ -97,10 +97,10 @@ CPU = -mcpu=cortex-m4
 
 #TODO: FPU Enbale/Disable
 # fpu
-FPU = -mfpu=fpv4-sp-d16
+FPU = #-mfpu=fpv4-sp-d16
 
 # float-abi
-FLOAT-ABI = -mfloat-abi=hard
+FLOAT-ABI = -mfloat-abi=soft
 
 # mcu
 MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
