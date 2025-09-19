@@ -61,15 +61,18 @@ uint64_t checksum = 0;
 int Image_width[6]  = {333,580,768,1280,1440,1920};
 int Image_height[6] = {480,480,576,720,1080,1080};
 
-uint64_t checksum_t2[5][5];
-uint64_t Exec_time_t2[5][5];
+uint64_t checksum_t2[5];
+uint64_t Exec_time_t2[5];
+uint64_t checksum_t3[5];
+uint64_t Exec_time_t3[5];
 uint64_t checksum_t4[3][5];
 uint64_t End_time_t4[3][5];
 uint64_t checksum_t4[3][5];
 uint64_t Cycles[6];
 uint64_t o_square[3][5];
 uint64_t o_cross[3][5];
-
+uint64_t throughput[5];
+uint64_t dimension;
 int Scales[3] = {1000,10000,1000000};
 int Scale_val = 0;
 int Dimension_val = 0;
@@ -79,6 +82,7 @@ int record = 1;  // live expression marker
 int image_dimension[5] = {128,160,192,224,256};
 int Test_ITER = 100;
 int iters[5]={100,250,500,750,1000};
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -172,29 +176,26 @@ int main(void)
       // }
       //}
 
-
-  for (int i = 0; i < (sizeof(Image_width) / sizeof(Image_width[0])); i++) {
+// task 3
+  for (int i = 0; i < 6 ; i++) {
 
       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // LED0 on (start)
 
       start = DWT->CYCCNT;
       start_time = HAL_GetTick();
 
-      checksum = calculate_mandelbrot_fixed_point_arithmetic(
-                    Image_width[i],
-                    Image_height[i],
-                    MAX_ITER);
-
+      checksum = calculate_mandelbrot_double(image_dimension[i],image_dimension[i],MAX_ITER);
+      dimension=image_dimension[i]*image_dimension[i];
       end_time = HAL_GetTick();
       end = DWT->CYCCNT;
 
       execution_time = end_time - start_time;
       cycles = end - start;
 
-      End_time_t4[i] = end_time;
-      checksum_t4[i] = checksum;
+      Exec_time_t2[i] = execution_time;
+      checksum_t2[i] = checksum;
       Cycles[i]      = cycles;
-
+      throughput[i] = ((1000*dimension)/execution_time) ;
       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET); // LED0 off
     }
   /*Code for Task 7 */ /*
