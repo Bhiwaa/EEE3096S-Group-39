@@ -32,6 +32,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+// Adding A struct to track in variables inside method execution.
 typedef struct {
     int overflow_square;
     int overflow_cross;
@@ -52,6 +53,7 @@ typedef struct {
 
 /* USER CODE BEGIN PV */
 //TODO: Define variables you think you might need
+/*A list a Variables used to conduct tasks 2,3,4,6,7*/
   Task7_Variables task7_variables;
   uint32_t start_time;
   uint32_t end_time;
@@ -88,7 +90,7 @@ static void MX_GPIO_Init(void);
 uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations);
 uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations);
 uint64_t calculate_mandelbrot_var_fixed_point_arithmetic(int width, int height, int max_iterations, int Scale);
-void TIM2_Init(void);
+void TIM2_Init(void); // Defining a timer to track clock cycles
 
 /* USER CODE END PFP */
 
@@ -143,6 +145,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  // Code by default is commented out. Remove comments on desired block to use. Reduces executions being done
     /*Base Mandelbrot Code Implementation*/
 //
 //		if (!run_Count) {
@@ -271,26 +274,25 @@ int main(void)
 //			HAL_Delay(1000);
 //			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
 //		}
-	/*Code for Task 4*/
-		for (int i = 0;
-				i < (sizeof(Image_width) / sizeof(Image_width[0]));
-				i++) {
-			Width_Val = Image_width[i];
-			Height_Val = Image_height[i];
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
-			start_time = HAL_GetTick(); //Record start time
-			checksum = calculate_mandelbrot_fixed_point_arithmetic(
-					Image_width[i], Image_height[i], Test_ITER); // Compute Mandelbrot
-
-			/*Retrieve end time and compute execution time*/
-			end_time = HAL_GetTick();
-			execution_time = end_time - start_time;
-
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
-			HAL_Delay(1000);
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
-		}
-
+//	/*Code for Task 4*/
+//		for (int i = 0;
+//				i < (sizeof(Image_width) / sizeof(Image_width[0]));
+//				i++) {
+//			Width_Val = Image_width[i];
+//			Height_Val = Image_height[i];
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET); // Turn on LED0 to signify the start of a computation
+//			start_time = HAL_GetTick(); //Record start time
+//			checksum = calculate_mandelbrot_fixed_point_arithmetic(
+//					Image_width[i], Image_height[i], Test_ITER); // Compute Mandelbrot
+//
+//			/*Retrieve end time and compute execution time*/
+//			end_time = HAL_GetTick();
+//			execution_time = end_time - start_time;
+//
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET); // Turn on LED1 to signify end of computation
+//			HAL_Delay(1000);
+//			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1, GPIO_PIN_RESET); // reset LEDS for next cycle
+//		}
 //  /*Code for Task 7 */
 //		for (int j = 0; j < (sizeof(Scales) / sizeof(Scales[0])); j++) {
 //			for (int i = 0;
@@ -422,6 +424,7 @@ uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height,
 uint64_t calculate_mandelbrot_var_fixed_point_arithmetic(int width, int height,	int max_iterations,int Scale) {
 	uint64_t mandelbrot_sum = 0;
 	int64_t S = Scale; // Scaling factor for fixed point arithmetic set vary between 10^3,10^4,10^6
+	//struct variables to track overflow while method executes
 	task7_variables.overflow_square = 0;
 	task7_variables.overflow_cross  = 0;
 	//TODO: Complete the function implementation
@@ -436,11 +439,11 @@ uint64_t calculate_mandelbrot_var_fixed_point_arithmetic(int width, int height,	
 			int iteration = 0;
 			while ((iteration < max_iterations)
 					&& (((x_i * x_i) / S) + ((y_i * y_i) / S) <= (4 * S))) {
-				// Check potential overflow for squares- Alters execution time so comment out
+				// Check potential overflow for squares- Alters execution time so comment out when not needed
 				if (x_i != 0 && abs(x_i) > INT32_MAX / abs(x_i)) {
 					task7_variables.overflow_square++;
 				}
-			    // Check potential overflow for cross-term (2 * x_i * y_i)- Alters execution time so comment out
+			    // Check potential overflow for cross-term (2 * x_i * y_i)- Alters execution time so comment out when not needed
 				if (x_i != 0 && y_i != 0
 						&& abs(y_i) > INT32_MAX / (1 * abs(x_i))) {
 					task7_variables.overflow_cross++;
