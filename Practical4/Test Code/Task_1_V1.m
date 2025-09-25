@@ -2,12 +2,11 @@
 
 % Initializing Audio file 
 File_names = {'drum.wav','guitar.wav','piano.wav'};
-N = 128;
-indices = round(linspace(1, length(wave), N));
-File_index = 1;
+N = 2000;
+File_index = 3;
 
 [wave, fs] = audioread(File_names{File_index});% Set index to current desired file.
-
+indices = round(linspace(1, length(wave), N));
 % Sample the Waveform and Normalize for DAC
 Samples = wave(indices);
 Norm_Sample = round((Samples + 1).*4095/2,0);
@@ -21,7 +20,7 @@ display(LUT_vals);
 t = (0:length(wave)-1)/fs; % Creating a set of time values for plotting
 figure;
 plot(t, wave,'b'); hold on;
-plot(t(indices), Samples,'rx','MarkerSize',4);
+plot(t(indices), Samples,'r');
 xlabel('Time (s)');
 ylabel('Amplitude');
 title('Waveform with LUT samples');
